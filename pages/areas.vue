@@ -7,7 +7,6 @@
                 <List :ar="area" area short/>
             </mdb-card>
         </mdb-container>
-
         <Footer />
     </div>
 </template>

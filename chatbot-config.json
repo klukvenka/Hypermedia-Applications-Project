@@ -1,0 +1,172 @@
+{
+	"name": "Hypercompany Chatbot",
+	"data": {
+		"kb": {
+			"first_xor": {
+				"initials": [
+					"Hello! I am HyperBot, here to help you. Please tell me what you want to do:\n1. Guide through the website\n2. Contact Us"
+				],
+				"choices": [
+					{
+						"id": "guide-choice",
+						"intents": ["I want to go to guide","guide", "guide me","1"],
+						"utterance": ["Do you want to start the guide?"],
+						"payload": {}
+					},
+					{
+						"id": "contact-choice",
+						"intents": ["I want to go to contact","contact", "contact us","2"],
+						"utterance": ["Thank you for contacting us! "],
+						"payload": {}
+					}
+				],
+				"unknown":"I cannot understand"
+			},
+			"contact-choice": {
+				"initials": [
+					"You can choose to do the following: 1. Type your message in chat\n2. Go to Contact page"
+				],
+				"choices": [
+					{
+						"id": "chatbot",
+						"intents": ["I want to go to type","type", "type here","1"],
+						"utterance": ["You can now send your message from the chatbot. "],
+						"payload": {}
+					},
+					{
+						"id": "contact",
+						"intents": ["I want to go to contact","contact page", "contact us","2"],
+						"utterance": ["Welcome to our contact page!"],
+						"payload": {
+							"guide": "/contact_us"
+						}
+					}
+				],
+				"unknown":"I cannot understand"
+			},
+			"chatbot": {
+				"initials": [
+					"Start typing your message"
+				],
+				"choices": [
+					{
+						"id": "chatbot-page",
+						"intents": ["I want to go to contact","contact page", "contact us","1"],
+						"utterance": ["Welcome to our contact page"],
+						"payload": {
+							"guide": "/contact_us"
+						}
+					},
+					{
+						"id": "chatbot-close",
+						"intents": ["end", "quit", "close","2"],
+						"utterance": ["Conversation has been closed."],
+						"payload": {}
+					}
+				],
+				"unknown": "Message received. We will respond within 24 hours. Do you want to 1. Send another message (redirects to contact page)\n2. End this conversation"
+			},
+			"areas": "Welcome to our Areas page! Here you can see all the areas that we work in! Once you're done, let me know and I can continue to the next step of the guide",
+			"products": "Welcome to our Products page! Here you can see all the products that we have built! Once you're done, let me know and I can continue to the next step of the guide",
+			"teams": "Welcome to Our Team page! Here you can see all the brilliant people that build our products! Once you're done, let me know and I can continue to the next step of the guide",
+			"about": "Welcome to The Company page! Here you can see who we are! Once you're done, let me know and I can continue to the next step of the guide",
+			"contact": "Welcome to Contact page! Here you can send us a message! Once you're done, let me know and I can continue to the next step of the guide",
+			"home": "Welcome to our home page! Please feel free to browse to each section at your own pace. Once you're done, let me know and I can continue to the next step of the guide",
+			"steps_v": ["","/","/areas","/products","/our_team", "/the_company", "/contact_us"],
+			"continue_v": ["continue","next", "go","yes"],
+			"end": "The process is complete",
+			"stay_message": "I don't understand. Do you want to continue? Enter either next or continue or yes or go"
+		},
+		"process": {
+			"activities": [
+				{
+					"my_id": "start",
+					"next_id": "first_xor",
+					"my_type": "START",
+					"callback": "start"
+				},
+				{
+					"my_id": "first_xor",
+					"next_id": "end",
+					"my_type": "XOR",
+					"callback": "generic_xor",
+					"choices": ["guide-choice","contact-choice"]
+				},
+				{
+					"my_id": "guide-choice",
+					"next_id": "home",
+					"my_type": "TASK",
+					"callback": "guide"
+				},
+				{
+					"my_id": "home",
+					"next_id": "areas",
+					"my_type": "TASK",
+					"callback": "guide"
+				},
+				{
+					"my_id": "areas",
+					"next_id": "products",
+					"my_type": "TASK",
+					"callback": "guide"
+				},
+				{
+					"my_id": "products",
+					"next_id": "teams",
+					"my_type": "TASK",
+					"callback": "guide"
+				},
+				{
+					"my_id": "teams",
+					"next_id": "about",
+					"my_type": "TASK",
+					"callback": "guide"
+				},
+				{
+					"my_id": "about",
+					"next_id": "contact",
+					"my_type": "TASK",
+					"callback": "guide"
+				},
+				{
+					"my_id": "contact-choice",
+					"next_id": "end",
+					"my_type": "XOR",
+					"callback": "generic_xor",
+					"choices": ["contact","chatbot"]
+				},
+				{
+					"my_id": "chatbot",
+					"next_id": "chatbot-page",
+					"my_type": "XOR",
+					"callback": "generic_xor",
+					"choices": ["chatbot-page","chatbot-close"]
+				},
+				{
+					"my_id": "chatbot-page",
+					"next_id": null,
+					"my_type": "TASK",
+					"callback": "guide"
+				},
+				{
+					"my_id": "chatbot-close",
+					"next_id": null,
+					"my_type": "TASK",
+					"callback": "guide"
+				},
+				{
+					"my_id": "contact",
+					"next_id": null,
+					"my_type": "TASK",
+					"callback": "guide"
+				},
+				{
+					"my_id": "end",
+					"next_id": "start",
+					"my_type": "END"
+				}
+			],
+			"first_activity_id": "start"
+		}
+	}
+}

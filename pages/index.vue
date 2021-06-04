@@ -4,7 +4,7 @@
             <div class="">
               <img class="home-image" src="home-carousel-1.jpg"/>
               <div v-for="(item,i) in items" :key="i">
-                <div class="display-details content w3-container w3-center w3-animate-left">
+                <div class="display-details content">
                 <div class="topic-image">
                   <img :src="item.src" :alt="item.name" :title="item.name" />
                 </div>
@@ -65,8 +65,9 @@
 
 
 <style scoped>
-.topic-content {
+.topic-data {
   padding: 2%;
+
 }
 
 .home-image {

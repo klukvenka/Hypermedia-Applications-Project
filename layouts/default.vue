@@ -132,4 +132,14 @@ button {
     box-shadow: 1px solid #333;
 }
 
+
+@media only screen and (max-width: 600px) {
+  .display-details {
+    display: block;
+  }
+  .display-details img {
+    width: 100%;
+  }
+}
+
 </style>

@@ -1,9 +1,11 @@
 <template>
     <div class="navbar">
-      <a href="/">Hypercompany</a>
-      <span class="dropdown" v-for="menu in menus" :key="menu">
-        <button class="dropbtn"><a :href="'/'+menu.replace(' ','_')">{{ menu }}</a></button>
-      </span>
+      <div class="logo">
+        <a href="/">Hypercompany</a>
+      </div>
+      <div class="menubar" v-for="menu in menus" :key="menu">
+        <button class="menu-item"><a :href="'/'+menu.replace(' ','_')">{{ menu }}</a></button>
+      </div>
     </div>
 
 </template>
@@ -30,10 +32,7 @@
   top:0vh;
   width: 100vw;
   display: flex;
-  flex-wrap: wrap;
-}
-.navbar span {
-  justify-content: center;
+  flex-wrap: wrap;;
 }
 .navbar a {
   float: left;
@@ -43,11 +42,7 @@
   padding: 14px 16px;
   text-decoration: none;
 }
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-.dropdown .dropbtn {
+.menubar {
   font-size: 16px;  
   border: none;
   outline: none;
@@ -56,24 +51,20 @@
   background-color: inherit;
   font-family: inherit;
   margin: 0;
+  justify-content: center;
+}
+
+.menubar button {
+  padding: 0px;
+  margin: 0px;
 }
 .navbar a:hover, .dropbtn {
   background-color: red;
 }
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+
+@media only screen and (max-width: 600px) {
+  .menubar {
+    display: flex;
+  }
 }
 </style>

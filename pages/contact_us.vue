@@ -3,68 +3,34 @@
         <Navbar />
         <Breadcrumbs />
 
-        <div class="container">
-            <div>
-            <div-title class="mt-4 h2">Contact us</div-title>
-            <div>
-                <div-text
-                class="pr-5 pl-5"
-                mr-4
-                ml-4
-                >Do you have any questions? Please do not hesitate to contact us directly. Our team will getback to you within a matter of hours to help you.</div-text>
+        <div class="card">
+            <h2>Contact us</h2>
+            <h4>Do you have any questions? Please do not hesitate to contact us directly. Our team will getback to you within a matter of hours to help you.</h4>
                 <form class="needs-validation" @submit.prevent="submitForm">
-                <div>
-                    <div md="8">
-                    <div>
-                        <div>
-                        <input type="textarea" label="Your name" v-model="fields.name" required />
-                        </div>
-                        <div>
-                        <input type="email" label="Your email" v-model="fields.email" required />
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                        <input type="textarea" label="Subject" v-model="fields.subject" required />
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                        <input
-                            type="textarea"
-                            label="Your message"
-                            v-model="fields.message"
-                            required
-                        />
-                        </div>
-                    </div>
-                    </div>
-                    <div md="4">
-                    <div>
-                        <div class="mt-4">
-                        <p>Milan, 20133, Italy</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="mt-4">
-                        <p>+ 39 234 567 8910</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="mt-4">
-                        <p>contact@hypercompany.com</p>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <button color="black" type="submit" class="float-center" @click="submitForm">Send</button>
+                  <div>
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" v-model="fields.name" required />
+                  </div>
+                  <div>
+                    <label for="email">Email: </label>
+                    <input type="email" id="email" v-model="fields.email" required />
+                  </div>
+                  <div>
+                    <label for="subject">Subject: </label>
+                    <input type="textarea" id="subject" v-model="fields.subject" required />
+                  </div>
+                  <div>
+                    <label for="message">Message: </label>
+                    <input type="textarea" id="message" v-model="fields.message" required />
+                  </div>
+                  <!--<div class="flex-list">
+                  <p>Milan, 20133, Italy</p>
+                  <p>+ 39 234 567 8910</p>
+                  <p>contact@hypercompany.com</p>
+                  </div>-->
+                <button type="submit" @click="submitForm">Send Message</button>
                 </form>
-            </div>
-            </div>
         </div>
-
-
-
         <Footer />
     </div>
 </template>

@@ -115,7 +115,7 @@ export default {
   color: white;
   border: 1px solid black;
 }
-input {
+.chat input {
   width: 100%;
   position: absolute;
   z-index: 20;

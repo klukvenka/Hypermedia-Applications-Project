@@ -22,8 +22,8 @@
             <button>
               Google
             </button>
-            <h6 class="my-5">Digital Evolution involves everything: this is why it requires relentless innovation, skills and ideas.
-          </h6>
+            <h5>Digital Evolution involves everything: this is why it requires relentless innovation, skills and ideas.
+          </h5>
           <p>At Hypergroup, we design and create a virtuous and proactive digital ecosystem, with the goal of continuous improvement of people and resources, technology and knowledge.
 Interpreting a constantly evolving world requires understanding, foreseeing and always being ready for change.
           </p>
@@ -33,26 +33,21 @@ Interpreting a constantly evolving world requires understanding, foreseeing and 
       </div>
     </div>
     </div>
-   <!-- Material form subscription -->
-   <div class = "my-5">
+   
+   <div class="card">
   <form class="needs-validation" @submit.prevent="submitForm">
-    <p class="h5 text-center mb-4">Subscribe to our newsletter</p>
+    <h4 class="text-center">Subscribe to our newsletter</h4>
+    <br>
     <div>
-      <div>
-        <input label="Your name" icon="user" type="textarea"/>
-      </div>
+      <label for="name">Name: </label>
+      <input type="text" id="name">
     </div>
+    <br>
     <div>
-      <div>
-        <input label="Your email" icon="envelope" type="email"/>
-      </div>
+      <label for="email">Email: </label>
+      <input type="email" id="email">
     </div>
-    <br><br><br>
-    <div>
-      <div>
-        <button type="submit" color="black" >Subscribe</button>
-      </div>
-    </div>
+    <button type="submit">Subscribe</button>
   </form>
   </div>
   <Footer />

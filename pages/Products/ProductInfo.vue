@@ -2,8 +2,8 @@
     <div class="root">
         <Navbar />
         <Breadcrumbs />
-        <div class="container">
-            <div reverse class="content">
+        <div class="content">
+            <div class="">
                 <Description :product="prod" prod />
             </div>
         </div>

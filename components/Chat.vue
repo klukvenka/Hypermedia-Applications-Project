@@ -72,6 +72,8 @@ export default {
 }
 .button img {
   width: 100%;
+  height: 100%
+  
 }
 .chat-container {
   border: 1px solid black;

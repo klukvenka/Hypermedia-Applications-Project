@@ -79,8 +79,8 @@ p {
 }
 
 img {
-  width:100%;
-  height: 100%
+  width:25vw;
+  height: 25vh;
 }
 
 .container {
@@ -106,7 +106,7 @@ button:hover {
   text-align: center;
 }
 
-.flex-list {
+.flex-list, .display-details {
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;      /* TWEENER - IE 10 */

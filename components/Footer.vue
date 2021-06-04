@@ -28,8 +28,6 @@
           </ul>
         </div>
       </div>
-    </div>
-    <div class="footer-copyright">
       <div class="copyright">
         &copy; 2020 Copyright: <a href="https://hypercompany.herokuapp.com"> Hypercompany </a>
       </div>
@@ -57,10 +55,9 @@ body {
   font-size: inherit;
 }
 
-.elements {
-  display: grid;
-  grid-template-columns: repeat(4,200px);
-  align-content: center;
+.elements, .copyright {
+  display: flex;
+  justify-content: center;
 }
 
 h5 {

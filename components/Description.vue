@@ -16,10 +16,10 @@
             <h2 class="h1-responsive font-weight-bold my-3">{{products.name}}</h2>
             <a class="red-text" :href="'/areas/AreaInfo?name='+products.area">
                 <h6 class="font-weight-bold mb-3">
-                    <img icon="book-open" class="pr-2" />{{products.area}}
+                    {{products.area}}
                 </h6>
             </a>
-            <div>
+            <div class="display-details">
                 <div md="5" class="mb-md-0 mb-5">
                     <img :src="products.image" class="rounded z-depth-1-half img-fluid" :alt="products.name" :title="products.name"/>
                 </div>
@@ -30,7 +30,7 @@
                             <h5>Manager:</h5>
                             <a class="red-text" :href="'/our_team/MemberInfo?name='+products.manager">
                                 <h6 class="font-weight-bold mb-3">
-                                    <img icon="users" class="pr-2" />{{products.manager}}
+                                    {{products.manager}}
                                 </h6>
                             </a>
                         </div>
@@ -38,7 +38,7 @@
                             <h5>Reference:</h5>
                             <a class="red-text" :href="'/our_team/MemberInfo?name='+products.reference">
                                 <h6 class="font-weight-bold mb-3">
-                                    <img icon="users" class="pr-2" />{{products.reference}}
+                                    {{products.reference}}
                                 </h6>
                             </a>
                         </div>
@@ -61,7 +61,7 @@
                         <div v-for="(area,j) in memberarea" :key="j" class="text-left">
                             <a class="red-text" :href="'/areas/AreaInfo?name='+area.replace(' ','_')">
                                 <h6 class="font-weight-bold mb-3">
-                                    <img icon="book-open" class="pr-2" />{{area}}
+                                    {{area}}
                                 </h6>
                             </a>
                         </div>
@@ -71,7 +71,7 @@
                         <div class="text-left" v-for="(manager,j) in isManagerReady" :key="j" >
                             <a class="red-text" :href="'/Products/ProductInfo?name='+manager.name.replace(' ','_')">
                                 <h6 class="font-weight-bold mb-3">
-                                    <img icon="lightbulb" class="pr-2" />{{manager.name}}
+                                    {{manager.name}}
                                 </h6>
                             </a>
                         </div>
@@ -81,7 +81,7 @@
                         <div class="text-left" v-for="(reference,j) in isReferenceReady" :key="j">
                             <a class="red-text" :href="'/Products/ProductInfo?name='+reference.name.replace(' ','_')">
                                 <h6 class="font-weight-bold mb-3">
-                                    <img icon="lightbulb" class="pr-2" />{{reference.name}}
+                                    {{reference.name}}
                                 </h6>
                             </a>
                         </div>

@@ -28,7 +28,7 @@
 
         <!--Display list of members-->
         <div v-if="isMemberReady && short" class="flex-list">
-            <div v-for="(member,j) in members" :key="j" class="member-list">
+            <div v-for="(member,j) in members" :key="j" class="member-list content">
                 <a class="red-text" v-if="member.area.includes(ar.name)" :href="'/Our_Team/MemberInfo?name='+member.name.replace(' ','_')">
                 <img class="rounded z-depth-1-half img-fluid my-2" :src="member.image" :alt="member.name" :title="member.name">
                 <h6 class="font-weight-bold mb-3 my-3">
@@ -40,7 +40,7 @@
         </div>
         <!--Display list of products-->
         <div v-if="isProductReady && short" class="flex-list">
-            <div v-for="(prod,j) in products" :key="j" class="product-list">
+            <div v-for="(prod,j) in products" :key="j" class="product-list content">
                 <a class="red-text" v-if="prod.area == (ar.name)" :href="'/Products/ProductInfo?name='+prod.name.replace(' ','_')">
                 <img class="rounded z-depth-1-half img-fluid my-2" :src="prod.image" :alt="prod.name" :title="prod.short_description">
                 <h6 class="font-weight-bold mb-3 my-3">

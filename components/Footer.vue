@@ -2,26 +2,26 @@
   <div class="footer">
     <div>
       <div class="elements">
-        <div sm="3">
+        <div>
           <h5 class="title">Areas</h5>
           <ul>
             <li class="list-unstyled"><a href="/Areas">All Areas</a></li>
           </ul>
         </div>
-        <div sm="3">
+        <div>
           <h5 class="title">Products</h5>
           <ul>
             <li class="list-unstyled"><a href="/Products">All Products</a></li>
           </ul>
         </div>
-        <div sm="3">
+        <div>
           <h5 class="title">Who We Are</h5>
           <ul>
             <li class="list-unstyled"><a href="/The_Company">About Us</a></li>
             <li class="list-unstyled"><a href="/Our_Team">Our Team</a></li>
           </ul>
         </div>
-        <div sm="3">
+        <div>
           <h5 class="title">Support</h5>
           <ul>
             <li class="list-unstyled"><a href="/Contact_Us">Contact Us</a></li>
@@ -54,6 +54,7 @@ body {
   background-color: black;
   color: white;
   text-decoration: none;
+  font-size: inherit;
 }
 
 .elements {

@@ -1,5 +1,5 @@
 <template>
-    <div class="text-center">
+    <div class="content">
         <!--Display list of areas-->
         <div v-if="area && short" class="mt-5 text-center">
             <div lg="5">
@@ -13,7 +13,7 @@
                     <img icon="book-open" class="pr-2" />{{ar.name}}</h6>
                 </a>
                 <p>{{ar.short_description}}</p>
-                <a :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')"><button color="black" size="md" class="waves-light ">View Products and Team</button></a>
+                <a :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')"><button>View Products and Team</button></a>
             </div>
         </div>
 
@@ -35,7 +35,7 @@
                 <h6 class="font-weight-bold mb-3 my-3">
                     <img icon="users" class="pr-2" />{{member.name}}, {{member.designation}}
                 </h6>
-                <button color="black" size="md" class="waves-light ">View Member Info</button>
+                <button>View Member Info</button>
                 </a>
             </div>
         </div>
@@ -47,7 +47,7 @@
                 <h6 class="font-weight-bold mb-3 my-3">
                     <img icon="lightbulb" class="pr-2" />{{prod.name}}
                 </h6>
-                <button color="black" size="md" class="waves-light ">View Product Info</button>
+                <button>View Product Info</button>
                 </a>
             </div>
         </div>
@@ -63,7 +63,7 @@
                     <img icon="lightbulb" class="pr-2" />{{product.name}}</h6>
                 </a>
                 <p>{{product.short_description}}</p>
-                <a :href="'/Products/ProductInfo?name='+product.name"><button color="black" size="md" class="waves-light float-center">View More</button></a>
+                <a :href="'/Products/ProductInfo?name='+product.name"><button>View More</button></a>
                 </div>
             </div>
         </div>
@@ -148,6 +148,15 @@ export default {
 .product-list img, .member-list img {
     height: 200px;
     width: 200px;
+}
+
+button {
+    border: none;
+    background-color: black;
+    color: white;
+    outline: none;
+    padding: 1%;
+    box-shadow: 1px solid #333;
 }
 </style>
 

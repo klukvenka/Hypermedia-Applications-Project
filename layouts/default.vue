@@ -82,4 +82,15 @@ img {
   width:100%;
   height: 100%
 }
+
+.container {
+    margin: 2% 5%;
+    border: 1px solid #333;
+    box-shadow: #333;
+}
+
+.content {
+  margin: 2% 5%;
+  text-align: center;
+}
 </style>

@@ -2,8 +2,8 @@
     <div class="root">
         <Navbar />
         <Breadcrumbs />
-        <div v-for="(area,i) in areas" :key="i" class="my-5" >
-            <div>
+        <div class="container" >
+            <div v-for="(area,i) in areas" :key="i" class="content">
                 <List :ar="area" area short/>
             </div>
         </div>
@@ -61,4 +61,5 @@ a {
     color: white;
     background-color: red;
 }
+
 </style>

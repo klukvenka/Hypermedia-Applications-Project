@@ -1,85 +1,82 @@
 <template>
-    <mdb-card-body class="text-center">
+    <div class="text-center">
         <!--Display list of areas-->
-        <mdb-row v-if="area && short" class="mt-5 text-center">
-            <mdb-col lg="5">
+        <div v-if="area && short" class="mt-5 text-center">
+            <div lg="5">
             <a :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')">
                 <img class="img-fluid" :src="ar.image" :alt="ar.name" :title="ar.name" />
             </a>
-            </mdb-col>
-            <mdb-col lg="7">
+            </div>
+            <div lg="7">
                 <a class="red-text" :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')">
                     <h6 class="font-weight-bold mb-3">
-                    <mdb-icon icon="book-open" class="pr-2" />{{ar.name}}</h6>
+                    <img icon="book-open" class="pr-2" />{{ar.name}}</h6>
                 </a>
                 <p>{{ar.short_description}}</p>
-                <a :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')"><mdb-btn color="black" size="md" class="waves-light ">View Products and Team</mdb-btn></a>
-            </mdb-col>
-        </mdb-row>
+                <a :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')"><button color="black" size="md" class="waves-light ">View Products and Team</button></a>
+            </div>
+        </div>
 
-        <mdb-row v-if="needarea">
-            <mdb-col>
+        <div v-if="needarea">
+            <div>
                 <a class="red-text" :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')">
                     <h6 class="font-weight-bold mb-3 my-3">
-                        <mdb-icon icon="book-open" class="pr-2" />{{ar.name}}
+                        <img icon="book-open" class="pr-2" />{{ar.name}}
                     </h6>
                 </a>
-            </mdb-col>
-        </mdb-row>
+            </div>
+        </div>
 
         <!--Display list of members-->
-        <mdb-row v-if="isMemberReady && short">
-            <mdb-col v-for="(member,j) in members" :key="j" class="member-list">
+        <div v-if="isMemberReady && short">
+            <div v-for="(member,j) in members" :key="j" class="member-list">
                 <a class="red-text" v-if="member.area.includes(ar.name)" :href="'/Our_Team/MemberInfo?name='+member.name.replace(' ','_')">
                 <img class="rounded z-depth-1-half img-fluid my-2" :src="member.image" :alt="member.name" :title="member.name">
                 <h6 class="font-weight-bold mb-3 my-3">
-                    <mdb-icon icon="users" class="pr-2" />{{member.name}}, {{member.designation}}
+                    <img icon="users" class="pr-2" />{{member.name}}, {{member.designation}}
                 </h6>
-                <mdb-btn color="black" size="md" class="waves-light ">View Member Info</mdb-btn>
+                <button color="black" size="md" class="waves-light ">View Member Info</button>
                 </a>
-            </mdb-col>
-        </mdb-row>
+            </div>
+        </div>
         <!--Display list of products-->
-        <mdb-row v-if="isProductReady && short">
-            <mdb-col v-for="(prod,j) in products" :key="j" class="product-list">
+        <div v-if="isProductReady && short">
+            <div v-for="(prod,j) in products" :key="j" class="product-list">
                 <a class="red-text" v-if="prod.area == (ar.name)" :href="'/Products/ProductInfo?name='+prod.name.replace(' ','_')">
                 <img class="rounded z-depth-1-half img-fluid my-2" :src="prod.image" :alt="prod.name" :title="prod.short_description">
                 <h6 class="font-weight-bold mb-3 my-3">
-                    <mdb-icon icon="lightbulb" class="pr-2" />{{prod.name}}
+                    <img icon="lightbulb" class="pr-2" />{{prod.name}}
                 </h6>
-                <mdb-btn color="black" size="md" class="waves-light ">View Product Info</mdb-btn>
+                <button color="black" size="md" class="waves-light ">View Product Info</button>
                 </a>
-            </mdb-col>
-        </mdb-row>
+            </div>
+        </div>
         <!--Display list with description of products-->
-        <mdb-card-body v-if="isProductReady && long" class="text-center cascade">
-            <mdb-row v-for="(product,i) in products" :key="i" class="mt-5 text-center">
-                <mdb-col lg="4">
+        <div v-if="isProductReady && long" class="text-center cascade">
+            <div v-for="(product,i) in products" :key="i" class="mt-5 text-center">
+                <div lg="4">
                     <img class="img-fluid" :src="product.image" :alt="product.name" :title="product.name" />
-                </mdb-col>
-                <mdb-col lg="7">
+                </div>
+                <div lg="7">
                     <a class="red-text" :href="'/Products/ProductInfo?name='+product.name">
                     <h6 class="font-weight-bold mb-3">
-                    <mdb-icon icon="lightbulb" class="pr-2" />{{product.name}}</h6>
+                    <img icon="lightbulb" class="pr-2" />{{product.name}}</h6>
                 </a>
                 <p>{{product.short_description}}</p>
-                <a :href="'/Products/ProductInfo?name='+product.name"><mdb-btn color="black" size="md" class="waves-light float-center">View More</mdb-btn></a>
-                </mdb-col>
-            </mdb-row>
-        </mdb-card-body>
+                <a :href="'/Products/ProductInfo?name='+product.name"><button color="black" size="md" class="waves-light float-center">View More</button></a>
+                </div>
+            </div>
+        </div>
         
-    </mdb-card-body>
+    </div>
 </template>
 
 <script>
-
-import { mdbRow, mdbCol, mdbIcon, mdbBtn, mdbCardBody} from 'mdbvue';
 import MemberDataService from '../services/MemberDataService'
 import ProductDataService from '../services/ProductDataService'
 
 export default {
     components: {
-        mdbRow, mdbCol, mdbIcon, mdbBtn, mdbCardBody
     },
     props: {
         product: {

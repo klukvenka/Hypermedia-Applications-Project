@@ -1,108 +1,104 @@
 <template>
-    <mdb-card-body>
+    <div>
         <!--Display description of areas-->
-        <mdb-row v-if="isAreaReady && ar">
-            <mdb-col md="12">
-                <mdb-card-body class="text-center cascade">
+        <div v-if="isAreaReady && ar">
+            <div md="12">
+                <div class="text-center cascade">
                     <h2 class="font-weight-bold">
                     {{areas.name}}
                     </h2>
                     <p>{{areas.description}}</p>
-                </mdb-card-body>
-            </mdb-col>
-        </mdb-row>
+                </div>
+            </div>
+        </div>
         <!--Display description of products-->
         <section  v-if="isProductReady &&  prod" class="text-center">
             <h2 class="h1-responsive font-weight-bold my-3">{{products.name}}</h2>
             <a class="red-text" :href="'/areas/AreaInfo?name='+products.area">
                 <h6 class="font-weight-bold mb-3">
-                    <mdb-icon icon="book-open" class="pr-2" />{{products.area}}
+                    <img icon="book-open" class="pr-2" />{{products.area}}
                 </h6>
             </a>
-            <mdb-row>
-                <mdb-col md="5" class="mb-md-0 mb-5">
+            <div>
+                <div md="5" class="mb-md-0 mb-5">
                     <img :src="products.image" class="rounded z-depth-1-half img-fluid" :alt="products.name" :title="products.name"/>
-                </mdb-col>
-                <mdb-col>
+                </div>
+                <div>
                     <p class="grey-text w-responsive mb-5 mx-auto">{{products.description}}</p>
-                    <mdb-row>
-                        <mdb-col>
+                    <div>
+                        <div>
                             <h5>Manager:</h5>
                             <a class="red-text" :href="'/our_team/MemberInfo?name='+products.manager">
                                 <h6 class="font-weight-bold mb-3">
-                                    <mdb-icon icon="users" class="pr-2" />{{products.manager}}
+                                    <img icon="users" class="pr-2" />{{products.manager}}
                                 </h6>
                             </a>
-                        </mdb-col>
-                        <mdb-col class="text-center">
+                        </div>
+                        <div class="text-center">
                             <h5>Reference:</h5>
                             <a class="red-text" :href="'/our_team/MemberInfo?name='+products.reference">
                                 <h6 class="font-weight-bold mb-3">
-                                    <mdb-icon icon="users" class="pr-2" />{{products.reference}}
+                                    <img icon="users" class="pr-2" />{{products.reference}}
                                 </h6>
                             </a>
-                        </mdb-col>
-                    </mdb-row>
-                </mdb-col>
-            </mdb-row>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <!--Display description of members-->
         <section v-if="isMemberReady && mem" class="text-center member">
             <h2 class="h1-responsive font-weight-bold my-3">{{members.name}}</h2>
             <h5 class="h5-responsive font-weight-bold my-3">{{members.designation}}</h5>
-            <mdb-row>
-                <mdb-col >
+            <div>
+                <div >
                     <img :src="members.image" class="rounded-circle z-depth-1-half img-fluid" :alt="members.name" :title="members.name"/>
-                </mdb-col>
-                <mdb-col>
+                </div>
+                <div>
                     <p class="grey-text w-responsive">{{members.description}}</p>
-                    <mdb-row class="my-5">
+                    <div class="my-5">
                         <h6>Related Areas: </h6>
-                        <mdb-col v-for="(area,j) in memberarea" :key="j" class="text-left">
+                        <div v-for="(area,j) in memberarea" :key="j" class="text-left">
                             <a class="red-text" :href="'/areas/AreaInfo?name='+area.replace(' ','_')">
                                 <h6 class="font-weight-bold mb-3">
-                                    <mdb-icon icon="book-open" class="pr-2" />{{area}}
+                                    <img icon="book-open" class="pr-2" />{{area}}
                                 </h6>
                             </a>
-                        </mdb-col>
-                    </mdb-row>
-                    <mdb-row class="my-5">
+                        </div>
+                    </div>
+                    <div class="my-5">
                         <h6>Manager for:</h6>
-                        <mdb-col class="text-left" v-for="(manager,j) in isManagerReady" :key="j" >
+                        <div class="text-left" v-for="(manager,j) in isManagerReady" :key="j" >
                             <a class="red-text" :href="'/Products/ProductInfo?name='+manager.name.replace(' ','_')">
                                 <h6 class="font-weight-bold mb-3">
-                                    <mdb-icon icon="lightbulb" class="pr-2" />{{manager.name}}
+                                    <img icon="lightbulb" class="pr-2" />{{manager.name}}
                                 </h6>
                             </a>
-                        </mdb-col>
-                    </mdb-row>
-                    <mdb-row class="my-5">
+                        </div>
+                    </div>
+                    <div class="my-5">
                         <h6>Reference for:</h6>
-                        <mdb-col class="text-left" v-for="(reference,j) in isReferenceReady" :key="j">
+                        <div class="text-left" v-for="(reference,j) in isReferenceReady" :key="j">
                             <a class="red-text" :href="'/Products/ProductInfo?name='+reference.name.replace(' ','_')">
                                 <h6 class="font-weight-bold mb-3">
-                                    <mdb-icon icon="lightbulb" class="pr-2" />{{reference.name}}
+                                    <img icon="lightbulb" class="pr-2" />{{reference.name}}
                                 </h6>
                             </a>
-                        </mdb-col>
-                    </mdb-row>
-                </mdb-col>
-            </mdb-row>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-    </mdb-card-body>
+    </div>
 </template>
 
 <script>
-
-import { mdbRow, mdbCol, mdbIcon, mdbBtn, mdbCardBody} from 'mdbvue';
 import AreaDataService from '../services/AreaDataService'
 import MemberDataService from '../services/MemberDataService'
 import ProductDataService from '../services/ProductDataService'
 
 export default {
-    components: {
-        mdbRow, mdbCol, mdbIcon, mdbBtn, mdbCardBody
-    },
+    components: {},
     props: {
         prod: {
             type: Boolean,

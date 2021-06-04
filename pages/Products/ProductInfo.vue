@@ -2,24 +2,20 @@
     <div class="root">
         <Navbar />
         <Breadcrumbs />
-        <mdb-container>
-            <mdb-card reverse class="my-5">
+        <div>
+            <div reverse class="my-5">
                 <Description :product="prod" prod />
-            </mdb-card>
-        </mdb-container>
+            </div>
+        </div>
         <Footer />
     </div>
 </template>
 
 <script>
-
-    import { mdbContainer, mdbCard } from 'mdbvue';
     import Description from '../../components/Description.vue';
 
     export default {
         components: {
-            mdbContainer,
-            mdbCard,
             Description
         },
         data () {

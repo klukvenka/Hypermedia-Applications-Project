@@ -2,23 +2,18 @@
     <div class="root">
         <Navbar />
         <Breadcrumbs />
-        <mdb-container>
-            <mdb-card reverse class="my-5">
+        <div>
+            <div reverse class="my-5">
                 <Description :member="mem" mem />
-            </mdb-card>
-        </mdb-container>
+            </div>
+        </div>
         <Footer />
     </div>
 </template>
 
 <script>
-    import { mdbContainer, mdbCard } from 'mdbvue';
 
     export default {
-        components: {
-            mdbContainer,
-            mdbCard
-        },
         data () {
             return {
                 mem: this.$route.query.name.replace('_',' '),

@@ -2,24 +2,19 @@
     <div class="root">
         <Navbar />
         <Breadcrumbs />
-        <mdb-container v-for="(area,i) in areas" :key="i" class="my-5" >
-            <mdb-card reverse>
+        <div v-for="(area,i) in areas" :key="i" class="my-5" >
+            <div>
                 <List :ar="area" area short/>
-            </mdb-card>
-        </mdb-container>
+            </div>
+        </div>
         <Footer />
     </div>
 </template>
 
 <script>
-    import { mdbContainer, mdbCard } from 'mdbvue';
     import AreaDataService from '../services/AreaDataService'
 
     export default {
-        components: { 
-            mdbCard,
-            mdbContainer,
-         },
          data() {
              return  {
                 areas: []

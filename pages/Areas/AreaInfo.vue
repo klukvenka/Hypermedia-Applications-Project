@@ -2,37 +2,32 @@
     <div class="root">
         <Navbar />
         <Breadcrumbs />
-        <mdb-container class="my-5">
-            <mdb-card>
+        <div class="my-5">
+            <div>
                 <Description :area="ar" ar />
-            </mdb-card>
-        </mdb-container>
-        <mdb-container class="my-5">
-            <mdb-card>
+            </div>
+        </div>
+        <div class="my-5">
+            <div>
                 <h3 class="font-weight-bold mb-3 my-3 text-center">Products</h3>
                 <List :ar="areas" product long />
-            </mdb-card>
-        </mdb-container>
-        <mdb-container class="my-5">
-            <mdb-card>
+            </div>
+        </div>
+        <div class="my-5">
+            <div>
                 <h3 class="font-weight-bold mb-3 my-3 text-center">Team Members</h3>
                 <List :ar="areas" member short />
-            </mdb-card>
-        </mdb-container>
+            </div>
+        </div>
         <Footer />
     </div>
 </template>
 
 <script>
 
-    import { mdbContainer, mdbCard } from 'mdbvue';
     import AreaDataService from '../../services/AreaDataService'
 
     export default {
-        components: {
-            mdbCard,
-            mdbContainer
-        },
         data () {
             return {
                 ar: this.$route.query.name.replace('_',' ').split('#')[0],

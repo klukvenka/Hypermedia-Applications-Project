@@ -13,33 +13,31 @@
         </div>
         <!--Display description of products-->
         <section  v-if="isProductReady &&  prod" class="text-center">
-            <h2 class="h1-responsive font-weight-bold my-3">{{products.name}}</h2>
+            <h2>{{products.name}}</h2>
             <a class="red-text" :href="'/areas/AreaInfo?name='+products.area">
-                <h6 class="font-weight-bold mb-3">
-                    {{products.area}}
-                </h6>
+                <h5>{{products.area}}</h5>
             </a>
             <div class="display-details">
-                <div md="5" class="mb-md-0 mb-5">
-                    <img :src="products.image" class="rounded z-depth-1-half img-fluid" :alt="products.name" :title="products.name"/>
-                </div>
                 <div>
-                    <p class="grey-text w-responsive mb-5 mx-auto">{{products.description}}</p>
+                    <img :src="products.image" :alt="products.name" :title="products.name"/>
+                </div>
+                <div class="card">
+                    <p>{{products.description}}</p>
                     <div>
-                        <div>
+                        <div class="text-center">
                             <h5>Manager:</h5>
                             <a class="red-text" :href="'/our_team/MemberInfo?name='+products.manager">
-                                <h6 class="font-weight-bold mb-3">
+                                <h5 class="font-weight-bold mb-3">
                                     {{products.manager}}
-                                </h6>
+                                </h5>
                             </a>
                         </div>
                         <div class="text-center">
                             <h5>Reference:</h5>
                             <a class="red-text" :href="'/our_team/MemberInfo?name='+products.reference">
-                                <h6 class="font-weight-bold mb-3">
+                                <h5 class="font-weight-bold mb-3">
                                     {{products.reference}}
-                                </h6>
+                                </h5>
                             </a>
                         </div>
                     </div>
@@ -47,42 +45,36 @@
             </div>
         </section>
         <!--Display description of members-->
-        <section v-if="isMemberReady && mem" class="text-center member">
-            <h2 class="h1-responsive font-weight-bold my-3">{{members.name}}</h2>
-            <h5 class="h5-responsive font-weight-bold my-3">{{members.designation}}</h5>
-            <div>
-                <div >
-                    <img :src="members.image" class="rounded-circle z-depth-1-half img-fluid" :alt="members.name" :title="members.name"/>
+        <section v-if="isMemberReady && mem" class="text-center">
+            <h2>{{members.name}}</h2>
+            <h5>{{members.designation}}</h5>
+            <div class="display-details text-center">
+                <div class="card">
+                    <img :src="members.image" :alt="members.name" :title="members.name"/>
                 </div>
-                <div>
-                    <p class="grey-text w-responsive">{{members.description}}</p>
-                    <div class="my-5">
-                        <h6>Related Areas: </h6>
+                <div class="text-center">
+                    <p>{{members.description}}</p>
+                    <div>
+                        <h5>Related Areas: </h5>
                         <div v-for="(area,j) in memberarea" :key="j" class="text-left">
                             <a class="red-text" :href="'/areas/AreaInfo?name='+area.replace(' ','_')">
-                                <h6 class="font-weight-bold mb-3">
-                                    {{area}}
-                                </h6>
+                                <h5>{{area}}</h5>
                             </a>
                         </div>
                     </div>
-                    <div class="my-5">
-                        <h6>Manager for:</h6>
-                        <div class="text-left" v-for="(manager,j) in isManagerReady" :key="j" >
+                    <div>
+                        <h5>Manager for:</h5>
+                        <div v-for="(manager,j) in isManagerReady" :key="j" >
                             <a class="red-text" :href="'/Products/ProductInfo?name='+manager.name.replace(' ','_')">
-                                <h6 class="font-weight-bold mb-3">
-                                    {{manager.name}}
-                                </h6>
+                                <h5>{{manager.name}}</h5>
                             </a>
                         </div>
                     </div>
-                    <div class="my-5">
+                    <div>
                         <h6>Reference for:</h6>
-                        <div class="text-left" v-for="(reference,j) in isReferenceReady" :key="j">
+                        <div v-for="(reference,j) in isReferenceReady" :key="j">
                             <a class="red-text" :href="'/Products/ProductInfo?name='+reference.name.replace(' ','_')">
-                                <h6 class="font-weight-bold mb-3">
-                                    {{reference.name}}
-                                </h6>
+                                <h5>{{reference.name}}</h5>
                             </a>
                         </div>
                     </div>

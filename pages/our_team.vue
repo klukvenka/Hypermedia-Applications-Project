@@ -2,7 +2,7 @@
     <div class="root">
         <Navbar />
         <Breadcrumbs />
-        <div class="">
+        <div>
             <div v-for="(area,i) in areas" :key="i" class="content">
                 <List :ar="area" member short needarea/>   
             </div>

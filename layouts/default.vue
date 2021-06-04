@@ -79,8 +79,8 @@ p {
 }
 
 img {
-  width:25vw;
-  height: 25vh;
+  width: 300px;
+  height: 300px;
 }
 
 .content {
@@ -97,6 +97,10 @@ img {
   box-shadow: 1px 1px 1px 1px #ccc;
   padding: 1%;
   margin: 2vh 5vw;
+}
+
+.card img {
+  padding: 1%;
 }
 
 button:hover {
@@ -120,6 +124,7 @@ button:hover {
 .red-text {
   color: red;
   text-decoration-line: none;
+  
 }
 
 button {
@@ -129,7 +134,7 @@ button {
     outline: none;
     padding: 2%;
     margin: 2%;
-    box-shadow: 1px solid #333;
+    box-shadow: 2px solid #333;
 }
 
 

@@ -2,10 +2,8 @@
     <div class="root">
         <Navbar />
         <Breadcrumbs />
-        <div class="container">
-            <div class="flex-list">
-                <Description :member="mem" mem />
-            </div>
+        <div class="content">
+            <Description :member="mem" mem />
         </div>
         <Footer />
     </div>

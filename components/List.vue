@@ -1,7 +1,7 @@
 <template>
     <div>
         <!--Display list of areas-->
-        <div v-if="area && short" class="area-content">
+        <div v-if="area && short" class="area-content display-details">
             <div class="area-image">
             <a :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')">
                 <img class="img-fluid" :src="ar.image" :alt="ar.name" :title="ar.name" />
@@ -31,9 +31,7 @@
             <div v-for="(member,j) in members" :key="j" class="member-list card">
                 <a class="red-text" v-if="member.area.includes(ar.name)" :href="'/Our_Team/MemberInfo?name='+member.name.replace(' ','_')">
                 <img :src="member.image" :alt="member.name" :title="member.name">
-                <h5>
-                    {{member.name}}, {{member.designation}}
-                </h5>
+                <h5>{{member.name}}, {{member.designation}}</h5>
                 <button>View Member Info</button>
                 </a>
             </div>
@@ -43,26 +41,23 @@
             <div v-for="(prod,j) in products" :key="j" class="product-list card">
                 <a v-if="prod.area == (ar.name)" :href="'/Products/ProductInfo?name='+prod.name.replace(' ','_')">
                 <img class="rounded z-depth-1-half img-fluid my-2" :src="prod.image" :alt="prod.name" :title="prod.short_description">
-                <h5 class="red-text">
-                    {{prod.name}}
-                </h5>
+                <h5 class="red-text">{{prod.name}}</h5>
                 <button>View Product Info</button>
                 </a>
             </div>
         </div>
         <!--Display list with description of products-->
-        <div v-if="isProductReady && long" class="text-center cascade">
-            <div v-for="(product,i) in products" :key="i" class="mt-5 text-center">
-                <div lg="4">
+        <div v-if="isProductReady && long" class="text-center display-details">
+            <div v-for="(product,i) in products" :key="i" class="text-center card">
+                <div>
                     <img class="img-fluid" :src="product.image" :alt="product.name" :title="product.name" />
                 </div>
-                <div lg="7">
+                <div>
                     <a class="red-text" :href="'/Products/ProductInfo?name='+product.name">
-                    <h6 class="font-weight-bold mb-3">
-                    {{product.name}}</h6>
-                </a>
-                <p>{{product.short_description}}</p>
-                <a :href="'/Products/ProductInfo?name='+product.name"><button>View More</button></a>
+                        <h5>{{product.name}}</h5>
+                    </a>
+                    <p>{{product.short_description}}</p>
+                    <a :href="'/Products/ProductInfo?name='+product.name"><button>View More</button></a>
                 </div>
             </div>
         </div>
@@ -152,10 +147,6 @@ export default {
 .product-list, .member-list {
     padding: 0% 1%;
     justify-items: center;
-}
-
-.area-content {
-    display: flex;
 }
 
 .area-data {

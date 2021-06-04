@@ -4,7 +4,7 @@
         <Breadcrumbs />
         <div class="">
             <div v-for="(area,i) in areas" :key="i" class="content">
-                <List :ar="area" product short needarea/>
+                <List :ar="area" product long needarea/>
             </div>
         </div>
         <Footer />

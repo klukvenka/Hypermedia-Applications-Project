@@ -65,7 +65,7 @@
 
 
 <style scoped>
-.topic-data {
+.topic-content {
   padding: 2%;
 
 }

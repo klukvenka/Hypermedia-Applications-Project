@@ -71,7 +71,7 @@
                         </div>
                     </div>
                     <div>
-                        <h6>Reference for:</h6>
+                        <h5>Reference for:</h5>
                         <div v-for="(reference,j) in isReferenceReady" :key="j">
                             <a class="red-text" :href="'/Products/ProductInfo?name='+reference.name.replace(' ','_')">
                                 <h5>{{reference.name}}</h5>

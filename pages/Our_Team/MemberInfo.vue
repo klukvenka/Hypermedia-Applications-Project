@@ -2,8 +2,8 @@
     <div class="root">
         <Navbar />
         <Breadcrumbs />
-        <div>
-            <div reverse class="my-5">
+        <div class="container">
+            <div class="flex-list">
                 <Description :member="mem" mem />
             </div>
         </div>

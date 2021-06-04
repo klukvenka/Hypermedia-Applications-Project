@@ -91,7 +91,7 @@ img {
 }
 
 .content {
-  margin: 2% 5%;
+  margin: 2vh 5vw;
   text-align: center;
   border: 1px solid #ccc;
   box-shadow: 3px 3px 5px 6px #ccc;
@@ -107,8 +107,11 @@ button:hover {
 }
 
 .flex-list {
-    display: flex;
-    align-content: center;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 }
 
 button {

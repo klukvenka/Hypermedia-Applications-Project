@@ -7,9 +7,9 @@
     <div>
       <div>
         <div class="content">
-            <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(142).jpg" class="img-fluid" />
+            <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(142).jpg" />
           <div>
-            <h2 class="font-weight-bold">
+            <h2>
               <a>HYPERCOMPANY</a>
             </h2>
             <h5>End-to-end solutions for Digital Evolution</h5>
@@ -20,7 +20,7 @@
               Twitter
             </button>
             <button>
-              Google
+              LinkedIn
             </button>
             <h5>Digital Evolution involves everything: this is why it requires relentless innovation, skills and ideas.
           </h5>
@@ -34,7 +34,7 @@ Interpreting a constantly evolving world requires understanding, foreseeing and 
     </div>
     </div>
    
-   <div class="card">
+   <div class="content">
   <form class="needs-validation" @submit.prevent="submitForm">
     <h4 class="text-center">Subscribe to our newsletter</h4>
     <br>

@@ -3,9 +3,10 @@
         <Navbar />
         <Breadcrumbs />
         <img class="top-image" src="home-carousel-2.jpg"/>
-        <div class="card">
+        <div class="content">
             <h2>Contact us</h2>
             <p class="text-center">Do you have any questions? Please do not hesitate to contact us directly. Our team will getback to you within a matter of hours to help you.</p>
+                <br>
                 <form class="needs-validation" @submit.prevent="submitForm">
                   <table class="form-elements">
                     <tr>

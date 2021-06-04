@@ -50,7 +50,7 @@
         <div v-if="isProductReady && long" class="text-center display-details">
             <div v-for="(product,i) in products" :key="i" class="text-center card">
                 <div>
-                    <img class="img-fluid" :src="product.image" :alt="product.name" :title="product.name" />
+                    <img :src="product.image" :alt="product.name" :title="product.name" />
                 </div>
                 <div>
                     <a class="red-text" :href="'/Products/ProductInfo?name='+product.name">

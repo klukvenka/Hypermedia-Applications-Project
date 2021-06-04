@@ -96,7 +96,7 @@ img {
   border: 1px solid #ccc;
   box-shadow: 1px 1px 1px 1px #ccc;
   padding: 1%;
-  margin: 2vh 5vw;
+  margin: 2vh 2vw;
 }
 
 .card img {

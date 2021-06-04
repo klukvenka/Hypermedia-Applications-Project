@@ -1,12 +1,12 @@
 <template>
-    <div class="navbar">
+    <nav class="navbar">
       <div class="logo">
         <a href="/">Hypercompany</a>
       </div>
       <div class="menubar" v-for="menu in menus" :key="menu">
         <button class="menu-item"><a :href="'/'+menu.replace(' ','_')">{{ menu }}</a></button>
       </div>
-    </div>
+    </nav>
 
 </template>
 
@@ -58,7 +58,7 @@
   padding: 0px;
   margin: 0px;
 }
-.navbar a:hover, .dropbtn {
+.navbar a:hover {
   background-color: red;
 }
 

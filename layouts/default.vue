@@ -137,8 +137,13 @@ button {
     box-shadow: 2px solid #333;
 }
 
+.top-image {
+  margin-top: 2%;
+  width: 100vw;
+  height: 60vh;
+}
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .display-details {
     display: block;
   }

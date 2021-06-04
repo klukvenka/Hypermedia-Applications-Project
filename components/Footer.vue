@@ -46,19 +46,14 @@ body {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
-.elements {
-  padding: 100px;
-}
-.footer, .list-unstyled a{
+.footer{
   background-color: black;
   color: white;
   text-decoration: none;
-  bottom: 0;
 }
 
 .elements, .copyright {
   display: flex;
-  padding: 10px;
   justify-content: center;
 }
 
@@ -68,6 +63,10 @@ body {
 
 .list-unstyled {
   list-style-type: none;
+}
+
+.list-unstyled a {
+  color: white;
 }
 
 </style>

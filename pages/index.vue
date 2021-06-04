@@ -2,7 +2,7 @@
     <div class="root">
         <Navbar />
             <div class="">
-              <img class="home-image" src="home-carousel-1.jpg"/>
+              <img class="top-image" src="home-carousel-1.jpg"/>
               <div v-for="(item,i) in items" :key="i">
                 <div class="display-details content">
                 <div class="topic-image">
@@ -68,11 +68,5 @@
 .topic-content {
   padding: 2%;
 
-}
-
-.home-image {
-  margin-top: 2%;
-  width: 100vw;
-  height: 60vh;
 }
 </style>

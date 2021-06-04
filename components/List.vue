@@ -1,16 +1,15 @@
 <template>
-    <div class="content">
+    <div>
         <!--Display list of areas-->
-        <div v-if="area && short" class="mt-5 text-center">
-            <div lg="5">
+        <div v-if="area && short" class="area-content">
+            <div class="area-image">
             <a :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')">
                 <img class="img-fluid" :src="ar.image" :alt="ar.name" :title="ar.name" />
             </a>
             </div>
-            <div lg="7">
-                <a class="red-text" :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')">
-                    <h6 class="font-weight-bold mb-3">
-                    <img icon="book-open" class="pr-2" />{{ar.name}}</h6>
+            <div class="area-data">
+                <a :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')">
+                    {{ar.name}}
                 </a>
                 <p>{{ar.short_description}}</p>
                 <a :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')"><button>View Products and Team</button></a>
@@ -20,32 +19,32 @@
         <div v-if="needarea">
             <div>
                 <a class="red-text" :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')">
-                    <h6 class="font-weight-bold mb-3 my-3">
-                        <img icon="book-open" class="pr-2" />{{ar.name}}
-                    </h6>
+                    <h4 class="font-weight-bold mb-3 my-3">
+                        {{ar.name}}
+                    </h4>
                 </a>
             </div>
         </div>
 
         <!--Display list of members-->
-        <div v-if="isMemberReady && short">
+        <div v-if="isMemberReady && short" class="main-list">
             <div v-for="(member,j) in members" :key="j" class="member-list">
                 <a class="red-text" v-if="member.area.includes(ar.name)" :href="'/Our_Team/MemberInfo?name='+member.name.replace(' ','_')">
                 <img class="rounded z-depth-1-half img-fluid my-2" :src="member.image" :alt="member.name" :title="member.name">
                 <h6 class="font-weight-bold mb-3 my-3">
-                    <img icon="users" class="pr-2" />{{member.name}}, {{member.designation}}
+                    {{member.name}}, {{member.designation}}
                 </h6>
                 <button>View Member Info</button>
                 </a>
             </div>
         </div>
         <!--Display list of products-->
-        <div v-if="isProductReady && short">
+        <div v-if="isProductReady && short" class="main-list">
             <div v-for="(prod,j) in products" :key="j" class="product-list">
                 <a class="red-text" v-if="prod.area == (ar.name)" :href="'/Products/ProductInfo?name='+prod.name.replace(' ','_')">
                 <img class="rounded z-depth-1-half img-fluid my-2" :src="prod.image" :alt="prod.name" :title="prod.short_description">
                 <h6 class="font-weight-bold mb-3 my-3">
-                    <img icon="lightbulb" class="pr-2" />{{prod.name}}
+                    {{prod.name}}
                 </h6>
                 <button>View Product Info</button>
                 </a>
@@ -60,7 +59,7 @@
                 <div lg="7">
                     <a class="red-text" :href="'/Products/ProductInfo?name='+product.name">
                     <h6 class="font-weight-bold mb-3">
-                    <img icon="lightbulb" class="pr-2" />{{product.name}}</h6>
+                    {{product.name}}</h6>
                 </a>
                 <p>{{product.short_description}}</p>
                 <a :href="'/Products/ProductInfo?name='+product.name"><button>View More</button></a>
@@ -150,6 +149,16 @@ export default {
     width: 200px;
 }
 
+.product-list, .member-list {
+    padding: 0% 1%;
+    justify-items: center;
+}
+
+.main-list {
+    display: flex;
+    align-content: center;
+}
+
 button {
     border: none;
     background-color: black;
@@ -157,6 +166,14 @@ button {
     outline: none;
     padding: 1%;
     box-shadow: 1px solid #333;
+}
+
+.area-content {
+    display: flex;
+}
+
+button:hover {
+    background-color: red;
 }
 </style>
 

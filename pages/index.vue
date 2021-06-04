@@ -1,8 +1,8 @@
 <template>
     <div class="root">
         <Navbar />
-            <div>
-              <div class="mt-5" v-mdb-animate-on-scroll="'fadeInLeft'">
+            <div class="container">
+              <div class="content" v-mdb-animate-on-scroll="'fadeInLeft'">
                 <div lg="5">
                   <img class="img-fluid" src="home-areas.jpg" alt="Areas" title="Areas" />
                 </div>

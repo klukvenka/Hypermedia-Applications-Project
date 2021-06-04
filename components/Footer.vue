@@ -3,26 +3,26 @@
     <div>
       <div class="elements">
         <div>
-          <h5 class="title">Areas</h5>
+          <h5>Areas</h5>
           <ul>
             <li class="list-unstyled"><a href="/Areas">All Areas</a></li>
           </ul>
         </div>
         <div>
-          <h5 class="title">Products</h5>
+          <h5>Products</h5>
           <ul>
             <li class="list-unstyled"><a href="/Products">All Products</a></li>
           </ul>
         </div>
         <div>
-          <h5 class="title">Who We Are</h5>
+          <h5>Who We Are</h5>
           <ul>
             <li class="list-unstyled"><a href="/The_Company">About Us</a></li>
             <li class="list-unstyled"><a href="/Our_Team">Our Team</a></li>
           </ul>
         </div>
         <div>
-          <h5 class="title">Support</h5>
+          <h5>Support</h5>
           <ul>
             <li class="list-unstyled"><a href="/Contact_Us">Contact Us</a></li>
           </ul>
@@ -50,7 +50,7 @@ body {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
-.footer, .title, .list-unstyled a, .copyright a {
+.footer, .list-unstyled a, .copyright a {
   background-color: black;
   color: white;
   text-decoration: none;
@@ -59,6 +59,12 @@ body {
 
 .elements {
   display: grid;
-  grid-template-columns: repeat(4,400px);
+  grid-template-columns: repeat(4,200px);
+  align-content: center;
 }
+
+h5 {
+  color: white;
+}
+
 </style>

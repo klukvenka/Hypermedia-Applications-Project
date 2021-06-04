@@ -85,12 +85,32 @@ img {
 
 .container {
     margin: 2% 5%;
-    border: 1px solid #333;
-    box-shadow: #333;
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 5px 6px #ccc;
 }
 
 .content {
   margin: 2% 5%;
   text-align: center;
+  border: 1px solid #ccc;
+  box-shadow: 3px 3px 5px 6px #ccc;
 }
+
+button:hover {
+  background-color: red;
+}
+
+.text-center {
+  text-align: center;
+}
+
+button {
+    border: none;
+    background-color: black;
+    color: white;
+    outline: none;
+    padding: 1%;
+    box-shadow: 1px solid #333;
+}
+
 </style>

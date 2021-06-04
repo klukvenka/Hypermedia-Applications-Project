@@ -2,20 +2,20 @@
     <div class="root">
         <Navbar />
         <Breadcrumbs />
-        <div class="my-5">
-            <div>
+        <div class="container">
+            <div class="content">
                 <Description :area="ar" ar />
             </div>
         </div>
-        <div class="my-5">
+        <div class="content">
             <div>
-                <h3 class="font-weight-bold mb-3 my-3 text-center">Products</h3>
+                <h3 class="">Products</h3>
                 <List :ar="areas" product long />
             </div>
         </div>
-        <div class="my-5">
+        <div class="content">
             <div>
-                <h3 class="font-weight-bold mb-3 my-3 text-center">Team Members</h3>
+                <h3 class="">Team Members</h3>
                 <List :ar="areas" member short />
             </div>
         </div>

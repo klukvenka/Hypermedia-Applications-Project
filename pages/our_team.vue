@@ -2,8 +2,8 @@
     <div class="root">
         <Navbar />
         <Breadcrumbs />
-        <div>
-            <div v-for="(area,i) in areas" :key="i" class="my-5" reverse>
+        <div class="container">
+            <div v-for="(area,i) in areas" :key="i" class="content">
                 <List :ar="area" member short needarea/>   
             </div>
         </div>

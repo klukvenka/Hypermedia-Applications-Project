@@ -3,9 +3,9 @@
         <Navbar />
         <Breadcrumbs />
         
-    <div class="text-center">
-    <div class="mt-5">
-      <div md="12">
+    <div class="content text-center">
+    <div>
+      <div class="content">
         <div reverse>
             <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(142).jpg" class="img-fluid" />
           <div class="text-center cascade">
@@ -13,16 +13,13 @@
               <a>HYPERCOMPANY</a>
             </h2>
             <h5>End-to-end solutions for Digital Evolution</h5>
-            <button class="btn-fb waves-light">
-              <img fab icon="facebook" class="pr-2"/>
+            <button>
               Facebook
             </button>
-            <button class="btn-tw waves-light">
-              <img fab icon="twitter" class="pr-2"/>
+            <button>
               Twitter
             </button>
-            <button class="btn-gplus waves-light">
-              <img fab icon="google-plus" class="pr-2"/>
+            <button>
               Google
             </button>
             <h6 class="my-5">Digital Evolution involves everything: this is why it requires relentless innovation, skills and ideas.

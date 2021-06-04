@@ -5,10 +5,9 @@
 
         <div class="card">
             <h2>Contact us</h2>
-            <h4>Do you have any questions? Please do not hesitate to contact us directly. Our team will getback to you within a matter of hours to help you.</h4>
-                <div class="contact">
-                <form class="needs-validation card" @submit.prevent="submitForm">
-                  <table class="text-center contacts">
+            <p class="text-center">Do you have any questions? Please do not hesitate to contact us directly. Our team will getback to you within a matter of hours to help you.</p>
+                <form class="needs-validation" @submit.prevent="submitForm">
+                  <table class="form-elements">
                     <tr>
                       <td>
                         <label for="name">Name: </label>
@@ -42,15 +41,13 @@
                       </td>
                     </tr>
                   </table>
-
+                  <button type="submit" @click="submitForm">Send Message</button>
                   <!--<div class="flex-list">
                   <p>Milan, 20133, Italy</p>
                   <p>+ 39 234 567 8910</p>
                   <p>contact@hypercompany.com</p>
                   </div>-->
-                <button type="submit" @click="submitForm">Send Message</button>
                 </form>
-                </div>
         </div>
         <Footer />
     </div>
@@ -86,7 +83,8 @@
 
 
 <style scoped>
-.contacts {
-    align-content: center;
+.form-elements {
+    margin-left: auto;
+    margin-right: auto;
   }
 </style>

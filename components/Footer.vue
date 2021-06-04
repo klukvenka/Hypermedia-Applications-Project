@@ -1,6 +1,5 @@
 <template>
   <div class="footer">
-    <div>
       <div class="elements">
         <div>
           <h5>Areas</h5>
@@ -29,9 +28,8 @@
         </div>
       </div>
       <div class="copyright">
-        &copy; 2020 Copyright: <a href="https://hypercompany.herokuapp.com"> Hypercompany </a>
+        &copy; 2020 Copyright: <a href="https://hypercompany.herokuapp.com">  Hypercompany </a>
       </div>
-    </div>
   </div>
 </template>
 
@@ -48,20 +46,28 @@ body {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
-.footer, .list-unstyled a, .copyright a {
+.elements {
+  padding: 100px;
+}
+.footer, .list-unstyled a{
   background-color: black;
   color: white;
   text-decoration: none;
-  font-size: inherit;
+  bottom: 0;
 }
 
 .elements, .copyright {
   display: flex;
+  padding: 10px;
   justify-content: center;
 }
 
-.footer h5 {
+.footer h5, .copyright, .copyright a {
   color: white;
+}
+
+.list-unstyled {
+  list-style-type: none;
 }
 
 </style>

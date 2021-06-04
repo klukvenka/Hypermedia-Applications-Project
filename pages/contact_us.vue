@@ -3,7 +3,7 @@
         <Navbar />
         <Breadcrumbs />
 
-        <div class="mt-5">
+        <div class="container">
             <div>
             <div-title class="mt-4 h2">Contact us</div-title>
             <div>
@@ -42,19 +42,16 @@
                     <div md="4">
                     <div>
                         <div class="mt-4">
-                        <img icon="map-marker-alt" size="2x" />
                         <p>Milan, 20133, Italy</p>
                         </div>
                     </div>
                     <div>
                         <div class="mt-4">
-                        <img icon="phone" size="2x" />
                         <p>+ 39 234 567 8910</p>
                         </div>
                     </div>
                     <div>
                         <div class="mt-4">
-                        <img icon="envelope" size="2x" />
                         <p>contact@hypercompany.com</p>
                         </div>
                     </div>

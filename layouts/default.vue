@@ -87,6 +87,7 @@ img {
     margin: 2% 5%;
     border: 1px solid #ccc;
     box-shadow: 3px 3px 5px 6px #ccc;
+    
 }
 
 .content {
@@ -94,6 +95,7 @@ img {
   text-align: center;
   border: 1px solid #ccc;
   box-shadow: 3px 3px 5px 6px #ccc;
+  padding: 1%;
 }
 
 button:hover {
@@ -102,6 +104,11 @@ button:hover {
 
 .text-center {
   text-align: center;
+}
+
+.flex-list {
+    display: flex;
+    align-content: center;
 }
 
 button {

@@ -27,7 +27,7 @@
         </div>
 
         <!--Display list of members-->
-        <div v-if="isMemberReady && short" class="main-list">
+        <div v-if="isMemberReady && short" class="flex-list">
             <div v-for="(member,j) in members" :key="j" class="member-list">
                 <a class="red-text" v-if="member.area.includes(ar.name)" :href="'/Our_Team/MemberInfo?name='+member.name.replace(' ','_')">
                 <img class="rounded z-depth-1-half img-fluid my-2" :src="member.image" :alt="member.name" :title="member.name">
@@ -39,7 +39,7 @@
             </div>
         </div>
         <!--Display list of products-->
-        <div v-if="isProductReady && short" class="main-list">
+        <div v-if="isProductReady && short" class="flex-list">
             <div v-for="(prod,j) in products" :key="j" class="product-list">
                 <a class="red-text" v-if="prod.area == (ar.name)" :href="'/Products/ProductInfo?name='+prod.name.replace(' ','_')">
                 <img class="rounded z-depth-1-half img-fluid my-2" :src="prod.image" :alt="prod.name" :title="prod.short_description">
@@ -152,20 +152,6 @@ export default {
 .product-list, .member-list {
     padding: 0% 1%;
     justify-items: center;
-}
-
-.main-list {
-    display: flex;
-    align-content: center;
-}
-
-button {
-    border: none;
-    background-color: black;
-    color: white;
-    outline: none;
-    padding: 1%;
-    box-shadow: 1px solid #333;
 }
 
 .area-content {

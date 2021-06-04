@@ -2,8 +2,9 @@
     <div class="root">
         <Navbar />
             <div class="container">
+              <img src="home-carousel-1.jpg"/>
               <div class="content" v-for="(item,i) in items" :key="i">
-                <div class="flex-list">
+                <div class="display-details">
                 <div class="topic-image">
                   <img :src="item.src" :alt="item.name" :title="item.name" />
                 </div>

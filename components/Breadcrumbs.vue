@@ -44,7 +44,7 @@
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 10rem;
   padding: 20px;
-  margin-top: 10px;
+  margin-top: 60px;
 }
 
 .breadcrumb-item {

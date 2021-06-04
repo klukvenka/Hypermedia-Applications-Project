@@ -1,8 +1,9 @@
 <template>
     <div class="navbar">
-      <a href="/">
-        <Logo />
-      </a>
+      <div class="logo">
+        <a href="/">Hypercompany</a>
+      </div>
+
       <span class="dropdown" v-for="menu in menus" :key="menu">
         <button class="dropbtn"><a :href="'/'+menu.replace(' ','_')">{{ menu }}</a></button>
       </span>
@@ -26,8 +27,11 @@
 <style>
 .navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: black;
   opacity: 100%;
+  position: fixed;
+  top:0vh;
+  width: 100vw;
 }
 .navbar span {
   justify-content: center;
@@ -41,8 +45,7 @@
   text-decoration: none;
 }
 .dropdown {
-  float: left;
-  overflow: hidden;
+  flex-wrap: wrap;
 }
 .dropdown .dropbtn {
   font-size: 16px;  
@@ -72,11 +75,5 @@
   text-decoration: none;
   display: block;
   text-align: left;
-}
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-.dropdown:hover .dropdown-content {
-  display: block;
 }
 </style>

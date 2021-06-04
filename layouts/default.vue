@@ -106,9 +106,13 @@ button:hover {
   text-align: center;
 }
 
-.flex-list, .display-details {
+.flex-list {
   display: flex;
   flex-wrap: wrap;
+}
+
+.display-details {
+  display: flex;
 }
 
 button {

@@ -83,19 +83,20 @@ img {
   height: 25vh;
 }
 
-.container {
-    margin: 2% 5%;
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 5px 6px #ccc;
-    
-}
-
 .content {
-  margin: 2vh 5vw;
+  margin: 2vh 10vw;
   text-align: center;
   border: 1px solid #ccc;
-  box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow: 1px 1px 1px 1px #ccc;
   padding: 1%;
+}
+
+.card {
+  text-align: center;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px 1px #ccc;
+  padding: 1%;
+  margin: 2vh 5vw;
 }
 
 button:hover {
@@ -109,10 +110,16 @@ button:hover {
 .flex-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .display-details {
   display: flex;
+}
+
+.red-text {
+  color: red;
+  text-decoration-line: none;
 }
 
 button {

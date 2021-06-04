@@ -8,8 +8,8 @@
             </a>
             </div>
             <div class="area-data">
-                <a :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')">
-                    {{ar.name}}
+                <a class="red-text" :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')">
+                    <h4>{{ar.name}}</h4>
                 </a>
                 <p>{{ar.short_description}}</p>
                 <a :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')"><button>View Products and Team</button></a>
@@ -19,7 +19,7 @@
         <div v-if="needarea">
             <div>
                 <a class="red-text" :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')">
-                    <h4 class="font-weight-bold mb-3 my-3">
+                    <h4>
                         {{ar.name}}
                     </h4>
                 </a>
@@ -28,24 +28,24 @@
 
         <!--Display list of members-->
         <div v-if="isMemberReady && short" class="flex-list">
-            <div v-for="(member,j) in members" :key="j" class="member-list content">
-                <a v-if="member.area.includes(ar.name)" :href="'/Our_Team/MemberInfo?name='+member.name.replace(' ','_')">
+            <div v-for="(member,j) in members" :key="j" class="member-list card">
+                <a class="red-text" v-if="member.area.includes(ar.name)" :href="'/Our_Team/MemberInfo?name='+member.name.replace(' ','_')">
                 <img :src="member.image" :alt="member.name" :title="member.name">
-                <h6>
+                <h5>
                     {{member.name}}, {{member.designation}}
-                </h6>
+                </h5>
                 <button>View Member Info</button>
                 </a>
             </div>
         </div>
         <!--Display list of products-->
         <div v-if="isProductReady && short" class="flex-list">
-            <div v-for="(prod,j) in products" :key="j" class="product-list content">
-                <a class="red-text" v-if="prod.area == (ar.name)" :href="'/Products/ProductInfo?name='+prod.name.replace(' ','_')">
+            <div v-for="(prod,j) in products" :key="j" class="product-list card">
+                <a v-if="prod.area == (ar.name)" :href="'/Products/ProductInfo?name='+prod.name.replace(' ','_')">
                 <img class="rounded z-depth-1-half img-fluid my-2" :src="prod.image" :alt="prod.name" :title="prod.short_description">
-                <h6 class="font-weight-bold mb-3 my-3">
+                <h5 class="red-text">
                     {{prod.name}}
-                </h6>
+                </h5>
                 <button>View Product Info</button>
                 </a>
             </div>

@@ -3,12 +3,12 @@
         <Navbar />
         <Breadcrumbs />
         
-    <div class="content text-center">
+    <div class="text-center">
     <div>
       <div>
         <div class="content">
             <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(142).jpg" class="img-fluid" />
-          <div >
+          <div>
             <h2 class="font-weight-bold">
               <a>HYPERCOMPANY</a>
             </h2>

@@ -1,16 +1,16 @@
 <template>
     <div class="root">
         <Navbar />
-            <div class="container">
-              <img src="home-carousel-1.jpg"/>
-              <div class="content" v-for="(item,i) in items" :key="i">
-                <div class="display-details">
+            <div class="">
+              <img class="home-image" src="home-carousel-1.jpg"/>
+              <div v-for="(item,i) in items" :key="i">
+                <div class="display-details content w3-container w3-center w3-animate-left">
                 <div class="topic-image">
                   <img :src="item.src" :alt="item.name" :title="item.name" />
                 </div>
                 <div class="topic-content">
-                  <a :href="item.path">
-                    <h6>{{item.title}}</h6>
+                  <a class="red-text" :href="item.path">
+                    <h5>{{item.title}}</h5>
                   </a>
                   <h3>
                     <strong>{{item.heading}}</strong>
@@ -67,5 +67,11 @@
 <style scoped>
 .topic-content {
   padding: 2%;
+}
+
+.home-image {
+  margin-top: 2%;
+  width: 100vw;
+  height: 60vh;
 }
 </style>

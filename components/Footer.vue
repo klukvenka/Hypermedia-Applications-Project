@@ -60,7 +60,7 @@ body {
   justify-content: center;
 }
 
-h5 {
+.footer h5 {
   color: white;
 }
 

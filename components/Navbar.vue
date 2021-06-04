@@ -1,9 +1,6 @@
 <template>
     <div class="navbar">
-      <div class="logo">
-        <a href="/">Hypercompany</a>
-      </div>
-
+      <a href="/">Hypercompany</a>
       <span class="dropdown" v-for="menu in menus" :key="menu">
         <button class="dropbtn"><a :href="'/'+menu.replace(' ','_')">{{ menu }}</a></button>
       </span>
@@ -32,6 +29,8 @@
   position: fixed;
   top:0vh;
   width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
 }
 .navbar span {
   justify-content: center;
@@ -45,7 +44,8 @@
   text-decoration: none;
 }
 .dropdown {
-  flex-wrap: wrap;
+  float: left;
+  overflow: hidden;
 }
 .dropdown .dropbtn {
   font-size: 16px;  

@@ -7,7 +7,7 @@
                 <Description :area="ar" ar />
             </div>
         </div>
-        <div class="content">
+        <div class="content display-details">
             <div>
                 <h3 class="">Products</h3>
                 <List :ar="areas" product long />

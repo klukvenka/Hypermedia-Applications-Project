@@ -29,9 +29,9 @@
         <!--Display list of members-->
         <div v-if="isMemberReady && short" class="flex-list">
             <div v-for="(member,j) in members" :key="j" class="member-list content">
-                <a class="red-text" v-if="member.area.includes(ar.name)" :href="'/Our_Team/MemberInfo?name='+member.name.replace(' ','_')">
-                <img class="rounded z-depth-1-half img-fluid my-2" :src="member.image" :alt="member.name" :title="member.name">
-                <h6 class="font-weight-bold mb-3 my-3">
+                <a v-if="member.area.includes(ar.name)" :href="'/Our_Team/MemberInfo?name='+member.name.replace(' ','_')">
+                <img :src="member.image" :alt="member.name" :title="member.name">
+                <h6>
                     {{member.name}}, {{member.designation}}
                 </h6>
                 <button>View Member Info</button>
@@ -156,6 +156,10 @@ export default {
 
 .area-content {
     display: flex;
+}
+
+.area-data {
+    padding: 2%;
 }
 
 button:hover {

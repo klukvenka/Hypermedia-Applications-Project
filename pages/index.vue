@@ -4,10 +4,10 @@
             <div class="container">
               <div class="content" v-for="(item,i) in items" :key="i">
                 <div class="flex-list">
-                <div lg="5">
+                <div class="topic-image">
                   <img :src="item.src" :alt="item.name" :title="item.name" />
                 </div>
-                <div lg="7">
+                <div class="topic-content">
                   <a :href="item.path">
                     <h6>{{item.title}}</h6>
                   </a>
@@ -64,5 +64,7 @@
 
 
 <style scoped>
-
+.topic-content {
+  padding: 2%;
+}
 </style>

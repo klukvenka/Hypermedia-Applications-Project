@@ -5,10 +5,10 @@
         
     <div class="content text-center">
     <div>
-      <div class="content">
-        <div reverse>
+      <div>
+        <div class="content">
             <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(142).jpg" class="img-fluid" />
-          <div class="text-center cascade">
+          <div >
             <h2 class="font-weight-bold">
               <a>HYPERCOMPANY</a>
             </h2>

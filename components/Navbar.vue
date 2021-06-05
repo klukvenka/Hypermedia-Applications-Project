@@ -29,6 +29,7 @@
   top:0vh;
   width: 100vw;
   display: flex;
+  background-color: black;
 }
 .navbar a {
   float: left;

@@ -25,7 +25,7 @@
 
 <style>
 .navbar {
-  
+  overflow: hidden;
   background-color: black;
   opacity: 100%;
   position: fixed;
@@ -48,7 +48,6 @@
   outline: none;
   color: white;
   padding: 0px 16px;
-  background-color: inherit;
   font-family: inherit;
   margin: 0;
   justify-content: center;

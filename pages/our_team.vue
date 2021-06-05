@@ -4,7 +4,7 @@
         <Breadcrumbs />
         <div>
             <div v-for="(area,i) in areas" :key="i" class="content">
-                <short-page :ar="area" member needarea/>   
+                <short-page :ar="area" getMember needarea/>   
             </div>
         </div>
         <Footer />

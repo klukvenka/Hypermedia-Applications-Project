@@ -7,8 +7,6 @@ module.exports = app => {
     router.get("/all", members.findAll);
     router.get("/name", members.findByName);
     router.get("/area", members.findByArea);
-    router.get("/manager", members.findByManager);
-    router.get("/reference", members.findByReference);
 
 
     app.use('/members', router);

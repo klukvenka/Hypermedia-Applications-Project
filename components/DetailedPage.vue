@@ -1,9 +1,5 @@
 <template>
     <div>
-        <!--Display description of areas-->
-        <div v-if="isAreaReady && ar">
-            <Heading :heading="areas.name" :subheading="areas.description" />
-        </div>
         <!--Display description of products-->
         <section  v-if="isProductReady &&  prod" class="text-center">
             <h2>{{products.name}}</h2>
@@ -48,7 +44,7 @@
                 <div class="text-center">
                     <p>{{members.description}}</p>
                     <div>
-                        <h5>Related Areas: </h5>
+                        <h5>Related Area(s): </h5>
                         <div v-for="(area,j) in memberarea" :key="j" class="text-left">
                             <a class="red-text" :href="'/areas/AreaInfo?name='+area.replace(' ','_')">
                                 <h5>{{area}}</h5>
@@ -106,6 +102,7 @@ export default {
             products: {},
             members: {},
             areas: {},
+            items: {},
             memberarea: [],
             managers: [],
             references: []
@@ -113,18 +110,19 @@ export default {
     },
     methods: {
         async retrieveAreaByName() {
-            if (this.ar) {
-                this.areas = await (await AreaDataService.getByName(this.area)).data[0];
-            }
+            this.areas = await (await AreaDataService.getByName(this.area)).data[0];
+            this.items = this.areas;
         },
         async retrieveProductsByName() {
             this.products = await (await ProductDataService.getByName(this.product)).data[0];
+            this.items = this.products;
         },
         async retrieveMembersByName() {
             this.members = await (await MemberDataService.getByName(this.member)).data[0];
             this.memberarea = this.members.area.split(', ')
             this.managers = await (await ProductDataService.getByManager(this.members.name)).data;
             this.references = await (await ProductDataService.getByReference(this.members.name)).data;
+            this.items = this.members;
         },
         async retrieveProductsByManager() {
             console.log(this.managers);
@@ -134,7 +132,9 @@ export default {
     },
     computed: {
         isAreaReady: function () {
-            return this.retrieveAreaByName()
+            if (this.ar) {
+                return this.retrieveAreaByName()
+            }
         },
         isMemberReady: function () {
             if (this.mem) {

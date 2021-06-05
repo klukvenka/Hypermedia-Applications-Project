@@ -1,10 +1,8 @@
 <template>
     <div>
         <!--Display list of areas-->
-        <div v-if="area" class="area-content display-details">
-            <a :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')">
-                <img :src="ar.image" :alt="ar.name" :title="ar.name" />
-            </a>
+        <div v-if="getArea" class="area-content display-details">
+            <img :src="ar.image" :alt="ar.name" :title="ar.name" />
             <div class="area-data">
                 <a class="red-text" :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')">
                     <h4>{{ar.name}}</h4>
@@ -22,7 +20,7 @@
         </div>
 
         <!--Display list of members and products-->
-        <div v-if="isMemberReady || isProductReady" class="flex-list item-list">
+        <div v-if="(isMemberReady || isProductReady)" class="flex-list item-list">
             <div v-for="(item,j) in items" :key="j">
                 <div class="card">
                     <img v-on:click="isShow(item)" :src="item.image" :alt="item.name" :title="item.name">
@@ -48,20 +46,41 @@ export default {
     components: {
     },
     props: {
-        product: {
+        getProduct: {
             type: Boolean,
             default: false
         },
-        area: {
+        getArea: {
             type: Boolean,
             default: false
         },
-        member: {
+        getMember: {
             type: Boolean,
             default: false
         },
-        ar: Object,
+        ar: {
+            type: Object,
+            default() {
+                return {}
+            }
+        },
+        mem: {
+            type: String,
+            default: ''
+        },
+        prod: {
+            type: String,
+            default: ''
+        },
         needarea: {
+            type: Boolean,
+            default: false
+        },
+        manager: {
+            type: Boolean,
+            default: false
+        },
+        reference: {
             type: Boolean,
             default: false
         }
@@ -77,16 +96,24 @@ export default {
     },
     methods: {
         async retrieveProductsByArea() {
-            if (this.product) {
-                this.products = await (await ProductDataService.getByArea(this.ar.name)).data;
-                this.items = this.products;
-            }
+            this.products = await (await ProductDataService.getByArea(this.ar.name)).data;
+            this.items = this.products;
         },
         async retrieveMembersByArea() {
-            if (this.member) {
-                this.members = await (await MemberDataService.getByArea(this.ar.name)).data;
-                this.items = this.members;
-            }
+            this.members = await (await MemberDataService.getByArea(this.ar.name)).data;
+            this.items = this.members;
+        },
+        async retrieveMembersByName() {
+            this.members = await (await MemberDataService.getByName(this.mem)).data;
+            this.items = this.members;
+        },
+        async retrieveProductsByManager() {
+            this.products = await (await ProductDataService.getByManager(this.mem)).data;
+            this.items = this.products;
+        },
+        async retrieveProductsByReference() {
+            this.products = await (await ProductDataService.getByReference(this.mem)).data;
+            this.items = this.products;
         },
         async isShow(value) {
             if (this.render) {
@@ -102,19 +129,34 @@ export default {
     },
     computed: {
         isMemberReady: function () {
-            if (this.members.length > 0) {
-                return this.items;
-            }
-            else {
-                this.retrieveMembersByArea()
+            if (this.getMember) {
+                if (this.members.length > 0) {
+                    return this.items;
+                }
+                else if (this.prod.length > 0 && this.mem.length > 0) {
+                    this.retrieveMembersByName()
+                }
+                else {
+                    this.retrieveMembersByArea()
+                }
             }
         },
         isProductReady: function () {
-            if (this.products.length > 0) {
-                return this.items;
-            }
-            else {
-                this.retrieveProductsByArea()
+            if (this.getProduct) {
+                if (this.products.length > 0) {
+                    return this.items;
+                }
+                else if (this.mem.length > 0) {
+                    if (this.manager) {
+                        this.retrieveProductsByManager()
+                    }
+                    else if (this.reference) {
+                        this.retrieveProductsByReference()
+                    }
+                }
+                else {
+                    this.retrieveProductsByArea()
+                }
             }
         }
     }

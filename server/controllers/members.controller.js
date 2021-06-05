@@ -77,36 +77,6 @@ exports.findByArea = (req, res) => {
     });
 };
 
-// Retrieve all Members from the database by manager.
-exports.findByManager = (req, res) => {
-    const manager = req.query.manager;
-    var condition = manager ? { manager: { [Op.iLike]: `%${manager}%` } } : null;
-
-    members.findAll({ where: condition }).then(data => {
-        res.send(data);
-    })
-    .catch(err => {
-        res.status(500).send({
-            message: err.message || "Some error occurred while retrieving members."
-        });
-    });
-};
-
-// Retrieve all Members from the database by reference.
-exports.findByReference = (req, res) => {
-    const reference = req.query.reference;
-    var condition = reference ? { reference: { [Op.iLike]: `%${reference}%` } } : null;
-
-    members.findAll({ where: condition }).then(data => {
-        res.send(data);
-    })
-    .catch(err => {
-        res.status(500).send({
-            message: err.message || "Some error occurred while retrieving members."
-        });
-    });
-}
-
 //Initialize member data
 exports.initdata = (req, res) => {
     const member = [

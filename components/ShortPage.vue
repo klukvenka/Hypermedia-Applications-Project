@@ -1,22 +1,23 @@
 <template>
     <div>
-        <!--Display list of areas-->
-        <div v-if="getArea" class="area-content display-details">
-            <img :src="ar.image" :alt="ar.name" :title="ar.name" />
-            <div class="area-data">
-                <a class="red-text" :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')">
-                    <h4>{{ar.name}}</h4>
-                </a>
-                <p>{{ar.short_description}}</p>
-                <a :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')"><button>View Detailed Area Info</button></a>
-            </div>
-        </div>
-        <!--Display area heading-->
+        <!--Display area heading if requested-->
         <div v-if="needarea">
             <a class="red-text" :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')">
                 <h4>{{ar.name}}</h4>
             </a>
             <h5>(Click on each image for a short description)</h5>
+        </div>
+
+        <!--Display list of areas-->
+        <div v-if="getArea" class="area-content display-details">
+            <img :src="ar.image" :alt="ar.name" :title="ar.name" />
+            <div class="area-data">
+                <a class="red-text" :href="'/Areas/AreaInfo?name='+ar.name">
+                    <h4>{{ar.name}}</h4>
+                </a>
+                <p>{{ar.short_description}}</p>
+                <a :href="'/Areas/AreaInfo?name='+ar.name"><button>View Detailed Area Info</button></a>
+            </div>
         </div>
 
         <!--Display list of members and products-->
@@ -26,11 +27,12 @@
                     <img v-on:click="isShow(item)" :src="item.image" :alt="item.name" :title="item.name">
                     <h5 class="red-text">{{item.name}}</h5>
                     <div v-if="render && item.name == renderItem.name">{{renderItem.short_description}}</div>
+                    <div v-else-if="isExpand">{{item.short_description}}</div>
                 </div>
-                <a v-if="item.area.includes(ar.name) && isMemberReady" :href="'/Our_Team/MemberInfo?name='+item.name.replace(' ','_')">
+                <a v-if="isMemberReady" :href="'/Our_Team/MemberInfo?name='+item.name.replace(' ','_')">
                     <button>View Detailed Member Info</button>
                 </a>
-                <a v-else-if="item.area == ar.name && isProductReady" :href="'/Products/ProductInfo?name='+item.name.replace(' ','_')">
+                <a v-else-if="isProductReady" :href="'/Products/ProductInfo?name='+item.name.replace(' ','_')">
                     <button>View Detailed Product Info</button>
                 </a>
             </div>
@@ -64,6 +66,10 @@ export default {
                 return {}
             }
         },
+        area: {
+            type: String,
+            default: ''
+        },
         mem: {
             type: String,
             default: ''
@@ -83,6 +89,10 @@ export default {
         reference: {
             type: Boolean,
             default: false
+        },
+        isExpand: {
+            type: Boolean,
+            default: false
         }
     },
     data () {
@@ -95,6 +105,10 @@ export default {
         }
     },
     methods: {
+        async retrieveAreaByName() {
+            this.area = await (await AreaDataService.getByName(this.product.area)).data;
+            console.log(this.area)
+        },
         async retrieveProductsByArea() {
             this.products = await (await ProductDataService.getByArea(this.ar.name)).data;
             this.items = this.products;

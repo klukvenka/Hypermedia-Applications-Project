@@ -25,7 +25,7 @@
 
 <style>
 .navbar {
-  overflow: hidden;
+  
   background-color: black;
   opacity: 100%;
   position: fixed;

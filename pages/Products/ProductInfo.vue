@@ -12,11 +12,11 @@
         <div class="content display-details">
             <div>
                 <h2>Manager</h2>
-                <short-page :prod="prod" :mem="manager" getMember isExpand />
+                <short-page :prod="prod" :mem="manager" getMember />
             </div>
             <div>
                 <h2>Reference</h2>
-                <short-page :prod="prod" :mem="reference" getMember isExpand />
+                <short-page :prod="prod" :mem="reference" getMember />
             </div>
         </div>
         <Footer />

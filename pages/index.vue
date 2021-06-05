@@ -1,8 +1,8 @@
 <template>
     <div class="root">
         <Navbar />
-            <div class="">
-              <img class="top-image" src="home-carousel-1.jpg"/>
+            <div>
+              <img class="top-image" src="home-carousel-1.jpg" alt="top-image" title="top-image"/>
               <div v-for="(item,i) in items" :key="i">
                 <div class="display-details content">
                 <div class="topic-image">
@@ -10,7 +10,7 @@
                 </div>
                 <div class="topic-content">
                   <a class="red-text" :href="item.path">
-                    <h5>{{item.title}}</h5>
+                    <h2>{{item.title}}</h2>
                   </a>
                   <h3>
                     <strong>{{item.heading}}</strong>

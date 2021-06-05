@@ -7,13 +7,13 @@
         </div>
         <div class="content">
             <div>
-                <h3 class="">Products</h3>
+                <h2 class="">Products</h2>
                 <short-page :ar="areas" getProduct />
             </div>
         </div>
         <div class="content">
             <div>
-                <h3 class="">Team Members</h3>
+                <h2 class="">Team Members</h2>
                 <short-page :ar="areas" getMember />
             </div>
         </div>

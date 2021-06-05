@@ -1,12 +1,14 @@
 <template>
-    <nav class="navbar">
+    <div class="navbar">
+      <a href="/">
       <div class="logo">
-        <a href="/">Hypercompany</a>
+        <img src="/logo.png" alt="logo" title="logo"/>
       </div>
+      </a>
       <div class="menubar" v-for="menu in menus" :key="menu">
         <a :href="'/'+menu.replace(' ','_')"><button class="menu-item">{{ menu }}</button></a>
       </div>
-    </nav>
+    </div>
 
 </template>
 
@@ -30,14 +32,22 @@
   width: 100vw;
   display: flex;
   background-color: black;
-  padding: 0px 16px;
 }
 .navbar a {
   color: white;
-  text-align: center;
   text-decoration: none;
-  justify-content: center;
   font-weight: bolder;
+}
+.logo {
+  text-align: center;
+  display: block;
+  margin-right: 30vh;
+}
+
+.logo img {
+  height: 7vh;
+  width: 10vw;
+  
 }
 .menubar {
   font-family: inherit;
@@ -55,5 +65,10 @@
     display: block;
     position: relative;
   }
+  .logo img {
+    height: 7vh;
+    width: 100vw;
+  
+}
 }
 </style>

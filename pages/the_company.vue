@@ -4,7 +4,7 @@
         <Breadcrumbs />
         
         <div class="content">
-            <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(142).jpg" alt="top-image" title="top-image"/>
+            <img src="/the-company.jpg" alt="top-image" title="top-image"/>
           <div>
             <h2>HYPERCOMPANY</h2>
             <h5 class="light-heading">End-to-end solutions for Digital Evolution</h5>

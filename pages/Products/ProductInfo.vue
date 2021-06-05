@@ -24,7 +24,6 @@
 </template>
 
 <script>
-    import DetailedPage from '../../components/DetailedPage.vue';
     import ShortPage from '../../components/ShortPage.vue';
 
     import ProductDataService from '../../services/ProductDataService';
@@ -32,7 +31,6 @@
 
     export default {
         components: {
-            DetailedPage,
             ShortPage
         },
         data () {
@@ -45,7 +43,7 @@
             }
         },
         methods: {
-            async retrieveMembersByName() {
+            async retrieveProductsByName() {
                 this.product = await (await ProductDataService.getByName(this.prod)).data[0]
                 this.manager = this.product.manager;
                 this.reference = this.product.reference;
@@ -58,7 +56,7 @@
             }
         },
         created() {
-            this.retrieveMembersByName();
+            this.retrieveProductsByName();
         }
     }
 </script>

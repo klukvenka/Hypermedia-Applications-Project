@@ -2,10 +2,10 @@
     <div>
         <!--Display area heading if requested-->
         <div v-if="needarea">
-            <a class="red-text" :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')">
+            <a class="red-text" :href="'/Areas/AreaInfo?name='+ar.name">
                 <h4>{{ar.name}}</h4>
             </a>
-            <h5>(Click on each image for a short description)</h5>
+            <h5>(Click on each image to toggle short description)</h5>
         </div>
 
         <!--Display list of areas-->

@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar">
       <div class="logo">
-        <a href="/"><Logo /></a>
+        <a href="/">Hypercompany</a>
       </div>
       <div class="menubar" v-for="menu in menus" :key="menu">
         <a :href="'/'+menu.replace(' ','_')"><button class="menu-item">{{ menu }}</button></a>

@@ -119,14 +119,6 @@ export default {
             this.members = await (await MemberDataService.getByName(this.mem)).data;
             this.items = this.members;
         },
-        async retrieveProductsByManager() {
-            this.products = await (await ProductDataService.getByManager(this.mem)).data;
-            this.items = this.products;
-        },
-        async retrieveProductsByReference() {
-            this.products = await (await ProductDataService.getByReference(this.mem)).data;
-            this.items = this.products;
-        },
         async isShow(value) {
             if (this.render) {
                 this.render =  false;

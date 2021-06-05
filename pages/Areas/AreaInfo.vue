@@ -31,7 +31,7 @@
         components: { ShortPage, Heading },
         data () {
             return {
-                ar: this.$route.query.name.replace('_',' ').split('#')[0],
+                ar: this.$route.query.name.replace('_',' '),
                 areas: {}
             }
         },

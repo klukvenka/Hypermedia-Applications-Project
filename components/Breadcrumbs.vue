@@ -39,21 +39,6 @@
 </script>
  
 <style>
-.breadcrumbs {
-  background-color: rgb(255, 255, 255);
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 10rem;
-  padding: 20px;
-  margin-top: 60px;
-}
-
-.breadcrumb-item {
-  display: inline;
-  text-transform: uppercase;
-  font-weight:bold;
-  color: black;
-}
-
 a {
   color: black;
   text-decoration: none;

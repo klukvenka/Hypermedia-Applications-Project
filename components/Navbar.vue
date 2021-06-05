@@ -1,10 +1,10 @@
 <template>
     <nav class="navbar">
       <div class="logo">
-        <Logo />
+        <a href="/"><Logo /></a>
       </div>
       <div class="menubar" v-for="menu in menus" :key="menu">
-        <button class="menu-item"><a :href="'/'+menu.replace(' ','_')">{{ menu }}</a></button>
+        <a :href="'/'+menu.replace(' ','_')"><button class="menu-item">{{ menu }}</button></a>
       </div>
     </nav>
 
@@ -30,30 +30,30 @@
   width: 100vw;
   display: flex;
   background-color: black;
+  padding: 0px 16px;
 }
 .navbar a {
-  float: left;
-  font-size: 16px;
   color: white;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
+  justify-content: center;
+  font-weight: bolder;
 }
 .menubar {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 0px 16px;
   font-family: inherit;
-  margin: 0;
-  justify-content: center;
-  margin:auto;
+  text-align: center;
+  padding: 10px 16px;
+}
+
+.menu-item {
+  padding: 1vh 2vw;
+  width: 100%;
 }
 
 @media only screen and (max-width: 600px) {
-  .menubar {
-    display: flex;
+  .navbar {
+    display: block;
+    position: relative;
   }
 }
 </style>

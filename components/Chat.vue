@@ -66,7 +66,7 @@ export default {
   padding: 10px;
   float: right;
   position: fixed;
-  bottom: 175px;
+  bottom: 90px;
   right: 10px;
   z-index: 10000000;
 }
@@ -78,10 +78,10 @@ export default {
 .chat-container {
   border: 1px solid black;
   border-radius: 4px;
-  height: 400px;
-  width: 300px;
+  height: 350px;
+  width: 250px;
   position: fixed;
-  bottom: 250px;
+  bottom: 160px;
   right: 0px;
   z-index: 10000000;
   background-color: white;

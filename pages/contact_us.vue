@@ -95,8 +95,6 @@
 
 
 .top-image {
-  margin-top: 2%;
-  width: 100vw;
-  height: 80vh;
+  margin-top: 0.1%;
 }
 </style>

@@ -159,6 +159,11 @@ button {
   height: 60vh;
 }
 
+.light-heading {
+    font-weight:normal;
+    text-align: justify;
+}
+
 @media only screen and (max-width: 800px) {
   .display-details {
     display: block;

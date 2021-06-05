@@ -15,7 +15,7 @@
                 <a class="red-text" :href="'/Areas/AreaInfo?name='+ar.name">
                     <h4>{{ar.name}}</h4>
                 </a>
-                <p>{{ar.short_description}}</p>
+                <h5 class="light-heading">{{ar.short_description}}</h5>
                 <a :href="'/Areas/AreaInfo?name='+ar.name"><button>View Detailed Area Info</button></a>
             </div>
         </div>
@@ -26,8 +26,8 @@
                 <div class="card">
                     <img v-on:click="isShow(item)" :src="item.image" :alt="item.name" :title="item.name">
                     <h5 class="red-text">{{item.name}}</h5>
-                    <div v-if="render && item.name == renderItem.name">{{renderItem.short_description}}</div>
-                    <div v-else-if="isExpand">{{item.short_description}}</div>
+                    <div v-if="render && item.name == renderItem.name"><h5 class="light-heading">{{renderItem.short_description}}</h5></div>
+                    <div v-else-if="isExpand"><h5 class="light-heading">{{item.short_description}}</h5></div>
                 </div>
                 <a v-if="isMemberReady" :href="'/Our_Team/MemberInfo?name='+item.name.replace(' ','_')">
                     <button>View Detailed Member Info</button>

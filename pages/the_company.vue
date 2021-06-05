@@ -7,11 +7,11 @@
             <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(142).jpg" />
           <div>
             <h2>HYPERCOMPANY</h2>
-            <h5>End-to-end solutions for Digital Evolution</h5>
-            <h5>Digital Evolution involves everything: this is why it requires relentless innovation, skills and ideas.</h5>
-          <p>At Hypergroup, we design and create a virtuous and proactive digital ecosystem, with the goal of continuous improvement of people and resources, technology and knowledge.
+            <h5 class="light-heading">End-to-end solutions for Digital Evolution</h5>
+            <h5 class="light-heading">Digital Evolution involves everything: this is why it requires relentless innovation, skills and ideas.</h5>
+          <h5 class="light-heading">At Hypergroup, we design and create a virtuous and proactive digital ecosystem, with the goal of continuous improvement of people and resources, technology and knowledge.
 Interpreting a constantly evolving world requires understanding, foreseeing and always being ready for change.
-          </p>
+          </h5>
         </div>
     </div>
    
@@ -20,13 +20,13 @@ Interpreting a constantly evolving world requires understanding, foreseeing and 
     <h4 class="text-center">Subscribe to our newsletter</h4>
     <br>
     <div>
-      <label for="name">Name: </label>
-      <input type="text" id="name">
+      <label for="name"><h5 class="light-heading">Name: </h5></label>
+      <input type="text" id="name" required>
     </div>
     <br>
     <div>
-      <label for="email">Email: </label>
-      <input type="email" id="email">
+      <label for="email"><h5 class="light-heading">Email: </h5></label>
+      <input type="email" id="email" required>
     </div>
     <button type="submit">Subscribe</button>
   </form>
@@ -51,7 +51,7 @@ Interpreting a constantly evolving world requires understanding, foreseeing and 
 </script>
 
 <style scoped>
-.container {
+.light-heading {
     text-align: center;
   }
 

@@ -3,7 +3,7 @@
         <Navbar />
         <Breadcrumbs />
         <div class="content">
-            <Heading :heading="areas.name" :subheading="areas.description" />
+            <Heading :heading="areas.name" :description="areas.description" />
         </div>
         <div class="content">
             <div>

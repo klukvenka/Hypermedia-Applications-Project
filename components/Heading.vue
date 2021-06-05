@@ -1,7 +1,8 @@
 <template>
-    <div class="text-center">
+    <div class="heading text-center">
         <h2>{{heading}}</h2>
-        <p>{{subheading}}</p>
+        <h3>{{subheading}}</h3>
+        <h5 class="light-heading">{{description}}</h5>
     </div>
     
 </template>
@@ -16,7 +17,14 @@ export default {
         subheading: {
             type: String,
             default: ''
+        },
+        description: {
+            type: String,
+            default: ''
         }
     },
 }
 </script>
+
+<style scoped>
+</style>

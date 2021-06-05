@@ -15,7 +15,7 @@
                   <h3>
                     <strong>{{item.heading}}</strong>
                   </h3>
-                  <p>{{item.text}}</p>
+                  <h5 class="light-heading">{{item.text}}</h5>
                   <a :href="item.path"><button>Know More About Our {{item.title}}</button></a>
                 </div>
                 </div>

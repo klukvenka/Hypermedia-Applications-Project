@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar">
       <div class="logo">
-        <a href="/">Hypercompany</a>
+        <Logo />
       </div>
       <div class="menubar" v-for="menu in menus" :key="menu">
         <button class="menu-item"><a :href="'/'+menu.replace(' ','_')">{{ menu }}</a></button>
@@ -25,9 +25,6 @@
 
 <style>
 .navbar {
-  overflow: hidden;
-  background-color: black;
-  opacity: 100%;
   position: fixed;
   top:0vh;
   width: 100vw;
@@ -51,14 +48,6 @@
   margin: 0;
   justify-content: center;
   margin:auto;
-}
-
-.menubar button {
-  padding: 0px;
-  margin: 0px;
-}
-.navbar a:hover {
-  background-color: red;
 }
 
 @media only screen and (max-width: 600px) {

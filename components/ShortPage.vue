@@ -2,17 +2,15 @@
     <div>
         <!--Display list of areas-->
         <div v-if="area" class="area-content display-details">
-            <div class="area-image">
             <a :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')">
                 <img :src="ar.image" :alt="ar.name" :title="ar.name" />
             </a>
-            </div>
             <div class="area-data">
                 <a class="red-text" :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')">
                     <h4>{{ar.name}}</h4>
                 </a>
                 <p>{{ar.short_description}}</p>
-                <a :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')"><button>View Products and Team</button></a>
+                <a :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')"><button>View Detailed Area Info</button></a>
             </div>
         </div>
         <!--Display area heading-->
@@ -20,10 +18,11 @@
             <a class="red-text" :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')">
                 <h4>{{ar.name}}</h4>
             </a>
+            <h5>(Click on each image for a short description)</h5>
         </div>
 
         <!--Display list of members and products-->
-        <div v-if="isMemberReady || isProductReady" class="flex-list">
+        <div v-if="isMemberReady || isProductReady" class="flex-list item-list">
             <div v-for="(item,j) in items" :key="j">
                 <div class="card">
                     <img v-on:click="isShow(item)" :src="item.image" :alt="item.name" :title="item.name">
@@ -123,17 +122,25 @@ export default {
 </script>
 
 <style scoped>
-.flex-list img {
+.item-list img {
     height: 200px;
     width: 200px;
+}
+
+.area-content img {
+    width: 25vw;
+    height: 35vh;
 }
 
 .area-data {
     padding: 2%;
 }
 
-button:hover {
-    background-color: red;
+@media only screen and (max-width: 900px) {
+    .area-content img {
+        width: 70vw;
+        height: 40vh;
+    }
 }
 </style>
 

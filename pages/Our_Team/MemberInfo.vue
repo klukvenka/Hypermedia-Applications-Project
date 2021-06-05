@@ -3,15 +3,17 @@
         <Navbar />
         <Breadcrumbs />
         <div class="content">
-            <Description :member="mem" mem />
+            <detailed-page :member="mem" mem />
         </div>
         <Footer />
     </div>
 </template>
 
 <script>
+    import DetailedPage from '../../components/DetailedPage.vue'
 
     export default {
+        components: { DetailedPage },
         data () {
             return {
                 mem: this.$route.query.name.replace('_',' '),

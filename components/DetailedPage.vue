@@ -2,14 +2,7 @@
     <div>
         <!--Display description of areas-->
         <div v-if="isAreaReady && ar">
-            <div md="12">
-                <div class="text-center cascade">
-                    <h2 class="font-weight-bold">
-                    {{areas.name}}
-                    </h2>
-                    <p>{{areas.description}}</p>
-                </div>
-            </div>
+            <Heading :heading="areas.name" :subheading="areas.description" />
         </div>
         <!--Display description of products-->
         <section  v-if="isProductReady &&  prod" class="text-center">

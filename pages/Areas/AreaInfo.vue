@@ -4,19 +4,19 @@
         <Breadcrumbs />
         <div class="container">
             <div class="content">
-                <Description :area="ar" ar />
+                <detailed-page :area="ar" ar />
             </div>
         </div>
-        <div class="content display-details">
+        <div class="content">
             <div>
                 <h3 class="">Products</h3>
-                <List :ar="areas" product long />
+                <short-page :ar="areas" product />
             </div>
         </div>
         <div class="content">
             <div>
                 <h3 class="">Team Members</h3>
-                <List :ar="areas" member short />
+                <short-page :ar="areas" member />
             </div>
         </div>
         <Footer />
@@ -24,10 +24,13 @@
 </template>
 
 <script>
+    import DetailedPage from '../../components/DetailedPage.vue';
+    import ShortPage from '../../components/ShortPage.vue';
 
     import AreaDataService from '../../services/AreaDataService'
 
     export default {
+        components: { ShortPage, DetailedPage },
         data () {
             return {
                 ar: this.$route.query.name.replace('_',' ').split('#')[0],
@@ -37,7 +40,6 @@
         methods: {
             async retrieveAreaByName() {
                 this.areas = await (await AreaDataService.getByName(this.ar)).data[0];
-                console.log(this.areas);
             }
         },
         created() {

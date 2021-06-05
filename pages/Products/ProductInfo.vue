@@ -4,7 +4,7 @@
         <Breadcrumbs />
         <div class="content">
             <div class="">
-                <Description :product="prod" prod />
+                <detailed-page :product="prod" prod />
             </div>
         </div>
         <Footer />
@@ -12,11 +12,11 @@
 </template>
 
 <script>
-    import Description from '../../components/Description.vue';
+    import DetailedPage from '../../components/DetailedPage.vue';
 
     export default {
         components: {
-            Description
+            DetailedPage
         },
         data () {
             return {

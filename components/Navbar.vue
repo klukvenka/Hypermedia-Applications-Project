@@ -32,7 +32,6 @@
   top:0vh;
   width: 100vw;
   display: flex;
-  flex-wrap: wrap;;
 }
 .navbar a {
   float: left;
@@ -51,6 +50,7 @@
   font-family: inherit;
   margin: 0;
   justify-content: center;
+  margin:auto;
 }
 
 .menubar button {

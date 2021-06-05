@@ -1,7 +1,7 @@
 <template>
     <div>
         <!--Display list of areas-->
-        <div v-if="area && short" class="area-content display-details">
+        <div v-if="area" class="area-content display-details">
             <div class="area-image">
             <a :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')">
                 <img class="img-fluid" :src="ar.image" :alt="ar.name" :title="ar.name" />
@@ -15,53 +15,29 @@
                 <a :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')"><button>View Products and Team</button></a>
             </div>
         </div>
-
+        <!--Display area heading-->
         <div v-if="needarea">
-            <div>
-                <a class="red-text" :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')">
-                    <h4>
-                        {{ar.name}}
-                    </h4>
-                </a>
-            </div>
+            <a class="red-text" :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')">
+                <h4>{{ar.name}}</h4>
+            </a>
         </div>
 
-        <!--Display list of members-->
-        <div v-if="isMemberReady && short" class="flex-list">
-            <div v-for="(member,j) in members" :key="j" class="member-list card">
-                <a class="red-text" v-if="member.area.includes(ar.name)" :href="'/Our_Team/MemberInfo?name='+member.name.replace(' ','_')">
-                <img :src="member.image" :alt="member.name" :title="member.name">
-                <h5>{{member.name}}, {{member.designation}}</h5>
-                <button>View Member Info</button>
+        <!--Display list of members and products-->
+        <div v-if="isMemberReady || isProductReady" class="flex-list">
+            <div v-for="(item,j) in items" :key="j" class="member-list">
+                <div class="card">
+                    <img v-on:click="isShow(item)" :src="item.image" :alt="item.name" :title="item.name">
+                    <h5 class="red-text">{{item.name}}</h5>
+                    <div v-if="render && item.name == renderItem.name">{{renderItem.short_description}}</div>
+                </div>
+                <a v-if="item.area.includes(ar.name) && isMemberReady" :href="'/Our_Team/MemberInfo?name='+item.name.replace(' ','_')">
+                    <button>View Detailed Member Info</button>
+                </a>
+                <a v-else-if="item.area == ar.name && isProductReady" :href="'/Products/ProductInfo?name='+item.name.replace(' ','_')">
+                    <button>View Detailed Product Info</button>
                 </a>
             </div>
         </div>
-        <!--Display list of products-->
-        <div v-if="isProductReady && short" class="flex-list">
-            <div v-for="(prod,j) in products" :key="j" class="product-list card">
-                <a v-if="prod.area == (ar.name)" :href="'/Products/ProductInfo?name='+prod.name.replace(' ','_')">
-                <img class="rounded z-depth-1-half img-fluid my-2" :src="prod.image" :alt="prod.name" :title="prod.short_description">
-                <h5 class="red-text">{{prod.name}}</h5>
-                <button>View Product Info</button>
-                </a>
-            </div>
-        </div>
-        <!--Display list with description of products-->
-        <div v-if="isProductReady && long" class="text-center display-details">
-            <div v-for="(product,i) in products" :key="i" class="text-center card">
-                <div>
-                    <img :src="product.image" :alt="product.name" :title="product.name" />
-                </div>
-                <div>
-                    <a class="red-text" :href="'/Products/ProductInfo?name='+product.name">
-                        <h5>{{product.name}}</h5>
-                    </a>
-                    <p>{{product.short_description}}</p>
-                    <a :href="'/Products/ProductInfo?name='+product.name"><button>View More</button></a>
-                </div>
-            </div>
-        </div>
-        
     </div>
 </template>
 
@@ -86,14 +62,6 @@ export default {
             default: false
         },
         ar: Object,
-        short: {
-            type: Boolean,
-            default: false
-        },
-        long: {
-            type: Boolean,
-            default: false
-        },
         needarea: {
             type: Boolean,
             default: false
@@ -102,25 +70,42 @@ export default {
     data () {
         return {
             products: [],
-            members: []
+            members: [],
+            items: [],
+            render: false,
+            renderItem: ""
         }
     },
     methods: {
         async retrieveProductsByArea() {
             if (this.product) {
                 this.products = await (await ProductDataService.getByArea(this.ar.name)).data;
+                this.items = this.products;
             }
         },
         async retrieveMembersByArea() {
             if (this.member) {
                 this.members = await (await MemberDataService.getByArea(this.ar.name)).data;
+                this.items = this.members;
             }
+        },
+        async isShow(value) {
+            if (this.render) {
+                this.render =  false;
+                this.renderItem = "";
+            }
+            else {
+                this.render =  true;
+                this.renderItem = value;
+                console.log(this.renderItem);
+            }
+            await this.render;
         }
     },
     computed: {
         isMemberReady: function () {
             if (this.members.length > 0) {
-                return this.members;
+                return this.items;
             }
             else {
                 this.retrieveMembersByArea()
@@ -128,7 +113,7 @@ export default {
         },
         isProductReady: function () {
             if (this.products.length > 0) {
-                return this.products;
+                return this.items;
             }
             else {
                 this.retrieveProductsByArea()

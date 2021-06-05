@@ -4,7 +4,7 @@
         <Breadcrumbs />
         <div class="">
             <div v-for="(area,i) in areas" :key="i" class="content">
-                <List :ar="area" product long needarea/>
+                <short-page :ar="area" product needarea/>
             </div>
         </div>
         <Footer />
@@ -12,9 +12,11 @@
 </template>
 
 <script>
+    import ShortPage from '../components/ShortPage.vue'
     import AreaDataService from '../services/AreaDataService'
 
     export default {
+    components: { ShortPage },
         data () {
             return {
                 areas : [],

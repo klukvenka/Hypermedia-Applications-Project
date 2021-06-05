@@ -105,7 +105,6 @@ export default {
     methods: {
         async retrieveAreaByName() {
             this.area = await (await AreaDataService.getByName(this.product.area)).data;
-            console.log(this.area)
         },
         async retrieveProductsByArea() {
             this.products = await (await ProductDataService.getByArea(this.ar.name)).data;
@@ -147,7 +146,6 @@ export default {
         },
         isProductReady: function () {
             if (this.getProduct) {
-                console.log(this.items);
                 if (this.products.length > 0) {
                     return this.items;
                 }

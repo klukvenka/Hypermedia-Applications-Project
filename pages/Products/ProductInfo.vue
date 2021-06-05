@@ -43,10 +43,10 @@
             }
         },
         methods: {
-            async retrieveProductsByName() {
+            async retrieveAllDetails() {
                 this.product = await (await ProductDataService.getByName(this.prod)).data[0]
-                this.manager = this.product.manager;
-                this.reference = this.product.reference;
+                this.manager = await this.product.manager;
+                this.reference = await this.product.reference;
                 this.area = await (await AreaDataService.getByName(this.product.area)).data[0]
             }
         },
@@ -56,7 +56,7 @@
             }
         },
         created() {
-            this.retrieveProductsByName();
+            this.retrieveAllDetails();
         }
     }
 </script>

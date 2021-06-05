@@ -2,7 +2,7 @@
     <div class="root">
         <Navbar />
         <Breadcrumbs />
-        <img class="top-image" src="home-carousel-2.jpg" alt="top-image" title="top-image" />
+        <img class="top-image" src="home-carousel-3.jpg" alt="top-image" title="top-image" />
         <div class="content">
             <h2>Contact us</h2>
             <h3 class="light-heading">Do you have any questions? Please do not hesitate to contact us directly. Our team will getback to you within a matter of hours to help you.</h3>
@@ -91,5 +91,12 @@
 
 .light-heading {
   text-align: center;
+}
+
+
+.top-image {
+  margin-top: 2%;
+  width: 100vw;
+  height: 80vh;
 }
 </style>

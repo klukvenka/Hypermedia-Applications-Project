@@ -60,6 +60,12 @@ export default {
             type: Boolean,
             default: false
         },
+        item: {
+            type: Array,
+            default() {
+                return []
+            }
+        },
         ar: {
             type: Object,
             default() {
@@ -79,14 +85,6 @@ export default {
             default: ''
         },
         needarea: {
-            type: Boolean,
-            default: false
-        },
-        manager: {
-            type: Boolean,
-            default: false
-        },
-        reference: {
             type: Boolean,
             default: false
         },
@@ -157,19 +155,18 @@ export default {
         },
         isProductReady: function () {
             if (this.getProduct) {
+                console.log(this.items);
                 if (this.products.length > 0) {
                     return this.items;
                 }
-                else if (this.mem.length > 0) {
-                    if (this.manager) {
-                        this.retrieveProductsByManager()
-                    }
-                    else if (this.reference) {
-                        this.retrieveProductsByReference()
-                    }
-                }
                 else {
-                    this.retrieveProductsByArea()
+                    if (this.item.length > 0) {
+                        this.items = this.item;
+                        return this.items;
+                    }
+                    else {                    
+                        this.retrieveProductsByArea()
+                    }
                 }
             }
         }

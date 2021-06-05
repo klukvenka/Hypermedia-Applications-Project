@@ -3,35 +3,16 @@
         <Navbar />
         <Breadcrumbs />
         
-    <div class="text-center">
-    <div>
-      <div>
         <div class="content">
             <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(142).jpg" />
           <div>
-            <h2>
-              <a>HYPERCOMPANY</a>
-            </h2>
+            <h2>HYPERCOMPANY</h2>
             <h5>End-to-end solutions for Digital Evolution</h5>
-            <button>
-              Facebook
-            </button>
-            <button>
-              Twitter
-            </button>
-            <button>
-              LinkedIn
-            </button>
-            <h5>Digital Evolution involves everything: this is why it requires relentless innovation, skills and ideas.
-          </h5>
+            <h5>Digital Evolution involves everything: this is why it requires relentless innovation, skills and ideas.</h5>
           <p>At Hypergroup, we design and create a virtuous and proactive digital ecosystem, with the goal of continuous improvement of people and resources, technology and knowledge.
 Interpreting a constantly evolving world requires understanding, foreseeing and always being ready for change.
           </p>
-          </div>
         </div>
-          
-      </div>
-    </div>
     </div>
    
    <div class="content">

@@ -116,7 +116,8 @@ button:hover {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 10rem;
   padding: 20px;
-  margin-top: 60px;
+  margin-top: 70px;
+  text-align: center;
 }
 
 .breadcrumb-item {
@@ -166,7 +167,7 @@ button {
     width: 100%;
   }
   .breadcrumbs {
-    margin-top: 0px;
+    margin-top: 10px;
   }
 }
 

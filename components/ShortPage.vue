@@ -4,7 +4,7 @@
         <div v-if="area" class="area-content display-details">
             <div class="area-image">
             <a :href="'/Areas/AreaInfo?name='+ar.name.replace(' ','_')">
-                <img class="img-fluid" :src="ar.image" :alt="ar.name" :title="ar.name" />
+                <img :src="ar.image" :alt="ar.name" :title="ar.name" />
             </a>
             </div>
             <div class="area-data">
@@ -24,7 +24,7 @@
 
         <!--Display list of members and products-->
         <div v-if="isMemberReady || isProductReady" class="flex-list">
-            <div v-for="(item,j) in items" :key="j" class="member-list">
+            <div v-for="(item,j) in items" :key="j">
                 <div class="card">
                     <img v-on:click="isShow(item)" :src="item.image" :alt="item.name" :title="item.name">
                     <h5 class="red-text">{{item.name}}</h5>
@@ -73,7 +73,7 @@ export default {
             members: [],
             items: [],
             render: false,
-            renderItem: ""
+            renderItem: {}
         }
     },
     methods: {
@@ -92,12 +92,11 @@ export default {
         async isShow(value) {
             if (this.render) {
                 this.render =  false;
-                this.renderItem = "";
+                this.renderItem = {};
             }
             else {
                 this.render =  true;
                 this.renderItem = value;
-                console.log(this.renderItem);
             }
             await this.render;
         }
@@ -124,14 +123,9 @@ export default {
 </script>
 
 <style scoped>
-.product-list img, .member-list img {
+.flex-list img {
     height: 200px;
     width: 200px;
-}
-
-.product-list, .member-list {
-    padding: 0% 1%;
-    justify-items: center;
 }
 
 .area-data {

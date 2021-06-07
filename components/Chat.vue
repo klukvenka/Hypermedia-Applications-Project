@@ -89,7 +89,7 @@ export default {
 .chat-window {
   height: calc(100% - 34px);
   color: red;
-  overflow-y:scroll;
+  overflow-y:auto;
 }
 .message {
   width: calc(100% - 8px);

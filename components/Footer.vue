@@ -2,13 +2,15 @@
   <div class="footer">
     <div class="elements">
       <ul>
-        <li class="list-unstyled"><a href="/Areas">All Areas</a></li>
+        <a href="/Areas"><li class="list-unstyled">All Areas</li></a>
+      </ul>
+      <ul>
         <li class="list-unstyled"><a href="/Products">All Products</a></li>
       </ul>
       <ul>
+        <li class="list-unstyled"><a href="/The_Company">About Us</a></li>
       </ul>
       <ul>
-        <li class="list-unstyled"><a href="/The_Company">About Us</a></li>
         <li class="list-unstyled"><a href="/Our_Team">Our Team</a></li>
       </ul>
       <ul>
@@ -16,7 +18,7 @@
       </ul>
 
       <div class="copyright">
-        &copy; 2020 Copyright: <a href="https://hypercompany.herokuapp.com">  Hypercompany </a>
+        &copy; 2020 Copyright: <a href="/">  Hypercompany </a>
       </div>
     </div>
   </div>
@@ -33,6 +35,7 @@
 <style>
 body {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 .footer {
@@ -42,13 +45,16 @@ body {
 
 .elements {
   display: flex;
-  justify-content: center;
   background-color: black;
   width: 100%;
+  padding: 10px;
 }
 
+.elements button {
+  width: 100%;
+}
 .copyright {
-  margin-left: 25vw;
+  margin-left: 10vw;
 }
 
 .copyright a {
@@ -58,8 +64,12 @@ body {
 
 .list-unstyled {
   list-style-type: none;
+  margin-left: 105px;
 }
 
+.elements a {
+  color: white;
+}
 .list-unstyled a {
   text-decoration-line: none;
   color: white;

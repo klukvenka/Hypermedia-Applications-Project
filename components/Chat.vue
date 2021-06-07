@@ -79,17 +79,17 @@ export default {
   border: 1px solid black;
   border-radius: 4px;
   height: 350px;
-  width: 300px;
+  width: 275px;
   position: fixed;
-  bottom: 15vh;
-  right: 0px;
+  bottom: 18vh;
+  right: 10px;
   z-index: 10000000;
   background-color: white;
 }
 .chat-window {
   height: calc(100% - 34px);
   color: red;
-  overflow: hidden;
+  overflow-y:scroll;
 }
 .message {
   width: calc(100% - 8px);

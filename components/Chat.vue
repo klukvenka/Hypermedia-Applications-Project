@@ -20,7 +20,7 @@
       />
     </div>
     <div class="button" @click="isOpen = !isOpen">
-      <img src="https://img.icons8.com/ios-filled/452/chat--v1.png" alt="Chat" title="Chat" />
+      <img src="/chat.png" alt="Chat" title="Chat" />
     </div>
   </div>
 </template>
@@ -66,8 +66,8 @@ export default {
   padding: 10px;
   float: right;
   position: fixed;
-  bottom: 90px;
-  right: 10px;
+  bottom: 6vh;
+  right: 1vw;
   z-index: 10000000;
 }
 .button img {
@@ -81,7 +81,7 @@ export default {
   height: 350px;
   width: 250px;
   position: fixed;
-  bottom: 160px;
+  bottom: 15vh;
   right: 0px;
   z-index: 10000000;
   background-color: white;
@@ -119,5 +119,12 @@ export default {
   width: 100%;
   position: absolute;
   z-index: 20;
+}
+
+@media only screen and (max-width: 800px) {
+  .button {
+    bottom: 21vh;
+    right: 2vw;
+  }
 }
 </style>

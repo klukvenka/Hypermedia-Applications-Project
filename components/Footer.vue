@@ -1,27 +1,26 @@
 <template>
-  <div class="footer">
-    <div class="elements">
-      <ul>
-        <a href="/Areas"><li class="list-unstyled">All Areas</li></a>
-      </ul>
-      <ul>
-        <li class="list-unstyled"><a href="/Products">All Products</a></li>
-      </ul>
-      <ul>
-        <li class="list-unstyled"><a href="/The_Company">About Us</a></li>
-      </ul>
-      <ul>
-        <li class="list-unstyled"><a href="/Our_Team">Our Team</a></li>
-      </ul>
-      <ul>
-        <li class="list-unstyled"><a href="/Contact_Us">Contact Us</a></li>
-      </ul>
-
-      <div class="copyright">
-        &copy; 2020 Copyright: <a href="/">  Hypercompany </a>
-      </div>
+    <div class="footer">
+        <div class="elements">
+        <ul>
+            <a href="/Areas"><li class="list-unstyled">All Areas</li></a>
+        </ul>
+        <ul>
+            <a href="/Products"><li class="list-unstyled">All Products</li></a>
+        </ul>
+        <ul>
+            <a href="/The_Company"><li class="list-unstyled">About Us</li></a>
+        </ul>
+        <ul>
+            <a href="/Our_Team"><li class="list-unstyled">Our Team</li></a>
+        </ul>
+        <ul>
+            <a href="/Contact_Us"><li class="list-unstyled">Contact Us</li></a>
+        </ul>
+        </div>
+        <div class="copyright">
+            &copy; 2020 Copyright: <a href="/">  Hypercompany </a>
+        </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -35,42 +34,27 @@
 <style>
 body {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  overflow-x: hidden;
 }
 
 .footer {
   color: white;
   text-decoration: none;
+  display: flex;
 }
 
-.elements {
+.elements, .copyright {
   display: flex;
+  justify-content: center;
   background-color: black;
   width: 100%;
-  padding: 10px;
-}
-
-.elements button {
-  width: 100%;
-}
-.copyright {
-  margin-left: 10vw;
-}
-
-.copyright a {
-  color: white;
-  text-decoration-line: none;
+  padding: 10px 0px;
 }
 
 .list-unstyled {
   list-style-type: none;
-  margin-left: 105px;
 }
 
-.elements a {
-  color: white;
-}
-.list-unstyled a {
+.elements a, .copyright a {
   text-decoration-line: none;
   color: white;
 }

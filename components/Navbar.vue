@@ -1,15 +1,14 @@
 <template>
-    <div class="navbar">
-        <a href="/">
-        <div class="logo">
-            <img src="/logo.png" alt="logo" title="logo"/>
-        </div>
-        </a>
-        <div class="menubar" v-for="menu in menus" :key="menu">
-            <button class="menu-item"><a :href="'/'+menu.replace(' ','_')">{{ menu }}</a></button>
-        </div>
+  <div class="navbar">
+    <a href="/">
+    <div class="logo">
+        <img src="/logo.png" alt="logo" title="logo"/>
     </div>
-
+    </a>
+    <div class="menubar" v-for="menu in menus" :key="menu">
+        <a :href="'/'+menu.replace(' ','_')"><button class="menu-item">{{ menu }}</button></a>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -33,25 +32,22 @@
 
 .navbar a {
   color: white;
-  text-decoration-line: none;
-  font-size: 15px;
+  text-decoration: none;
 }
 .logo {
   text-align: center;
   display: block;
-  justify-content: center;
-  margin-top: .4vh;
 }
 
 .logo img {
   height: 7vh;
-  width: 8vw;
+  width: 10vw;
   
 }
 .menubar {
   font-family: inherit;
   text-align: center;
-  padding: 4px 16px;
+  padding: 10px 16px;
   margin: auto;
 }
 
@@ -66,7 +62,7 @@
     position: relative;
   }
   .logo img {
-    height: 6vh;
+    height: 10vh;
     width: 100vw;
   
 }

@@ -32,8 +32,9 @@
 2. Code for all components - Navbar (components/Navbar.vue), Breadcrumbs (components/Breadcrumbs.vue), Footer (components/Footer.vue), Shortpage (components/Shortpage.vue), Heading (components/Heading.vue)
 3. Chatbot (components/Chat.vue, mixins/mmcc-mixin.js and chatbot-config.json)
 4. CSS (layouts/default.vue), Error page (layouts/error.vue)
-5. Server (server/routes/, server/server.js) 
-6. Services to access DB (services/), Axios config for API (http-common.js)
-7. DB (server/models/, server/migrations, server/config, server/controllers)
-8. Github README
+5. Services to access DB (services/*)
+6. Axios config for API (http-common.js)
+7. Server (server/routes/*, server/server.js)
+8. DB (server/models/, server/migrations/*, server/config/*, server/controllers/*)
+9. Github README
 ```

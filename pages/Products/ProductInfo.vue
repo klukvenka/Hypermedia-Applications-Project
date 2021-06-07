@@ -1,7 +1,5 @@
 <template>
     <div class="root">
-        <Navbar />
-        <Breadcrumbs />
         <div class="content">
             <Heading :heading="product.name" :description="product.description" />
         </div>
@@ -19,7 +17,6 @@
                 <short-page :prod="prod" :mem="reference" getMember />
             </div>
         </div>
-        <Footer />
     </div>
 </template>
 

@@ -43,3 +43,14 @@
 - **Server and DB Technologies:** [server/README.md](./server/README.md)
 - **Components Developed and their structure:** [components/README.md](./components/README.md)
 - **Plugins:** [plugins/README.md](./plugins/README.md)
+
+## Compliance to best-practices of framework
+-**Adherence to project specification:**
+
+- **Consistency of page design:**
+
+- **Consistency of colors and font:**
+
+- **Re-usability of code:**
+
+- **Adherence to usability heuristics:**

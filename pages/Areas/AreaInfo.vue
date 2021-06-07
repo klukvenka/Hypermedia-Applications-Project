@@ -1,7 +1,5 @@
 <template>
     <div class="root">
-        <Navbar />
-        <Breadcrumbs />
         <div class="content">
             <Heading :heading="areas.name" :description="areas.description" />
         </div>
@@ -17,7 +15,6 @@
                 <short-page :ar="areas" getMember />
             </div>
         </div>
-        <Footer />
     </div>
 </template>
 

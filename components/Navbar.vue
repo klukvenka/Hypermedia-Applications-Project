@@ -6,7 +6,7 @@
     </div>
     </a>
     <div class="menubar" v-for="menu in menus" :key="menu">
-        <a :href="'/'+menu.replace(' ','_')"><button class="menu-item">{{ menu }}</button></a>
+        <a :href="'/'+menu"><button class="menu-item">{{ menu }}</button></a>
     </div>
   </div>
 </template>

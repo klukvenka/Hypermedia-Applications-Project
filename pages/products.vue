@@ -1,13 +1,10 @@
 <template>
     <div class="root">
-        <Navbar />
-        <Breadcrumbs />
         <div class="">
             <div v-for="(area,i) in areas" :key="i" class="content">
                 <short-page :ar="area" getProduct needarea/>
             </div>
         </div>
-        <Footer />
     </div>
 </template>
 

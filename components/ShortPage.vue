@@ -29,10 +29,10 @@
                     <div v-if="render && item.name == renderItem.name"><h5 class="light-heading">{{renderItem.short_description}}</h5></div>
                     <div v-else-if="isExpand"><h5 class="light-heading">{{item.short_description}}</h5></div>
                 </div>
-                <a v-if="isMemberReady" :href="'/Our_Team/MemberInfo?name='+item.name.replace(' ','_')">
+                <a v-if="isMemberReady" :href="'/Our_Team/MemberInfo?name='+item.name">
                     <button>View Detailed Member Info</button>
                 </a>
-                <a v-else-if="isProductReady" :href="'/Products/ProductInfo?name='+item.name.replace(' ','_')">
+                <a v-else-if="isProductReady" :href="'/Products/ProductInfo?name='+item.name">
                     <button>View Detailed Product Info</button>
                 </a>
             </div>

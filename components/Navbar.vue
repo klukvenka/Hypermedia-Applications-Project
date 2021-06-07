@@ -66,7 +66,7 @@
     position: relative;
   }
   .logo img {
-    height: 7vh;
+    height: 10vh;
     width: 100vw;
   
 }

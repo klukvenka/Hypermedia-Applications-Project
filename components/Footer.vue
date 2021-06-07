@@ -14,11 +14,11 @@
       <ul>
         <li class="list-unstyled"><a href="/Contact_Us">Contact Us</a></li>
       </ul>
+
+      <div class="copyright">
+        &copy; 2020 Copyright: <a href="https://hypercompany.herokuapp.com">  Hypercompany </a>
+      </div>
     </div>
-    <div class="copyright">
-      &copy; 2020 Copyright: <a href="https://hypercompany.herokuapp.com">  Hypercompany </a>
-    </div>
-    
   </div>
 </template>
 
@@ -48,12 +48,12 @@ body {
 }
 
 .copyright {
-  background-color: black;
-  width: 100%
+  margin-left: 25vw;
 }
 
 .copyright a {
   color: white;
+  text-decoration-line: none;
 }
 
 .list-unstyled {
@@ -65,4 +65,14 @@ body {
   color: white;
 }
 
+@media only screen and (max-width: 800px) {
+  .copyright, .elements {
+    display: block;
+    text-align: center;
+  }
+  .copyright {
+    margin-left: 0vw;
+  }
+  
+}
 </style>

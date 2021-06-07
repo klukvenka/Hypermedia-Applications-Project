@@ -38,3 +38,8 @@
 8. DB (server/models/, server/migrations/*, server/config/*, server/controllers/*)
 9. Github README
 ```
+
+## Technical Documentation
+- **Server and DB Technologies:** [server/README.md](/server/README.md)
+- **Components Developed and their structure:** [components/README.md](/components/README.md)
+- **Plugins:** [plugins/README.md](/plugins/README.md)

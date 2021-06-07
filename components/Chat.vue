@@ -79,7 +79,7 @@ export default {
   border: 1px solid black;
   border-radius: 4px;
   height: 350px;
-  width: 250px;
+  width: 300px;
   position: fixed;
   bottom: 15vh;
   right: 0px;
@@ -87,9 +87,9 @@ export default {
   background-color: white;
 }
 .chat-window {
-  overflow-y: scroll;
   height: calc(100% - 34px);
   color: red;
+  overflow: hidden;
 }
 .message {
   width: calc(100% - 8px);

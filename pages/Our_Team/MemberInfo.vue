@@ -12,12 +12,12 @@
             </div>
         </div>
         <div class="content display-details">
-            <div>
+            <div v-if="managers.length > 0">
                 <h2>Manager for</h2>
                 <short-page :item="managers" getProduct />
             </div>
             
-            <div>
+            <div v-if="references.length > 0">
                 <h2>Reference for</h2>
                 <short-page :item="references" getProduct />
             </div>

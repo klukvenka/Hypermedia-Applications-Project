@@ -2,8 +2,8 @@
     <div class="root">
         <Topbar />
         <div class="content display-details">
-            <img class="member-image" :src="member.image" :alt="member.name" :title="member.name" />
-            <Heading :heading="member.name" :subheading="member.designation" :description="member.description" />
+            <img :src="member.image" :alt="member.name" :title="member.name" />
+            <Heading class="member-details" :heading="member.name" :subheading="member.designation" :description="member.description" />
         </div>
         <div class="content">
             <h2>Related Area</h2>
@@ -67,7 +67,7 @@
     cursor:default;
 }
 
-.member-image {
-    padding-right: 10vw;
+.member-details {
+    padding-left: 10vw;
 }
 </style>

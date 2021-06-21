@@ -11,11 +11,11 @@
         <div class="content display-details">
             <div>
                 <h2>Manager</h2>
-                <short-page :forProduct="prod" :forMember="manager" getMember />
+                <short-page :forProduct="prod" :mem="manager" getMember />
             </div>
             <div>
                 <h2>Reference</h2>
-                <short-page :forProduct="prod" :forMember="reference" getMember />
+                <short-page :forProduct="prod" :mem="reference" getMember />
             </div>
         </div>
     </div>

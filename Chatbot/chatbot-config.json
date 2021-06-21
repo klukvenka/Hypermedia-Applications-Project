@@ -129,7 +129,7 @@
 				},
 				{
 					"my_id": "end",
-					"next_id": "start",
+					"next_id": null,
 					"my_type": "END"
 				}
 			],

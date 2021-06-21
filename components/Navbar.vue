@@ -26,6 +26,7 @@
   display: flex;
   background-color: black;
   top: 0vh;
+  position: sticky;
 }
 
 .navbar a {

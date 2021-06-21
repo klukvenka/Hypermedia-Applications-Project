@@ -51,7 +51,6 @@ The props that can be passed to this component are:
                     <h5 class="red-text">{{item.name}}</h5>
                     <h5 v-if="isMemberReady">{{item.designation}}</h5>
                     <div v-if="renderItem.includes(item.name)"><p>{{item.short_description}}</p></div>
-                    <div v-else-if="isExpand"><p class="light-heading">{{item.short_description}}</p></div>
                 </div>
                 <!--Display different links depending on Member or Product-->
                 <a v-if="isMemberReady" :href="'/Our_Team/MemberInfo?name='+item.name">
@@ -110,10 +109,6 @@ export default {
             default: ''
         },
         needHeading: {
-            type: Boolean,
-            default: false
-        },
-        isExpand: {
             type: Boolean,
             default: false
         }

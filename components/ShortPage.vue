@@ -76,7 +76,7 @@ export default {
             type: String,
             default: ''
         },
-        mem: {
+        forMember: {
             type: String,
             default: ''
         },

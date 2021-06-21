@@ -24,7 +24,7 @@ html {
   font-family:
     Arial;
   font-size: 16px;
-  word-spacing: 1px;
+  word-spacing: 1.4px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;

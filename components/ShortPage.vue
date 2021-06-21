@@ -25,7 +25,7 @@
             <div v-for="(item,j) in items" :key="j">
                 <div class="card" v-on:click="isShow(item.name)">
                     <img :src="item.image" :alt="item.name" :title="item.name">
-                    <h5 class="red-text">{{item.name}}</h5>
+                    <h6 class="red-text">{{item.name}}</h6>
                     <div v-if="renderItem.includes(item.name)"><p>{{item.short_description}}</p></div>
                     <div v-else-if="isExpand"><p class="light-heading">{{item.short_description}}</p></div>
                 </div>

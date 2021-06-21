@@ -16,7 +16,7 @@
                     <h3>
                         <strong>{{item.heading}}</strong>
                     </h3>
-                    <h4 class="light-heading">{{item.text}}</h4>
+                    <p>{{item.text}}</p>
                     <a :href="item.path"><button>Know More About Our {{item.title}}</button></a>
                 </div>
             </div>
@@ -64,10 +64,6 @@
 
 
 <style>
-.topic-content {
-  padding: 2%;
-}
-
 .breadcrumbs {
   background-color: rgb(255, 255, 255);
   border: 0px solid rgba(0, 0, 0, 0.125);

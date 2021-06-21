@@ -2,22 +2,20 @@
     <div class="root">
        	<!--Start main content--> 
         <div class="content">
-			<!--Image on top of page-->
-            
-			<!--Text accompanying image-->
-			<div>
-				<h2>HYPERCOMPANY</h2>
-				<h5 class="light-heading">End-to-end solutions for Digital Evolution</h5>
-				<h5 class="light-heading">Digital Evolution involves everything: this is why it requires relentless innovation, skills and ideas.</h5>
-				<h5 class="light-heading">At Hypergroup, we design and create a virtuous and proactive digital ecosystem, with the goal of continuous improvement of people and resources, technology and knowledge.
-		Interpreting a constantly evolving world requires understanding, foreseeing and always being ready for change.
-				</h5>
-			</div>
+			<!--About the company-->
+			<h2>About Us</h2>
+			<br>
+			<p>Hypercompany was founded in the year 2012 by Aida Gasanova, Lorenzo Grossi, Veronica Lucchetti and Sairaghav Venkataraman with the aim of providing much needed end-to-end solutions and services in then-upcoming fields such as Artificial Intelligence, Cloud Computing and Cybersecurity.</p>
+			<br>
+			<p>Digital Evolution involves everything: this is why it requires relentless innovation, skills and ideas. Over the years, the company has acquired tremendous knowledge and experience in these fields to grow into one of the superior technology companies in Italy.</p>
+			<br>
+			<p>At Hypercompany, we design and create a virtuous and proactive digital ecosystem, with the goal of continuous improvement of people and resources, technology and knowledge.
+	Interpreting a constantly evolving world requires understanding, foreseeing and always being ready for change.</p>
     	</div>
 		<!-- Office Location -->
 		<div class="content">
 			<h2>Our Offices</h2>
-			<div v-for="(item,i) in items" :key="i" class="content display-details">
+			<div v-for="(item,i) in items" :key="i" class="card display-details">
 				<div class="topic-image">
 					<img :src="item.image" :alt="item.location" :title="item.location" />
 				</div>

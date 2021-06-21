@@ -46,10 +46,13 @@ The props that can be passed to this component are:
         <!--Display list of members and products-->
         <div v-if="(isMemberReady || isProductReady)" class="flex-list item-list">
             <div v-for="(item,j) in items" :key="j">
+                <!--Configure toggle onclick-->
                 <div class="card" v-on:click="isShow(item.name)">
                     <img :src="item.image" :alt="item.name" :title="item.name">
                     <h5 class="red-text">{{item.name}}</h5>
+                    <!--Display designation only for members-->
                     <h5 v-if="isMemberReady">{{item.designation}}</h5>
+                    <!--Toggle short description-->
                     <div v-if="renderItem.includes(item.name)"><p>{{item.short_description}}</p></div>
                 </div>
                 <!--Display different links depending on Member or Product-->

@@ -1,3 +1,4 @@
+/*Same as https://gitlab.com/hypermedia2020-21/hands-on-3/-/blob/master/mixins/mmcc-mixin.js*/
 export default {
     data() {
       const list = []

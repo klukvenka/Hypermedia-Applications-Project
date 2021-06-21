@@ -1,3 +1,8 @@
+<!--
+Author: Sairaghav Venkataraman
+Description: 
+Has all components and CSS to be displayed on all pages
+-->
 <template>
   <div>
         <Nuxt />

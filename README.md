@@ -48,11 +48,14 @@
 
 ## Compliance to best-practices of framework
 - **Adherence to project specification:**
-
-- **Consistency of page design:**
-
-- **Consistency of colors and font:**
-
+```
+```
+- **Consistency of page design, colors and font:**
+```
+```
 - **Re-usability of code:**
-
+```
+```
 - **Adherence to usability heuristics:**
+```
+```

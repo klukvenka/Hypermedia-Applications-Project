@@ -1,3 +1,8 @@
+<!--
+Author: Sairaghav Venkataraman
+Description: 
+Defines the common error page for all errors
+-->
 <template>
     <div id="root">
         <div class="content error">

@@ -8,9 +8,10 @@
 ## Group Member Contribution
 - **Aida Gasanova:** 
 ```
-1. Wireframes: Low-fidelity and High-fidelity wireframes
-2. Code for Homepage (pages/index.vue), Contact Us (pages/contact_us.vue) and Company (pages/the_company.vue)
-3. Design document
+1. Low-fidelity wireframes
+2. High-fidelity wireframes
+3. Code for Homepage (pages/index.vue), Contact Us (pages/contact_us.vue) and Company (pages/the_company.vue)
+4. Design document
 ```
 - **Lorenzo Grossi:**
 ```
@@ -23,7 +24,7 @@
 1. C-IDM and P-IDM 
 2. Code for individual areas (pages/Areas/AreaInfo.vue), individual products (pages/Products/ProductInfo.vue) and individual team member pages (pages/our_team/MemberInfo.vue)
 3. Collection of data for all members, products and areas
-4. logo design
+4. Logo design
 5. Design document
 ```
 - **Sairaghav Venkataraman:**

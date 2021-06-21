@@ -76,7 +76,7 @@
 			"home": "This is our home page! Please feel free to browse to each section at your own pace. Once you're done, let me know and I can continue to the next step of the guide",
 			"steps_v": ["","/","/areas","/products","/our_team", "/the_company", "/contact_us"],
 			"continue_v": ["continue","next", "go","yes","Continue","Next","Go","Yes"],
-			"end": "The process is complete",
+			"end": "The activity is complete. Please refresh the page to start Hyperbot again.",
 			"stay_message": "I don't understand. Do you want to continue? Enter either next or continue or yes or go"
 		},
 		"process": {
@@ -142,10 +142,10 @@
 					"next_id": "chatbot-page",
 					"my_type": "XOR",
 					"callback": "generic_xor",
-					"choices": ["chatbot-page","chatbot-close"]
+					"choices": ["contact-page","chatbot-close"]
 				},
 				{
-					"my_id": "chatbot-page",
+					"my_id": "contact-page",
 					"next_id": null,
 					"my_type": "TASK",
 					"callback": "guide"
@@ -158,9 +158,16 @@
 				},
 				{
 					"my_id": "contact",
-					"next_id": null,
+					"next_id": "restart-choice",
 					"my_type": "TASK",
 					"callback": "guide"
+				},
+				{
+					"my_id": "restart-choice",
+					"next_id": "end",
+					"my_type": "XOR",
+					"callback": "generic_xor",
+					"choices": ["start-page","chatbot-close"]
 				},
 				{
 					"my_id": "end",

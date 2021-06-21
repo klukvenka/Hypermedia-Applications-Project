@@ -23,7 +23,7 @@
         <!--Display list of members and products-->
         <div v-if="(isMemberReady || isProductReady)" class="flex-list item-list">
             <div v-for="(item,j) in items" :key="j">
-                <div class="card" v-on:click="isShow(item)">
+                <div class="card" v-on:click="isShow(item.name)">
                     <img :src="item.image" :alt="item.name" :title="item.name">
                     <h5 class="red-text">{{item.name}}</h5>
                     <div v-if="renderItem.includes(item.name)"><p>{{item.short_description}}</p></div>
@@ -118,11 +118,11 @@ export default {
             this.items = this.members;
         },
         async isShow(item) {
-            if (this.renderItem.includes(item.name)) {
-                this.renderItem.splice(this.renderItem.indexOf(item.name),1);
+            if (this.renderItem.includes(item)) {
+                this.renderItem.splice(this.renderItem.indexOf(item),1);
             }
             else {
-                this.renderItem.push(item.name);
+                this.renderItem.push(item);
             }
             await this.renderItem;
         }

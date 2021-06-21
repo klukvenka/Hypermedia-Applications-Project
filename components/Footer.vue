@@ -36,6 +36,7 @@
   color: white;
   text-decoration: none;
   display: flex;
+  font-size: 13px;
 }
 
 .elements, .copyright {

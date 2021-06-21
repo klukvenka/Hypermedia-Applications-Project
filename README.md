@@ -30,7 +30,7 @@
 ```
 1. High-fidelity wireframes
 2. Code for all components - Navbar (components/Navbar.vue), Breadcrumbs (components/Breadcrumbs.vue), Footer (components/Footer.vue), Shortpage (components/Shortpage.vue), Heading (components/Heading.vue)
-3. Chatbot (components/Chat.vue, mixins/mmcc-mixin.js and chatbot-config.json)
+3. Chatbot (components/Chat.vue, mixins/mmcc-mixin.js and Chatbot/chatbot-config.json)
 4. CSS (layouts/default.vue), Error page (layouts/error.vue)
 5. Services to access DB (services/*)
 6. Axios config for API (http-common.js)

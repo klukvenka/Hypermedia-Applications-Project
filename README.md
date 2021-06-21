@@ -43,9 +43,10 @@
 - **Server and DB Technologies:** [server/README.md](./server/README.md)
 - **Components Developed and their structure:** [components/README.md](./components/README.md)
 - **Plugins:** [plugins/README.md](./plugins/README.md)
+- **Chatbot:** [Chatbot/README.md](./Chatbot/README.md)
 
 ## Compliance to best-practices of framework
--**Adherence to project specification:**
+- **Adherence to project specification:**
 
 - **Consistency of page design:**
 

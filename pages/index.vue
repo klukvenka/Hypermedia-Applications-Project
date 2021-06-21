@@ -1,14 +1,13 @@
 <template>
     <div class="root">
         <!--Start main content--> 
-        <div>
-            <!--Image on top of page-->
-            <img class="top-image" src="home-carousel-1.jpg" alt="top-image" title="Hypercompany"/>
-            <!--Display each item (area, products and members) in separate container-->
-            <div v-for="(item,i) in items" :key="i">
+        <!--Image on top of page-->
+        <img class="top-image" src="home-carousel-1.jpg" alt="top-image" title="Hypercompany"/>
+        <!--Display each item (area, products and members) in separate container-->
+        <div v-for="(item,i) in items" :key="i">
             <div class="display-details content">
                 <div class="topic-image">
-                <img :src="item.src" :alt="item.name" :title="item.name" />
+                    <img :src="item.src" :alt="item.name" :title="item.name" />
                 </div>
                 <div class="topic-content">
                     <a class="red-text" :href="item.path">
@@ -20,7 +19,6 @@
                     <h4 class="light-heading">{{item.text}}</h4>
                     <a :href="item.path"><button>Know More About Our {{item.title}}</button></a>
                 </div>
-            </div>
             </div>
         </div>
     </div>

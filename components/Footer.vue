@@ -32,10 +32,6 @@
 </script>
 
 <style>
-body {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-}
-
 .footer {
   color: white;
   text-decoration: none;

@@ -62,4 +62,7 @@
 
 
 <style scoped>
+.card {
+    cursor:default;
+}
 </style>

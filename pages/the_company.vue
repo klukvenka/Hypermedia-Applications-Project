@@ -53,5 +53,4 @@
 .light-heading {
     text-align: center;
   }
-
 </style>

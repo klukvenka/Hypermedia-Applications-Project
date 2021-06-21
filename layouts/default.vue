@@ -71,6 +71,7 @@ img {
   box-shadow: 1px 1px 1px 1px #ccc;
   padding: 1%;
   margin: 2vh 2vw;
+  cursor: pointer;
 }
 
 .card img {
@@ -114,7 +115,7 @@ button:hover {
 .red-text {
   color: red;
   text-decoration-line: none;
-  
+  cursor: pointer;
 }
 
 button {
@@ -124,6 +125,7 @@ button {
     outline: none;
     padding: 2%;
     margin: 2%;
+    cursor: pointer;
     box-shadow: 2px solid #333;
 }
 

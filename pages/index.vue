@@ -65,12 +65,4 @@
 
 
 <style>
-.breadcrumbs {
-  background-color: rgb(255, 255, 255);
-  border: 0px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0rem;
-  padding: 0px;
-  margin-top: 0px;
-  text-align: center;
-}
 </style>

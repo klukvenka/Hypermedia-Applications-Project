@@ -10,7 +10,6 @@
 
 <script>
     export default {
-        name: 'breadcrumb',
         data() {
             return {
                 crumbs: this.$route.path.split("/").splice(1), //Get the route of the page and remove the first empty value after split
@@ -39,21 +38,4 @@ a {
   text-decoration: none;
 }
 
-.breadcrumbs {
-  background-color: rgb(255, 255, 255);
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 10rem;
-  padding: 10px;
-  margin-top: 70px;
-  text-align: center;
-  position: relative;
-}
-
-.breadcrumb-item {
-  display: inline;
-  text-transform: uppercase;
-  font-weight:bold;
-  color: black;
-  position: relative;
-}
 </style>

@@ -1,14 +1,14 @@
 <template>
-  <div class="navbar">
-    <a href="/">
-    <div class="logo">
-        <img src="/logo.png" alt="logo" title="logo"/>
-    </div>
-    </a>
-    <div class="menubar-item" v-for="menu in menus" :key="menu">
-        <a :href="'/'+menu.replace(' ','_')"><button class="menu-item">{{ menu }}</button></a>
-    </div>
-  </div>
+	<div class="navbar">
+		<a href="/">
+		<div class="logo">
+			<img src="/logo.png" alt="logo" title="logo"/>
+		</div>
+		</a>
+		<div class="menubar-item" v-for="menu in menus" :key="menu">
+			<a :href="'/'+menu.replace(' ','_')"><button class="menu-item">{{ menu }}</button></a>
+		</div>
+	</div>
 </template>
 
 <script>
@@ -23,11 +23,9 @@
 
 <style>
 .navbar {
-  position: fixed; /*To fix the location of navbar on top always*/
-  top:0vh;
-  width: 100vw;
   display: flex;
   background-color: black;
+  top: 0vh;
 }
 
 .navbar a {
@@ -59,7 +57,6 @@
 @media only screen and (max-width: 600px) {
   .navbar {
     display: block;
-    position: relative;
   }
   .logo img {
     height: 10vh;

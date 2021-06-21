@@ -1,9 +1,6 @@
 <template>
     <div class="root">
-        <div>
-		<Navbar />
-		<Breadcrumbs />
-		</div>
+        <Topbar />
         <div v-for="(area,i) in areas" :key="i" class="content">
             <short-page :forArea="area" getArea/>
         </div>

@@ -1,9 +1,6 @@
 <template>
     <div class="root">
-        <div>
-		<Navbar />
-		<Breadcrumbs />
-		</div>
+        <Topbar />
         <div class="content">
             <Heading :heading="areas.name" :description="areas.description" />
         </div>

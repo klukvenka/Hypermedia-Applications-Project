@@ -1,9 +1,6 @@
 <template>
     <div class="root">
-        <div>
-		<Navbar />
-		<Breadcrumbs />
-		</div>
+        <Topbar />
         <div class="content display-details">
             <img :src="member.image" :alt="member.name" :title="member.name" />
             <Heading :heading="member.name" :subheading="member.designation" :description="member.description" />

@@ -57,7 +57,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .button {
   height: 60px;
   width: 60px;
@@ -68,7 +68,6 @@ export default {
   position: fixed;
   bottom: 6vh;
   right: 1vw;
-  z-index: 10000000;
 }
 .button img {
   width: 100%;
@@ -83,7 +82,6 @@ export default {
   position: fixed;
   bottom: 18vh;
   right: 10px;
-  z-index: 10000000;
   background-color: white;
 }
 .chat-window {
@@ -118,7 +116,6 @@ export default {
 .chat input {
   width: 100%;
   position: absolute;
-  z-index: 20;
 }
 
 @media only screen and (max-width: 800px) {

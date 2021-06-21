@@ -9,9 +9,10 @@
 <script>
 import Chat from '~/components/Chat'
 import MMCCMixin from '~/mixins/mmcc-mixin'
+
 export default {
   components: {
-    Chat,
+    Chat
   },
   mixins: [MMCCMixin],
 }
@@ -48,6 +49,12 @@ html {
 
 p {
     text-align: justify;
+}
+
+.topbar {
+  position: sticky;
+  top:0vh;
+  width: 100vw;
 }
 
 img {
@@ -89,9 +96,7 @@ button:hover {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 10rem;
   padding: 10px;
-  margin-top: 70px;
   text-align: center;
-  position: relative;
 }
 
 .breadcrumb-item {
@@ -136,7 +141,7 @@ p {
 }
 
 .top-image {
-  margin-top: 2%;
+  margin-top: 1%;
   width: 100vw;
   height: 60vh;
 }
@@ -153,8 +158,10 @@ p {
   .display-details img {
     width: 100%;
   }
-  .breadcrumbs {
-    margin-top: 10px;
+  .topbar {
+    display: block;
+    position: relative;
+    top: 0vh;
   }
 }
 

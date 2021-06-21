@@ -1,12 +1,9 @@
 <template>
     <div class="root">
-		<div>
-		<Navbar />
-		<Breadcrumbs />
-		</div>
+		<Topbar />
         <img class="top-image" src="home-carousel-3.jpg" alt="top-image" title="Contact Us" />
         <div class="content">
-            <h2>Contact us</h2>
+            <h2>Contact Form</h2>
             <h5 class="light-heading">Do you have any questions? Please do not hesitate to contact us directly. Our team will get back to you within a matter of hours to help you.</h5>
                 <div class="content">
                 	<form class="needs-validation" @submit.prevent="submitForm">

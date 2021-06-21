@@ -3,7 +3,7 @@
         <!--Display area heading if requested-->
         <div v-if="needarea">
             <a class="red-text" :href="'/Areas/AreaInfo?name='+ar.name">
-                <h4>{{ar.name}}</h4>
+                <h5>{{ar.name}}</h5>
             </a>
             <h5>(Click on each image to toggle short description)</h5>
         </div>
@@ -13,7 +13,7 @@
             <img :src="ar.image" :alt="ar.name" :title="ar.name" />
             <div class="area-data">
                 <a class="red-text" :href="'/Areas/AreaInfo?name='+ar.name">
-                    <h4>{{ar.name}}</h4>
+                    <h5>{{ar.name}}</h5>
                 </a>
                 <p>{{ar.short_description}}</p>
                 <a :href="'/Areas/AreaInfo?name='+ar.name"><button>View Detailed Area Info</button></a>

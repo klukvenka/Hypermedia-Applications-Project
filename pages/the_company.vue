@@ -44,6 +44,8 @@
 						<label for="email"><h5 class="light-heading">Email: </h5></label>
 						<input type="email" id="email" required>
 					</div>
+					<div v-if="success"><h5 class="text-center light-heading">You have successfully subscribed to the newsletter!</h5></div>
+					<div v-else><h5 class="text-center light-heading">Please fill all the details</h5></div>
 					<button type="submit">Subscribe</button>
 				</div>
 			</form>
@@ -70,15 +72,19 @@
 					email: "contact-turin@hypercompany.com",
 					image: "/turin.jpg"
 				}	
-			]
+			],
+			success: false
 		}
     },
     methods: {
       submitForm(event) {
         event.target.classList.add("was-validated");
         if (event.target.classList.length == 2) {
-          alert('You have subscribed to our newsletter!');
+          	this.success = true;
         }
+		else {
+			this.success = false;
+		}
       }
     }
   }

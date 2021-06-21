@@ -14,6 +14,8 @@
 						<input type="text" id="subject" v-model="fields.subject" required />
 						<label for="message"><h5 class="light-heading">Message: </h5></label>
 						<textarea id="message" v-model="fields.message" required></textarea>
+						<div v-if="success"><h5 class="text-center light-heading">The message has been successfully submitted!</h5></div>
+						<div v-else><h5 class="text-center light-heading">Please fill all the details</h5></div>
 						<div>
 							<button type="submit" @click="submitForm">Send Message</button>
 						</div>
@@ -35,16 +37,19 @@
           email: "",
           subject: "",
           message: "",
-          submit: false
-        }
-      };
+        },
+		success:false
+      }
     },
     methods: {
       submitForm(event) {
         event.target.classList.add("was-validated");
         if (event.target.classList.length == 2) {
-          alert('Message submitted');
+          this.success = true;
         }
+		else {
+			this.success = false;
+		}
       }
     }
   };

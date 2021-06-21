@@ -28,7 +28,7 @@
 				],
 				"choices": [
 					{
-						"id": "chatbot",
+						"id": "about-page",
 						"intents": ["view","information", "details","View","Information","Details","1"],
 						"utterance": ["Please check out the contact information of any of our office locations specified in the \"Our Offices\" section."],
 						"payload": {
@@ -46,28 +46,6 @@
 				],
 				"unknown":"I cannot understand"
 			},
-			"chatbot": {
-				"initials": [
-					"Start typing your message"
-				],
-				"choices": [
-					{
-						"id": "chatbot-page",
-						"intents": ["I want to go to contact","contact page", "contact us","1"],
-						"utterance": ["This is our contact page"],
-						"payload": {
-							"guide": "/contact_us"
-						}
-					},
-					{
-						"id": "chatbot-close",
-						"intents": ["end", "quit", "close","2"],
-						"utterance": ["Conversation has been closed."],
-						"payload": {}
-					}
-				],
-				"unknown": "Message received. We will respond within 24 hours. Do you want to 1. Send another message (redirects to contact page)\n2. End this conversation"
-			},
 			"areas": "This is our Areas page! Here you can see all the areas that we work in! Once you're done, let me know and I can continue to the next step of the guide",
 			"products": "This is our Products page! Here you can see all the products that we have built! Once you're done, let me know and I can continue to the next step of the guide",
 			"teams": "This is Our Team page! Here you can see all the brilliant people that build our products! Once you're done, let me know and I can continue to the next step of the guide",
@@ -75,9 +53,9 @@
 			"contact": "This is Contact page! Here you can send us a message! Once you're done, let me know and I can continue to the next step of the guide",
 			"home": "This is our home page! Please feel free to browse to each section at your own pace. Once you're done, let me know and I can continue to the next step of the guide",
 			"steps_v": ["","/","/areas","/products","/our_team", "/the_company", "/contact_us"],
-			"continue_v": ["continue","next", "go","yes","Continue","Next","Go","Yes"],
+			"continue_v": ["continue","next", "go","yes","Continue","Next","Go","Yes","ok","Ok"],
 			"end": "The activity is complete. Please refresh the page to start Hyperbot again.",
-			"stay_message": "I don't understand. Do you want to continue? Enter either next or continue or yes or go"
+			"stay_message": "I don't understand. Do you want to continue? Enter either next or continue"
 		},
 		"process": {
 			"activities": [
@@ -135,39 +113,19 @@
 					"next_id": "end",
 					"my_type": "XOR",
 					"callback": "generic_xor",
-					"choices": ["contact","chatbot"]
+					"choices": ["contact","about-page"]
 				},
 				{
-					"my_id": "chatbot",
-					"next_id": "chatbot-page",
-					"my_type": "XOR",
-					"callback": "generic_xor",
-					"choices": ["contact-page","chatbot-close"]
-				},
-				{
-					"my_id": "contact-page",
-					"next_id": null,
-					"my_type": "TASK",
-					"callback": "guide"
-				},
-				{
-					"my_id": "chatbot-close",
+					"my_id": "about-page",
 					"next_id": null,
 					"my_type": "TASK",
 					"callback": "guide"
 				},
 				{
 					"my_id": "contact",
-					"next_id": "restart-choice",
+					"next_id": null,
 					"my_type": "TASK",
 					"callback": "guide"
-				},
-				{
-					"my_id": "restart-choice",
-					"next_id": "end",
-					"my_type": "XOR",
-					"callback": "generic_xor",
-					"choices": ["start-page","chatbot-close"]
 				},
 				{
 					"my_id": "end",

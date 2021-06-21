@@ -26,7 +26,7 @@
                 <div class="card" v-on:click="isShow(item)">
                     <img :src="item.image" :alt="item.name" :title="item.name">
                     <h5 class="red-text">{{item.name}}</h5>
-                    <div v-if="render && item.name == renderItem.name"><p>{{renderItem.short_description}}</p></div>
+                    <div v-if="renderItem.includes(item.name)"><p>{{item.short_description}}</p></div>
                     <div v-else-if="isExpand"><p class="light-heading">{{item.short_description}}</p></div>
                 </div>
                 <a v-if="isMemberReady" :href="'/Our_Team/MemberInfo?name='+item.name">
@@ -98,8 +98,7 @@ export default {
             products: [],
             members: [],
             items: [],
-            render: false,
-            renderItem: {}
+            renderItem: []
         }
     },
     methods: {
@@ -118,16 +117,14 @@ export default {
             this.members = await (await MemberDataService.getByName(this.mem)).data;
             this.items = this.members;
         },
-        async isShow(value) {
-            if (this.render) {
-                this.render =  false;
-                this.renderItem = {};
+        async isShow(item) {
+            if (this.renderItem.includes(item.name)) {
+                this.renderItem.splice(this.renderItem.indexOf(item.name),1);
             }
             else {
-                this.render =  true;
-                this.renderItem = value;
+                this.renderItem.push(item.name);
             }
-            await this.render;
+            await this.renderItem;
         }
     },
     computed: {

@@ -94,4 +94,8 @@
 .light-heading {
     text-align: center;
 }
+
+.card {
+	cursor: default;
+}
 </style>

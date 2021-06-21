@@ -34,7 +34,7 @@
                 title: "Areas",
                 src: "home-areas.jpg",
                 heading: "THREE DIVISIONS, ONE GOAL.",
-                text: "We stands beside you in your Digital Evolution with our three divisions, designed to deliver complete, integrated solutions capable of meeting multiple business needs. Welcome to the Hypercompany. Are you ready to begin?",
+                text: "We stand beside you in your Digital Evolution with our three divisions, designed to deliver complete, integrated solutions capable of meeting multiple business needs. Welcome to the Hypercompany. Are you ready to begin?",
                 path: "/Areas"
             },
             {

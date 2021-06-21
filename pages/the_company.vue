@@ -36,7 +36,7 @@
 		<div class="content">
 			<form class="needs-validation" @submit.prevent="submitForm">
 				<h2 class="text-center">Newsletter</h2>
-				<h5 class="light-heading">Please provide us you details if you wish to subscribe to our newsletter</h5>
+				<h5 class="light-heading">Please provide us your details if you wish to subscribe to our newsletter</h5>
 				<div class="card">
 					<div>
 						<label for="name"><h5 class="light-heading">Name: </h5></label>

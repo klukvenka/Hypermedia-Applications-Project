@@ -1,22 +1,22 @@
 <template>
     <div>
         <!--Display area heading if requested-->
-        <div v-if="needarea">
-            <a class="red-text" :href="'/Areas/AreaInfo?name='+ar.name">
-                <h5>{{ar.name}}</h5>
+        <div v-if="needHeading">
+            <a class="red-text" :href="'/Areas/AreaInfo?name='+forArea.name">
+                <h5>{{forArea.name}}</h5>
             </a>
             <h5>(Click on each image to toggle short description)</h5>
         </div>
 
         <!--Display list of areas-->
         <div v-if="getArea" class="area-content display-details">
-            <img :src="ar.image" :alt="ar.name" :title="ar.name" />
+            <img :src="forArea.image" :alt="forArea.name" :title="forArea.name" />
             <div class="area-data">
-                <a class="red-text" :href="'/Areas/AreaInfo?name='+ar.name">
-                    <h5>{{ar.name}}</h5>
+                <a class="red-text" :href="'/Areas/AreaInfo?name='+forArea.name">
+                    <h5>{{forArea.name}}</h5>
                 </a>
-                <p>{{ar.short_description}}</p>
-                <a :href="'/Areas/AreaInfo?name='+ar.name"><button>View Detailed Area Info</button></a>
+                <p>{{forArea.short_description}}</p>
+                <a :href="'/Areas/AreaInfo?name='+forArea.name"><button>View Detailed Area Info</button></a>
             </div>
         </div>
 
@@ -66,7 +66,7 @@ export default {
                 return []
             }
         },
-        ar: {
+        forArea: {
             type: Object,
             default() {
                 return {}
@@ -80,11 +80,11 @@ export default {
             type: String,
             default: ''
         },
-        prod: {
+        forProduct: {
             type: String,
             default: ''
         },
-        needarea: {
+        needHeading: {
             type: Boolean,
             default: false
         },
@@ -106,11 +106,11 @@ export default {
             this.area = await (await AreaDataService.getByName(this.product.area)).data;
         },
         async retrieveProductsByArea() {
-            this.products = await (await ProductDataService.getByArea(this.ar.name)).data;
+            this.products = await (await ProductDataService.getByArea(this.forArea.name)).data;
             this.items = this.products;
         },
         async retrieveMembersByArea() {
-            this.members = await (await MemberDataService.getByArea(this.ar.name)).data;
+            this.members = await (await MemberDataService.getByArea(this.forArea.name)).data;
             this.items = this.members;
         },
         async retrieveMembersByName() {
@@ -133,7 +133,7 @@ export default {
                 if (this.members.length > 0) {
                     return this.items;
                 }
-                else if (this.prod.length > 0 && this.mem.length > 0) {
+                else if (this.forProduct.length > 0 && this.mem.length > 0) {
                     this.retrieveMembersByName()
                 }
                 else {

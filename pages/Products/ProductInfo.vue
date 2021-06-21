@@ -1,20 +1,24 @@
 <template>
     <div class="root">
+        <div>
+		<Navbar />
+		<Breadcrumbs />
+		</div>
         <div class="content">
             <Heading :heading="product.name" :description="product.description" />
         </div>
         <div class="content">
             <h2>Related Area</h2>
-            <short-page :ar="isAreaReady" getArea/>
+            <short-page :forArea="isAreaReady" getArea/>
         </div>
         <div class="content display-details">
             <div>
                 <h2>Manager</h2>
-                <short-page :prod="prod" :mem="manager" getMember />
+                <short-page :forProduct="prod" :mem="manager" getMember />
             </div>
             <div>
                 <h2>Reference</h2>
-                <short-page :prod="prod" :mem="reference" getMember />
+                <short-page :forProduct="prod" :mem="reference" getMember />
             </div>
         </div>
     </div>

@@ -1,5 +1,9 @@
 <template>
     <div class="root">
+        <div>
+		<Navbar />
+		<Breadcrumbs />
+		</div>
         <div class="content display-details">
             <img :src="member.image" :alt="member.name" :title="member.name" />
             <Heading :heading="member.name" :subheading="member.designation" :description="member.description" />
@@ -7,7 +11,7 @@
         <div class="content">
             <h2>Related Area</h2>
             <div class="card" v-for="(area,i) in areas" :key="i">
-                <short-page :ar="area" getArea/>
+                <short-page :forArea="area" getArea/>
             </div>
         </div>
         <div class="content display-details">

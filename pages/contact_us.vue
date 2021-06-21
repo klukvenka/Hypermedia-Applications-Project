@@ -1,5 +1,9 @@
 <template>
     <div class="root">
+		<div>
+		<Navbar />
+		<Breadcrumbs />
+		</div>
         <img class="top-image" src="home-carousel-3.jpg" alt="top-image" title="Contact Us" />
         <div class="content">
             <h2>Contact us</h2>

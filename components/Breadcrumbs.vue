@@ -1,11 +1,11 @@
 <template>
-    <nav class="breadcrumbs">
+    <div class="breadcrumbs">
         <div v-for="(crumb, ci) in crumbs" :key="ci" class="breadcrumb-item">
             <a v-if="crumb.toLowerCase().indexOf('info') < 0 && crumb.length > 0" :href="'../'.repeat(getIndex(crumb))+crumb"> {{ crumb.replace('_',' ') }} </a>
             <a v-else-if="crumb.toLowerCase().indexOf('info') > 0" href="#"> / </a>
             <!--<a v-else-if="ci === getLength(crumb) && crumb.indexOf('Info') < 0" :href="crumb"> {{ crumb.replace('_',' ') }}</a>-->
         </div>
-    </nav>
+    </div>
 </template>
 
 <script>
@@ -29,7 +29,7 @@
             getParam(crumb) {
                 return this.$route.query.name
             }*/
-        },
+        }
     };
 </script>
  
@@ -37,5 +37,23 @@
 a {
   color: red;
   text-decoration: none;
+}
+
+.breadcrumbs {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 10rem;
+  padding: 10px;
+  margin-top: 70px;
+  text-align: center;
+  position: relative;
+}
+
+.breadcrumb-item {
+  display: inline;
+  text-transform: uppercase;
+  font-weight:bold;
+  color: black;
+  position: relative;
 }
 </style>

@@ -1,7 +1,5 @@
 <template>
   <div>
-        <Navbar />
-        <Breadcrumbs />
         <Nuxt />
         <chat :chat-list="list" />
         <Footer />
@@ -93,6 +91,7 @@ button:hover {
   padding: 10px;
   margin-top: 70px;
   text-align: center;
+  position: relative;
 }
 
 .breadcrumb-item {

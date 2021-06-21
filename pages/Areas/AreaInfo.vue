@@ -1,18 +1,22 @@
 <template>
     <div class="root">
+        <div>
+		<Navbar />
+		<Breadcrumbs />
+		</div>
         <div class="content">
             <Heading :heading="areas.name" :description="areas.description" />
         </div>
         <div class="content">
             <div>
                 <h2 class="">Products</h2>
-                <short-page :ar="areas" getProduct />
+                <short-page :forArea="areas" getProduct />
             </div>
         </div>
         <div class="content">
             <div>
                 <h2 class="">Team Members</h2>
-                <short-page :ar="areas" getMember />
+                <short-page :forArea="areas" getMember />
             </div>
         </div>
     </div>

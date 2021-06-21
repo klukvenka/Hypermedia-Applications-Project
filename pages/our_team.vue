@@ -1,9 +1,11 @@
 <template>
     <div class="root">
         <div>
-            <div v-for="(area,i) in areas" :key="i" class="content">
-                <short-page :ar="area" getMember needarea/>   
-            </div>
+		<Navbar />
+		<Breadcrumbs />
+		</div>
+        <div v-for="(area,i) in areas" :key="i" class="content">
+            <short-page :forArea="area" getMember needHeading/>   
         </div>
     </div>
 </template>

@@ -1,5 +1,6 @@
 <template>
     <div class="root">
+        <Navbar />
         <!--Start main content--> 
         <!--Image on top of page-->
         <img class="top-image" src="home-carousel-1.jpg" alt="top-image" title="Hypercompany"/>

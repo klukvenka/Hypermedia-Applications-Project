@@ -1,5 +1,9 @@
 <template>
     <div class="root">
+		<div>
+		<Navbar />
+		<Breadcrumbs />
+		</div>
        	<!--Start main content--> 
         <div class="content">
 			<!--About the company-->

@@ -5,7 +5,7 @@
         <img src="/logo.png" alt="logo" title="logo"/>
     </div>
     </a>
-    <div class="menubar" v-for="menu in menus" :key="menu">
+    <div class="menubar-item" v-for="menu in menus" :key="menu">
         <a :href="'/'+menu.replace(' ','_')"><button class="menu-item">{{ menu }}</button></a>
     </div>
   </div>
@@ -44,7 +44,7 @@
   width: 10vw;
   
 }
-.menubar {
+.menubar-item {
   font-family: inherit;
   text-align: center;
   padding: 10px 16px;

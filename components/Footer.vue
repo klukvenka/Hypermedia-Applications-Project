@@ -2,19 +2,19 @@
     <div class="footer">
         <div class="elements">
         <ul>
-            <a href="/Areas"><li class="list-unstyled">All Areas</li></a>
+            <li class="list-unstyled"><a href="/Areas">All Areas</a></li>
         </ul>
         <ul>
-            <a href="/Products"><li class="list-unstyled">All Products</li></a>
+            <li class="list-unstyled"><a href="/Products">All Products</a></li>
         </ul>
         <ul>
-            <a href="/The_Company"><li class="list-unstyled">About Us</li></a>
+            <li class="list-unstyled"><a href="/The_Company">About Us</a></li>
         </ul>
         <ul>
-            <a href="/Our_Team"><li class="list-unstyled">Our Team</li></a>
+            <li class="list-unstyled"><a href="/Our_Team">Our Team</a></li>
         </ul>
         <ul>
-            <a href="/Contact_Us"><li class="list-unstyled">Contact Us</li></a>
+            <li class="list-unstyled"><a href="/Contact_Us">Contact Us</a></li>
         </ul>
         </div>
         <div class="copyright">

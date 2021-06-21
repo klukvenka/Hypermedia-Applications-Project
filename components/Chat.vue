@@ -1,3 +1,12 @@
+<!--
+Author: Sairaghav Venkataraman
+Description:
+Not much has been changed from https://gitlab.com/hypermedia2020-21/hands-on-3/-/blob/master/components/Chat.vue
+
+The only changes were in CSS to adjust height, width of .chat-container and .button.
+
+Also, img src was changed from URL to local file in /static folder
+-->
 <template>
   <div class="chat">
     <div v-if="isOpen" class="chat-container">

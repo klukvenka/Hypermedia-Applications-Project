@@ -1,3 +1,27 @@
+<!--
+Author: Sairaghav Venkataraman
+Description:
+This is the component which is re-used the most in the website.
+
+This component displays the areas, members and products based on the props passed to this component.
+
+The props that can be passed to this component are:
+
+1. needHeading: If this is true, the component displays the heading specifying the area name as a link. 
+                This is used in all intro pages for areas, our_team and products page
+
+2. getArea: If this is true, the component will display details of the area value passed in 'forArea' prop.
+            getArea ALWAYS requires 'forArea' prop (Object type) to be passed.
+
+3. getMember: If this is true, the component will display details of all members of the specific area passed in 'forArea' prop.
+                getMember ALWAYS requires 'forArea' prop (Object type) to be passed. 
+                If 'mem' prop (String type) is also passed as an optional parameter, the component will display only that particular member details.
+                If 'forProduct' prop (String type) is also passed as an optional parameter along with 'mem' prop, the component will display only that particular member details. Used in 'ProductInfo.vue'.
+
+4. getProduct: If this is true, the component will display details of all products of the specific area passed in 'forArea' prop.
+                getProduct ALWAYS requires 'forArea' prop (Object type) to be passed. 
+                It also accepts optional parameters 'item' which is an array and will have value of list of members. Used in 'MemberInfo.vue'
+-->
 <template>
     <div>
         <!--Display area heading if requested-->
@@ -30,6 +54,7 @@
                     <div v-if="renderItem.includes(item.name)"><p>{{item.short_description}}</p></div>
                     <div v-else-if="isExpand"><p class="light-heading">{{item.short_description}}</p></div>
                 </div>
+                <!--Display different links depending on Member or Product-->
                 <a v-if="isMemberReady" :href="'/Our_Team/MemberInfo?name='+item.name">
                     <button>View Detailed Member Info</button>
                 </a>
@@ -103,6 +128,9 @@ export default {
         }
     },
     methods: {
+        /*These methods use the Data services defined in 'services/' folder to access the DB using API (with Axios defined in http-common.js)
+        For products and members, the value is stored in 'this.items' variable.
+        */
         async retrieveAreaByName() {
             this.area = await (await AreaDataService.getByName(this.product.area)).data;
         },
@@ -118,6 +146,10 @@ export default {
             this.members = await (await MemberDataService.getByName(this.mem)).data;
             this.items = this.members;
         },
+        /*Toggle which card should display the short description. 
+        'renderItem' array will maintain the list of all the products/members clicked.
+        If 'renderItem' is already true, it removes that particular clicked item out of the list and
+        if 'renderItem' is already false, it adds the clicked item to array  */
         async isShow(item) {
             if (this.renderItem.includes(item)) {
                 this.renderItem.splice(this.renderItem.indexOf(item),1);
@@ -129,6 +161,10 @@ export default {
         }
     },
     computed: {
+        /*IsMemberReady will check if 'getMember' prop is passed. It will execute only if this is true.
+        It will check 'forProduct' is true. If true, it will check 'mem' is passed. If 'mem' is passed, it will return details of member in 'mem' prop.
+        If 'mem' is not passed, it will return all member details in a particular area specified in prop 'forArea' 
+        */
         isMemberReady: function () {
             if (this.getMember) {
                 if (this.members.length > 0) {
@@ -142,6 +178,8 @@ export default {
                 }
             }
         },
+        /*IsProductReady will check if 'getProduct' prop is passed. It will only execute if it is true. 
+        It will return all products of particular area passed in prop 'forArea' */
         isProductReady: function () {
             if (this.getProduct) {
                 if (this.products.length > 0) {
@@ -176,6 +214,8 @@ export default {
 .area-data {
     padding: 2%;
 }
+
+/*The image for area will be adjusted depending on screen size. */
 
 @media only screen and (max-width: 900px) {
     .area-content img {

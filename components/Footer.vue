@@ -1,3 +1,12 @@
+<!--
+Author: Sairaghav Venkataraman
+Description:
+This component for Footer displays all the landmark links as an unstyled list.
+
+'list-unstyled' CSS is defined to not display bullet points.
+
+@media is used to adjust display based on device width.
+-->
 <template>
     <div class="footer">
         <div class="elements">
@@ -38,7 +47,7 @@
   display: flex;
   font-size: 13px;
 }
-
+/*Display as flex for side-by-side representation of list elements */
 .elements, .copyright {
   display: flex;
   justify-content: center;
@@ -46,16 +55,16 @@
   width: 100%;
   padding: 10px 0px;
 }
-
+/*Do not display bullet point */
 .list-unstyled {
   list-style-type: none;
 }
-
+/*Do not underline links and display in white color */
 .elements a, .copyright a {
   text-decoration-line: none;
   color: white;
 }
-
+/*Do not use flex elements but display as block when the device is smaller than 800 px width*/
 @media only screen and (max-width: 800px) {
   .copyright, .elements {
     display: block;

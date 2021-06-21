@@ -17,7 +17,6 @@ The props that can be passed to this component are:
 3. getMember: If this is true, the component will display details of all members of the specific area passed in 'forArea' prop.
                 getMember ALWAYS requires 'forArea' prop (Object type) to be passed. 
                 If 'mem' prop (String type) is also passed as an optional parameter, the component will display only that particular member details.
-                If 'forProduct' prop (String type) is also passed as an optional parameter along with 'mem' prop, the component will display only that particular member details. Used in 'ProductInfo.vue'.
 
 4. getProduct: If this is true, the component will display details of all products of the specific area passed in 'forArea' prop.
                 getProduct ALWAYS requires 'forArea' prop (Object type) to be passed. 

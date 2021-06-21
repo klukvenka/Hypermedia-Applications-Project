@@ -3,7 +3,7 @@
         <h2>{{heading}}</h2>
         <h3>{{subheading}}</h3>
         <br>
-        <h5 class="light-heading">{{description}}</h5>
+        <p>{{description}}</p>
     </div>
     
 </template>

@@ -42,6 +42,7 @@ html {
 
 p {
     text-align: justify;
+    font-size: 13px;
 }
 
 .topbar {
@@ -123,10 +124,6 @@ button {
     margin: 2%;
     cursor: pointer;
     box-shadow: 2px solid #333;
-}
-
-p {
-	font-size: 14px;
 }
 
 .topic-content {

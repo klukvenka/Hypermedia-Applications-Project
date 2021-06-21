@@ -12,11 +12,11 @@
                 </div>
                 <div class="topic-content">
                     <a class="red-text" :href="item.path">
-                        <h2>{{item.title}}</h2>
+                        <h3>{{item.title}}</h3>
                     </a>
-                    <h3>
+                    <h4>
                         <strong>{{item.heading}}</strong>
-                    </h3>
+                    </h4>
                     <p>{{item.text}}</p>
                     <a :href="item.path"><button>Know More About Our {{item.title}}</button></a>
                 </div>

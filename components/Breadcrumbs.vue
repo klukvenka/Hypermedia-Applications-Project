@@ -1,7 +1,7 @@
 <template>
     <nav class="breadcrumbs">
         <div v-for="(crumb, ci) in crumbs" :key="ci" class="breadcrumb-item">
-            <a v-if="crumb.toLowerCase().indexOf('info') < 0" :href="'../'.repeat(getIndex(crumb))+crumb"> {{ crumb.replace('_',' ') }} </a>
+            <a v-if="crumb.toLowerCase().indexOf('info') < 0 && crumb.length > 0" :href="'../'.repeat(getIndex(crumb))+crumb"> {{ crumb.replace('_',' ') }} </a>
             <a v-else-if="crumb.toLowerCase().indexOf('info') > 0" href="#"> / </a>
             <!--<a v-else-if="ci === getLength(crumb) && crumb.indexOf('Info') < 0" :href="crumb"> {{ crumb.replace('_',' ') }}</a>-->
         </div>

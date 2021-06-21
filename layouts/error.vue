@@ -2,7 +2,7 @@
     <div id="root">
         <div class="content error">
             <div class="text-center">
-                <h2>Oops...</h2>
+                <h2>Oh no!</h2>
                 <h3 class="light-heading">Seems like there is some error in your request</h3>
                 <h4 class="light-heading">Go to <a href="/">home</a></h4>
             </div>

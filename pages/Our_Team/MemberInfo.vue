@@ -68,6 +68,6 @@
 }
 
 .member-details {
-    padding-left: 10vw;
+    padding-left: 2%;
 }
 </style>

@@ -3,7 +3,7 @@
        	<!--Start main content--> 
         <div class="content">
 			<!--Image on top of page-->
-            <img src="/the-company.jpg" alt="top-image" title="top-image"/>
+            
 			<!--Text accompanying image-->
 			<div>
 				<h2>HYPERCOMPANY</h2>
@@ -89,9 +89,5 @@
 <style scoped>
 .light-heading {
     text-align: center;
-}
-
-.topic-content {
-	font-size: 14px;
 }
 </style>

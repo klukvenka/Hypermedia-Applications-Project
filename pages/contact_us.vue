@@ -4,9 +4,8 @@
         <div class="content">
             <h2>Contact us</h2>
             <h5 class="light-heading">Do you have any questions? Please do not hesitate to contact us directly. Our team will get back to you within a matter of hours to help you.</h5>
-                <br>
-                <form class="needs-validation" @submit.prevent="submitForm">
-					<div>
+                <div class="content">
+                	<form class="needs-validation" @submit.prevent="submitForm">
 						<label for="name"><h5 class="light-heading">Name: </h5></label>
 						<input type="text" id="name" v-model="fields.name" required />
 						<label for="email"><h5 class="light-heading">Email: </h5></label>
@@ -15,14 +14,11 @@
 						<input type="text" id="subject" v-model="fields.subject" required />
 						<label for="message"><h5 class="light-heading">Message: </h5></label>
 						<textarea id="message" v-model="fields.message" required></textarea>
-					</div>
-					<button type="submit" @click="submitForm">Send Message</button>
-					<!--<div class="flex-list">
-					<p>Milan, 20133, Italy</p>
-					<p>+ 39 234 567 8910</p>
-					<p>contact@hypercompany.com</p>
-					</div>-->
-                </form>
+						<div>
+							<button type="submit" @click="submitForm">Send Message</button>
+						</div>
+                	</form>
+				</div>
         </div>
     </div>
 </template>

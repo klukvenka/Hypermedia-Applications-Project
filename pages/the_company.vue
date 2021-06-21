@@ -41,10 +41,12 @@
 						<label for="name"><h5 class="light-heading">Name: </h5></label>
 						<input type="text" id="name" required>
 					</div>
+					<br>
 					<div>
 						<label for="email"><h5 class="light-heading">Email: </h5></label>
 						<input type="email" id="email" required>
 					</div>
+					<br>
 					<div v-if="success"><h5 class="text-center light-heading">You have successfully subscribed to the newsletter!</h5></div>
 					<div v-else><h5 class="text-center light-heading">Please fill all the details</h5></div>
 					<button type="submit">Subscribe</button>

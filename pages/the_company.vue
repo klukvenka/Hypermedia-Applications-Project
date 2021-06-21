@@ -14,21 +14,40 @@
 				</h5>
 			</div>
     	</div>
+		<!-- Office Location -->
+		<div class="content">
+			<h2>Our Offices</h2>
+			<div v-for="(item,i) in items" :key="i" class="content display-details">
+				<div class="topic-image">
+					<img :src="item.image" :alt="item.location" :title="item.location" />
+				</div>
+				<div class="topic-content text-center">
+					<h3>{{item.location}}</h3>
+					<br>
+					<p><strong>Address:</strong> {{item.address}}</p>
+					<br>
+					<p><strong>Contact Number:</strong> {{item.phone}}</p>
+					<br>
+					<p><strong>Contact E-mail:</strong> {{item.email}}</p>
+				</div>
+			</div>
+		</div>
 		<!--Subscription form-->
 		<div class="content">
 			<form class="needs-validation" @submit.prevent="submitForm">
-				<h4 class="text-center">Subscribe to our newsletter</h4>
-				<br>
-				<div>
-				<label for="name"><h5 class="light-heading">Name: </h5></label>
-				<input type="text" id="name" required>
+				<h2 class="text-center">Newsletter</h2>
+				<h5 class="light-heading">Please provide us you details if you wish to subscribe to our newsletter</h5>
+				<div class="card">
+					<div>
+						<label for="name"><h5 class="light-heading">Name: </h5></label>
+						<input type="text" id="name" required>
+					</div>
+					<div>
+						<label for="email"><h5 class="light-heading">Email: </h5></label>
+						<input type="email" id="email" required>
+					</div>
+					<button type="submit">Subscribe</button>
 				</div>
-				<br>
-				<div>
-				<label for="email"><h5 class="light-heading">Email: </h5></label>
-				<input type="email" id="email" required>
-				</div>
-				<button type="submit">Subscribe</button>
 			</form>
   		</div>
 	</div>
@@ -36,7 +55,25 @@
 
 <script>
   export default {
-    components: {
+    data() {
+		return {
+			items: [
+				{
+					location: "Milan",
+					address: "Milan, 20133, Italy",
+					phone: "+ 39 234 567 8910",
+					email: "contact-milan@hypercompany.com",
+					image: "/milan.jpg"
+				},
+				{
+					location: "Turin",
+					address: "C.so Francia, 112 - 10143 Turin, Italy",
+					phone: "+ 39 123 567 8910",
+					email: "contact-turin@hypercompany.com",
+					image: "/turin.jpg"
+				}	
+			]
+		}
     },
     methods: {
       submitForm(event) {
@@ -52,5 +89,9 @@
 <style scoped>
 .light-heading {
     text-align: center;
-  }
+}
+
+.topic-content {
+	font-size: 14px;
+}
 </style>

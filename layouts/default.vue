@@ -129,6 +129,14 @@ button {
     box-shadow: 2px solid #333;
 }
 
+p {
+	font-size: 14px;
+}
+
+.topic-content {
+  padding: 2%;
+}
+
 .top-image {
   margin-top: 2%;
   width: 100vw;

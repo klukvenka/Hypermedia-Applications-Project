@@ -115,7 +115,6 @@ button:hover {
 .red-text {
   color: red;
   text-decoration-line: none;
-  cursor: pointer;
 }
 
 button {

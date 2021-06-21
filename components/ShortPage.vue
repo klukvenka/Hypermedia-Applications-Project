@@ -23,9 +23,9 @@
         <!--Display list of members and products-->
         <div v-if="(isMemberReady || isProductReady)" class="flex-list item-list">
             <div v-for="(item,j) in items" :key="j">
-                <div class="card">
-                    <img v-on:click="isShow(item)" :src="item.image" :alt="item.name" :title="item.name">
-                    <h5 v-on:click="isShow(item)" class="red-text">{{item.name}}</h5>
+                <div class="card" v-on:click="isShow(item)">
+                    <img :src="item.image" :alt="item.name" :title="item.name">
+                    <h5 class="red-text">{{item.name}}</h5>
                     <div v-if="render && item.name == renderItem.name"><p>{{renderItem.short_description}}</p></div>
                     <div v-else-if="isExpand"><p class="light-heading">{{item.short_description}}</p></div>
                 </div>

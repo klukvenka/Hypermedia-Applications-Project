@@ -7,7 +7,7 @@ Loads the chat and footer in all pages
 
 - **CSS:**
 
-**1. .topbar:** Visible on all pages except home page. It is fixed to the top and always displayed when user scrolls down. Displays the Navbar and breadcrumb.
+1. **.topbar:** Visible on all pages except home page. It is fixed to the top and always displayed when user scrolls down. Displays the Navbar and breadcrumb.
 ```
 .topbar {
   position: sticky;
@@ -16,7 +16,7 @@ Loads the chat and footer in all pages
 }
 ```
 
-**2. .content:** Displays data with a shadow border.
+2. **.content:** Displays data with a shadow border.
 ```
 .content {
   margin: 2vh 10vw;
@@ -27,7 +27,7 @@ Loads the chat and footer in all pages
 }
 ```
 
-**3. .card:** Displays data with a shadow border and text aligned to center. This is used for images with heading and cursor changes to pointer.
+3. **.card:** Displays data with a shadow border and text aligned to center. This is used for images with heading and cursor changes to pointer.
 ```
 .card {
   text-align: center;
@@ -39,7 +39,7 @@ Loads the chat and footer in all pages
 }
 ```
 
-**4. .flex-list:** Displays data in flex but wraps content with center alignment
+4. **.flex-list:** Displays data in flex but wraps content with center alignment
 ```
 .flex-list {
   display: flex;
@@ -48,7 +48,7 @@ Loads the chat and footer in all pages
 }
 ```
 
-**5. display-details:** Displays data in flexbox and displays side-by-side.
+5. **display-details:** Displays data in flexbox and displays side-by-side.
 ```
 .display-details {
   display: flex;

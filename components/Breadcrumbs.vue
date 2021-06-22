@@ -22,9 +22,6 @@
       isLast(index) {
         return index === this.crumbs.length - 1;
       },
-      selected(crumb) {
-        this.$emit('selected', crumb);
-      },
       getIndex(crumb) {
         return this.crumbs.length - this.crumbs.indexOf(crumb);
       },

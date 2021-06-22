@@ -9,23 +9,6 @@ This component for Footer displays all the landmark links as an unstyled list.
 -->
 <template>
     <div class="footer">
-        <div class="elements">
-        <ul>
-            <li class="list-unstyled"><a href="/Areas">All Areas</a></li>
-        </ul>
-        <ul>
-            <li class="list-unstyled"><a href="/Products">All Products</a></li>
-        </ul>
-        <ul>
-            <li class="list-unstyled"><a href="/The_Company">About Us</a></li>
-        </ul>
-        <ul>
-            <li class="list-unstyled"><a href="/Our_Team">Our Team</a></li>
-        </ul>
-        <ul>
-            <li class="list-unstyled"><a href="/Contact_Us">Contact Us</a></li>
-        </ul>
-        </div>
         <div class="copyright">
             &copy; 2020 Copyright: <a href="/">  Hypercompany </a>
         </div>

@@ -83,7 +83,7 @@ img {
 }
 
 button:hover {
-  background-color: red;
+  background-color: steelblue
 }
 
 .text-center {
@@ -95,7 +95,6 @@ button:hover {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 10rem;
   padding: 10px;
-  text-align: center;
 }
 
 .breadcrumb-item {
@@ -116,7 +115,7 @@ button:hover {
 }
 
 .red-text {
-  color: red;
+  color: steelblue;
   text-decoration-line: none;
 }
 

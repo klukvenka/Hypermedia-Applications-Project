@@ -28,7 +28,10 @@ The props that can be passed to this component are:
             <a class="red-text" :href="'/Areas/AreaInfo?name='+forArea.name">
                 <h5>{{forArea.name}}</h5>
             </a>
-            <h5>(Click on each image to toggle short description)</h5>
+        </div>
+
+        <div v-if="needToggleInfo">
+            <p>(Click on image to toggle short description)</p>
         </div>
 
         <!--Display list of areas-->
@@ -112,6 +115,10 @@ export default {
             default: ''
         },
         needHeading: {
+            type: Boolean,
+            default: false
+        },
+        needToggleInfo: {
             type: Boolean,
             default: false
         }

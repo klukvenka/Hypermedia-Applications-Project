@@ -1,13 +1,43 @@
 # Server and DB Technologies
 
 ## DB Schema
-The backend database used in this website is PostgreSQL setup using Heroku free Postgres. We are using the plugin `sequelize` to interact with the DB (configuration and explanation provided below). We are making use of following 3 tables for our website:
+The backend database used in this website is PostgreSQL setup using Heroku free Postgres. We are using the plugin `sequelize` to interact with the DB (configuration and explanation provided in Plugins section). We are making use of following 3 tables for our website:
 
+**1. Areas:**
 <table>
-<tr><td>areas</td></tr>
+<tr>
+    <td>**Field Name**</td>
+    <td>**Field Type**</td>
+</tr>
+<tr>
+    <td>id</td>
+    <td>INTEGER</td>
+    <td>Primary key</td>
+</tr>
 <tr>
     <td>name</td>
     <td>VARCHAR</td>
+    <td>Contains name of the area</td>
+</tr>
+<tr>
+    <td>short_description</td>
+    <td>VARCHAR</td>
+    <td>Contains a short description of the area</td>
+</tr>
+<tr>
+    <td>description</td>
+    <td>VARCHAR</td>
+    <td>Contains a full description of the area</td>
+</tr>
+<tr>
+    <td>createdAt</td>
+    <td>DATETIME</td>
+    <td>Contains the created date of record. Automatically added by Sequelize</td>
+</tr>
+<tr>
+    <td>updatedAt</td>
+    <td>DATETIME</td>
+    <td>Contains the updated date of record. Automatically added by Sequelize</td>
 </tr>
 </table>
 

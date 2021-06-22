@@ -1,7 +1,10 @@
 # Server and DB Technologies
 
+## Server
+This website uses `express`, `axios` `vue-router` to host the server and access using API routes. The detailed explanation is given in Plugins section of this document.
+
 ## DB Schema
-The backend database used in this website is PostgreSQL setup using Heroku free Postgres. We are using the plugin `sequelize` to interact with the DB (configuration and explanation provided in Plugins section). We are making use of following 3 tables for our website:
+The backend database used in this website is PostgreSQL setup using Heroku free Postgres. We are using the plugin `sequelize` to interact with the DB (configuration and explanation provided in Plugins section of this document). We are making use of following 3 tables for our website:
 
 **1. Areas:**
 <table>
@@ -159,6 +162,14 @@ The backend database used in this website is PostgreSQL setup using Heroku free 
     <td>Contains the updated date of record. Automatically added by Sequelize</td>
 </tr>
 </table>
+
+For this website, the relationship between the tables are as follows:
+
+Members are part of areas table. 1 -> Many relationship
+
+Products are part of areas table. 1 -> 1 relationship
+Products contain manager from members table. 1 -> 1 relationship
+Products contain reference from members table. 1 -> 1 relationship
 
 ## Plugins
 

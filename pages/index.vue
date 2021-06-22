@@ -1,3 +1,12 @@
+<!--
+Author: Aida Gasanova
+Description:
+The page displays the home page of the website.
+
+The page contains a navigation bar on the top and links to three main sections of the website (Areas, Products and Our Team)
+with a description related to each one of them. 
+
+-->
 <template>
     <div class="root">
         <Navbar />

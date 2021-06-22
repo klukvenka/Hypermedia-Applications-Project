@@ -6,8 +6,9 @@ The backend database used in this website is PostgreSQL setup using Heroku free 
 **1. Areas:**
 <table>
 <tr>
-    <td>**Field Name**</td>
-    <td>**Field Type**</td>
+    <td><b>Field Name</b></td>
+    <td><b>Field Type</b></td>
+    <td><b>Field Description</b></td>
 </tr>
 <tr>
     <td>id</td>

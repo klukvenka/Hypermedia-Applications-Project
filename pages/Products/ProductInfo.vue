@@ -11,11 +11,11 @@
         <div class="content display-details">
             <div>
                 <h2>Manager</h2>
-                <short-page :mem="manager" getMember />
+                <short-page :mem="manager" getMember needToggleInfo />
             </div>
             <div>
                 <h2>Reference</h2>
-                <short-page :mem="reference" getMember />
+                <short-page :mem="reference" getMember needToggleInfo />
             </div>
         </div>
     </div>

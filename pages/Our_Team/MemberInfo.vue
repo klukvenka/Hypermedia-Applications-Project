@@ -14,12 +14,12 @@
         <div class="content display-details">
             <div v-if="managers.length > 0">
                 <h2>Manager for</h2>
-                <short-page :item="managers" getProduct />
+                <short-page :item="managers" getProduct needToggleInfo />
             </div>
             
             <div v-if="references.length > 0">
                 <h2>Reference for</h2>
-                <short-page :item="references" getProduct />
+                <short-page :item="references" getProduct needToggleInfo />
             </div>
         </div>
     </div>

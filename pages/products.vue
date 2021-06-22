@@ -2,7 +2,7 @@
     <div class="root">
         <Topbar />
         <div v-for="(area,i) in areas" :key="i" class="content">
-            <short-page :forArea="area" getProduct needHeading/>
+            <short-page :forArea="area" getProduct needHeading needToggleInfo/>
         </div>
     </div>
 </template>

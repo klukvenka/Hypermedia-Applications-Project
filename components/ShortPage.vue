@@ -31,7 +31,7 @@ The props that can be passed to this component are:
         </div>
 
         <div v-if="needToggleInfo">
-            <p>(Click on image to toggle short description)</p>
+            <h5>(Click on image to toggle short description)</h5>
         </div>
 
         <!--Display list of areas-->

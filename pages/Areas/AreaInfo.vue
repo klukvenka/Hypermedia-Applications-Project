@@ -7,13 +7,13 @@
         <div class="content">
             <div>
                 <h2 class="">Products</h2>
-                <short-page :forArea="areas" getProduct />
+                <short-page :forArea="areas" getProduct needToggleInfo />
             </div>
         </div>
         <div class="content">
             <div>
                 <h2 class="">Team Members</h2>
-                <short-page :forArea="areas" getMember />
+                <short-page :forArea="areas" getMember needToggleInfo />
             </div>
         </div>
     </div>

@@ -4,28 +4,9 @@
 
 **1. MMCC:** Plugin for chatbot: https://gitlab.com/i3lab/mmcc/frontend/mmcc-vue.git.
 
-
-**2. Axios:** Defined in `http-common.js`. API served in /api base URL. Makes use of services defined in ../services/ folder. Axios was installed with the command `npm install --save axios`
-```
-AreaDataService:
-    getAll - /api/areas/all
-    getByName(name) - /api/areas/name?name=${name}
-MemberDataService:
-    getAll - /api/members/all
-    getByName(name) - /api/members/name?name=${name}
-    getByProduct(name) - /api/members/product?product=${name}
-    getByArea(name) - /api/members/area?area=${name}
-ProductDataService:
-    getAll - /api/products/all
-    getByName(name) - /api/products/name?name=${name}
-    getByArea(name) - /api/products/area?area=${name}
-    getByManager(name) - /api/products/manager?manager=${name}
-    getByReference(name) - /api/products/reference?reference=${name}
-```
-
 ## Server-side
 
-**1. Router**: For setting up the server, `express` is installed with the command `npm install --save express cors`. **cors** is used to provide cross-origin resource sharing capability to allow access from only allowed external websites. `vue-router` is also installed to enable routing for the server using  the command `npm install --save vue-router`.
+**1. vue-router**: For setting up the server, `express` is installed with the command `npm install --save express cors`. **cors** is used to provide cross-origin resource sharing capability to allow access from only allowed external websites. `vue-router` is also installed to enable routing for the server using  the command `npm install --save vue-router`.
 
 The routes for the server are configured using files in server/controllers and server/routes folders. There are controllers and routes for each table, namely areas, members and products. The following routes are configured:
 
@@ -51,8 +32,25 @@ Members:
     GET /members/area - Queries all values in members table based on area parameter (calls findByArea function in controllers and requires parameter area)
 ```
 
+**2. Axios:** Defined in `http-common.js`. API served in /api base URL. Makes use of services defined in ../services/ folder. Axios was installed with the command `npm install --save axios`
+```
+AreaDataService:
+    getAll - /api/areas/all
+    getByName(name) - /api/areas/name?name=${name}
+MemberDataService:
+    getAll - /api/members/all
+    getByName(name) - /api/members/name?name=${name}
+    getByProduct(name) - /api/members/product?product=${name}
+    getByArea(name) - /api/members/area?area=${name}
+ProductDataService:
+    getAll - /api/products/all
+    getByName(name) - /api/products/name?name=${name}
+    getByArea(name) - /api/products/area?area=${name}
+    getByManager(name) - /api/products/manager?manager=${name}
+    getByReference(name) - /api/products/reference?reference=${name}
+```
 
-**2. Sequelize:** Sequelize is the plugin used to interact with the DB. It provides ability to create tables with models, insert and search from DB by calling required functions. 
+**3. Sequelize:** Sequelize is the plugin used to interact with the DB. It provides ability to create tables with models, insert and search from DB by calling required functions. 
 
 Reference: https://sequelize.org/v3/docs/getting-started/  
 

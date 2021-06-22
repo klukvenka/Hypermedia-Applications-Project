@@ -6,6 +6,7 @@ Loads the chat and footer in all pages
 ```
 
 - **CSS:**
+
 **1. .topbar:** Visible on all pages except home page. It is fixed to the top and always displayed when user scrolls down. Displays the Navbar and breadcrumb.
 ```
 .topbar {
@@ -55,3 +56,6 @@ Loads the chat and footer in all pages
 ```
 
 - **Common Error page:**
+```
+Displays a common error message with link to home
+```

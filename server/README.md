@@ -168,7 +168,9 @@ For this website, the relationship between the tables are as follows:
 Members contain area from areas table. 1 -> Many relationship
 
 Products contain area from areas table. 1 -> 1 relationship
+
 Products contain manager from members table. 1 -> 1 relationship
+
 Products contain reference from members table. 1 -> 1 relationship
 
 ## Plugins

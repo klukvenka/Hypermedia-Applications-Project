@@ -165,9 +165,9 @@ The backend database used in this website is PostgreSQL setup using Heroku free 
 
 For this website, the relationship between the tables are as follows:
 
-Members are part of areas table. 1 -> Many relationship
+Members contain area from areas table. 1 -> Many relationship
 
-Products are part of areas table. 1 -> 1 relationship
+Products contain area from areas table. 1 -> 1 relationship
 Products contain manager from members table. 1 -> 1 relationship
 Products contain reference from members table. 1 -> 1 relationship
 

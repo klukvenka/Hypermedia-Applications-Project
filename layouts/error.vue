@@ -5,6 +5,7 @@ Defines the common error page for all errors
 -->
 <template>
     <div id="root">
+        <Navbar />
         <div class="content error">
             <div class="text-center">
                 <h2>Oh no!</h2>
@@ -17,8 +18,7 @@ Defines the common error page for all errors
 
 <style scoped>
 .error {
-    height: 75vh;
-    position: relative;
+    height: 100vh;
     padding-top: 60px;
     
 }

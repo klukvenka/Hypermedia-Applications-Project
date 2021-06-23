@@ -56,8 +56,8 @@ with a description related to each one of them.
                 path: "/Products"
             },
             {
-                name: "Our Team",
-                title: "Our Team",
+                name: "Team",
+                title: "Team",
                 src: "home-team.jpg",
                 heading: "WE BELIEVE IN THE MOST ADVANCED TECHNOLOGY. PASSION.",
                 text: "A passion for challenges, sense of belonging, ability to listen.\

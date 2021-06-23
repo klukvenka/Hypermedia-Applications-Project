@@ -1,3 +1,15 @@
+<!--
+Author: Aida Gasanova
+Description:
+The page displays the The Company page of the website.
+
+The page contains a navigation bar on the top and "About Us" section that contains information about foundation and the aim
+of the company. 
+Also the page contains information about main offices of the company (in Milan and Turin) and the form below the page that 
+allows the user to subscribe the newsletter of the company.
+In order to subscribe the user has to input his name and email.
+
+-->
 <template>
     <div class="root">
 		<Topbar />

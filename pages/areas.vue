@@ -1,12 +1,22 @@
+<!--
+Author: Lorenzo Grossi
+Description:
+The page displays the introductory page to access different areas listed with name and brief descrition.
+
+A the beginning of the page there are landmarks, and then a list presenting every area with its image and description,
+and links to see details (with related products and people) about it.
+-->
 <template>
     <div class="root">
         <Topbar />
+        <!-- Display all the different areas in separated containers-->
         <div v-for="(area,i) in areas" :key="i" class="content">
             <short-page :forArea="area" getArea/>
         </div>
     </div>
 </template>
 
+<!-- Structure and data needed -->
 <script>
     import ShortPage from '../components/ShortPage.vue'
     import AreaDataService from '../services/AreaDataService'

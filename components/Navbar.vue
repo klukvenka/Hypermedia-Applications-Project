@@ -68,6 +68,7 @@ The Navbar will adjust based on device width using @media CSS
 @media only screen and (max-width: 600px) {
   .navbar {
     display: block;
+    position: relative;
   }
   .logo img {
     height: 10vh;

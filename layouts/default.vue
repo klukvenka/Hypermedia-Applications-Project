@@ -114,7 +114,7 @@ button:hover {
   display: flex;
 }
 
-.red-text {
+.blue-text {
   color: steelblue;
   text-decoration-line: none;
 }

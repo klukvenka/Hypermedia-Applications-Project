@@ -11,7 +11,7 @@
                     <img :src="item.src" :alt="item.name" :title="item.name" />
                 </div>
                 <div class="topic-content">
-                    <a class="red-text" :href="item.path">
+                    <a class="blue-text" :href="item.path">
                         <h3>{{item.title}}</h3>
                     </a>
                     <h4>

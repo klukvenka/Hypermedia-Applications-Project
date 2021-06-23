@@ -25,7 +25,7 @@ The props that can be passed to this component are:
     <div>
         <!--Display area heading if requested-->
         <div v-if="needHeading">
-            <a class="red-text" :href="'/Areas/AreaInfo?name='+forArea.name">
+            <a class="blue-text" :href="'/Areas/AreaInfo?name='+forArea.name">
                 <h5>{{forArea.name}}</h5>
             </a>
         </div>
@@ -38,7 +38,7 @@ The props that can be passed to this component are:
         <div v-if="getArea" class="area-content display-details">
             <img :src="forArea.image" :alt="forArea.name" :title="forArea.name" />
             <div class="area-data">
-                <a class="red-text" :href="'/Areas/AreaInfo?name='+forArea.name">
+                <a class="blue-text" :href="'/Areas/AreaInfo?name='+forArea.name">
                     <h5>{{forArea.name}}</h5>
                 </a>
                 <p>{{forArea.short_description}}</p>
@@ -52,7 +52,7 @@ The props that can be passed to this component are:
                 <!--Configure toggle onclick-->
                 <div class="card" v-on:click="isShow(item.name)">
                     <img :src="item.image" :alt="item.name" :title="item.name">
-                    <h5 class="red-text">{{item.name}}</h5>
+                    <h5 class="blue-text">{{item.name}}</h5>
                     <!--Display designation only for members-->
                     <h5 v-if="isMemberReady">{{item.designation}}</h5>
                     <!--Toggle short description-->

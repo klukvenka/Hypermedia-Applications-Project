@@ -3,7 +3,7 @@
 - Aida Gasanova 10732229‌ aida.gasanova‌@mail.polimi.it
 - Lorenzo‌ ‌Grossi‌ ‌10570753‌ lorenzo.grossi@mail.polimi.it‌
 - Veronica‌ ‌Lucchetti ‌10539391‌ ‌veronica.lucchetti@mail.polimi.it
-- Sairaghav‌ ‌Venkataraman‌ ‌10767948‌ sairagav.venkataraman@mail.polimi.it
+- Sairaghav‌ ‌Venkataraman‌ ‌10767948‌ sairaghav.venkataraman@mail.polimi.it
 
 ## Group Member Contribution
 - **Aida Gasanova:** 

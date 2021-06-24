@@ -1,6 +1,7 @@
 # Chatbot
 
 The chatbot presents users with 2 options:
+
 **1. Guide:** Navigates through `Homepage`, `Areas` page, `Products` page, `Our Team` page and then presents users an option to either go to `The Company` or `Contact Us` page. Depending on the user's choice, it displays the corresponding page and then exits.
 
 **2. Contact:** Presents users an option to either go to `The Company` which displays contact information of each office of Hypercompany, or `Contact Us` page which provides a form to contact Hypercompany. Depending on the user's choice, it displays the corresponding page and then exits.

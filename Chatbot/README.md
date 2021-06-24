@@ -78,7 +78,7 @@ The chatbot presents users with 2 options:
     <tr>
         <td>teams</td>
         <td>Guide for Our Team page</td>
-        <td></td>
+        <td>This is Our Team page! Here you can see all the brilliant people that build our products! We are almost done with the guide. You will be provided a choice in the next step.</td>
         <td>["continue","next","Continue","Next"]</td>
         <td>/our_team</td>
         <td>contact-choice</td>
@@ -87,19 +87,19 @@ The chatbot presents users with 2 options:
     <tr>
         <td>about</td>
         <td>Guide for The Company page</td>
-        <td></td>
+        <td>This is The Company page! Here you can see who we are! You can also check out the contact information of any of our office locations specified in the "Our Offices" section.</td>
         <td>["continue","next","Continue","Next"]</td>
         <td>/the_company</td>
-        <td></td>
+        <td>null</td>
         <td>I don't understand. Do you want to continue? Enter either next or continue</td>
     </tr>
     <tr>
         <td>contact</td>
         <td>Guide for Contact Us page</td>
-        <td></td>
+        <td>This is Contact page! Here you can send us a message!</td>
         <td>["continue","next","Continue","Next"]</td>
         <td>/contact_us</td>
-        <td></td>
+        <td>null</td>
         <td>I don't understand. Do you want to continue? Enter either next or continue</td>
     </tr>
 </table>

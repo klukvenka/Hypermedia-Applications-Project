@@ -44,7 +44,7 @@
 						}
 					}
 				],
-				"unknown":"I cannot understand. Please enter \"about\" or \"contact\" or \"exit\" to continue."
+				"unknown":"I cannot understand. Please enter \"about\" or \"contact\" to continue."
 			},
 			"areas": "This is our Areas page! Here you can see all the areas that we work in! Once you're done, let me know and I can continue to the next step of the guide",
 			"products": "This is our Products page! Here you can see all the products that we have built! Once you're done, let me know and I can continue to the next step of the guide",

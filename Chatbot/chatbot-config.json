@@ -37,7 +37,7 @@
 					},
 					{
 						"id": "contact",
-						"intents": ["I want to go to contact","contact page", "contact us","2", "form", "Form"],
+						"intents": ["I want to go to contact","contact page", "contact us","2", "form", "Form","contact","Contact"],
 						"utterance": ["Thank you."],
 						"payload": {
 							"guide": "/contact_us"

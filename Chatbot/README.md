@@ -43,7 +43,7 @@ The chatbot presents users with 2 options:
         <td>contact-choice</td>
         <td>XOR which provides option to choose either "The Company" page or "Contact Us" page.</td>
         <td>You can choose to do one of the following: 1. View information about our company\n2. Submit contact form</td>
-        <td>["view","information", "details","View","Information","Details","1", "about", "About"] or ["I want to go to contact","contact page", "contact us","2", "form", "Form"]</td>
+        <td>["view","information", "details","View","Information","Details","1", "about", "About"] or ["I want to go to contact","contact page", "contact us","2", "form", "Form","contact","Contact"]</td>
         <td>Current page where user has already navigated to</td>
         <td>Either "about" or "contact" based on user response</td>
         <td>I cannot understand. Please enter "about" or "contact" to continue.</td>

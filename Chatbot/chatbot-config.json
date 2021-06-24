@@ -4,13 +4,13 @@
 		"kb": {
 			"first_xor": {
 				"initials": [
-					"Hello! I am HyperBot, here to help you. Please tell me what you want to do:\n1. Guide through the website\n2. Contact Us"
+					"Hello! I am HyperBot, here to help you. Please type what you want to do:\n1. Guide through the website\n2. Contact Us"
 				],
 				"choices": [
 					{
 						"id": "guide-choice",
 						"intents": ["I want to go to guide","guide", "guide me","website","Website","Guide","1"],
-						"utterance": ["This is the guide! Please say either \"continue\" or \"next\" to move to the next stage of the guide."],
+						"utterance": ["This is the guide! Please do not click on any links on the website while the guide is ongoing. Type either \"continue\" or \"next\" to move to the next stage of the guide."],
 						"payload": {}
 					},
 					{
@@ -20,40 +20,40 @@
 						"payload": {}
 					}
 				],
-				"unknown":"I cannot understand"
+				"unknown":"I cannot understand. Please enter \"guide\" or \"contact\" to continue."
 			},
 			"contact-choice": {
 				"initials": [
-					"You can choose to do the following: 1. View information about our contact details\n2. Submit contact form"
+					"You can choose to do one of the following: 1. View information about our company\n2. Submit contact form"
 				],
 				"choices": [
 					{
-						"id": "about-page",
-						"intents": ["view","information", "details","View","Information","Details","1"],
-						"utterance": ["Please check out the contact information of any of our office locations specified in the \"Our Offices\" section."],
+						"id": "about",
+						"intents": ["view","information", "details","View","Information","Details","1", "about", "About"],
+						"utterance": ["Thank you."],
 						"payload": {
 							"guide": "/the_company"
 						}
 					},
 					{
 						"id": "contact",
-						"intents": ["I want to go to contact","contact page", "contact us","2"],
-						"utterance": ["This is our contact page!"],
+						"intents": ["I want to go to contact","contact page", "contact us","2", "form", "Form"],
+						"utterance": ["Thank you."],
 						"payload": {
 							"guide": "/contact_us"
 						}
 					}
 				],
-				"unknown":"I cannot understand"
+				"unknown":"I cannot understand. Please enter \"about\" or \"contact\" or \"exit\" to continue."
 			},
 			"areas": "This is our Areas page! Here you can see all the areas that we work in! Once you're done, let me know and I can continue to the next step of the guide",
 			"products": "This is our Products page! Here you can see all the products that we have built! Once you're done, let me know and I can continue to the next step of the guide",
-			"teams": "This is Our Team page! Here you can see all the brilliant people that build our products! Once you're done, let me know and I can continue to the next step of the guide",
-			"about": "This is The Company page! Here you can see who we are! Once you're done, let me know and I can continue to the next step of the guide",
-			"contact": "This is Contact page! Here you can send us a message! Once you're done, let me know and I can continue to the next step of the guide",
+			"teams": "This is Our Team page! Here you can see all the brilliant people that build our products! We are almost done with the guide. You will be provided a choice in the next step.",
+			"about": "This is The Company page! Here you can see who we are! You can also check out the contact information of any of our office locations specified in the \"Our Offices\" section.",
+			"contact": "This is Contact page! Here you can send us a message!",
 			"home": "This is our home page! Please feel free to browse to each section at your own pace. Once you're done, let me know and I can continue to the next step of the guide",
-			"steps_v": ["","/","/areas","/products","/our_team", "/the_company", "/contact_us"],
-			"continue_v": ["continue","next", "go","yes","Continue","Next","Go","Yes","ok","Ok"],
+			"steps_v": ["","/","/areas","/products","/our_team"],
+			"continue_v": ["continue","next","Continue","Next"],
 			"end": "The activity is complete. Please refresh the page to start Hyperbot again.",
 			"stay_message": "I don't understand. Do you want to continue? Enter either next or continue"
 		},
@@ -98,13 +98,7 @@
 				},
 				{
 					"my_id": "teams",
-					"next_id": "about",
-					"my_type": "TASK",
-					"callback": "guide"
-				},
-				{
-					"my_id": "about",
-					"next_id": "contact",
+					"next_id": "contact-choice",
 					"my_type": "TASK",
 					"callback": "guide"
 				},
@@ -113,16 +107,16 @@
 					"next_id": "end",
 					"my_type": "XOR",
 					"callback": "generic_xor",
-					"choices": ["contact","about-page"]
+					"choices": ["contact","about"]
 				},
 				{
-					"my_id": "about-page",
+					"my_id": "contact",
 					"next_id": null,
 					"my_type": "TASK",
 					"callback": "guide"
 				},
 				{
-					"my_id": "contact",
+					"my_id": "about",
 					"next_id": null,
 					"my_type": "TASK",
 					"callback": "guide"

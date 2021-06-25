@@ -3,6 +3,16 @@
 ## Server
 This website uses `express`, `axios` `vue-router` to host the server and access using API routes. The detailed explanation is given in Plugins section of this document.
 
+The server is configured in `nuxt.config.js`:
+```
+ serverMiddleware: [
+    {
+      path: '/api',
+      handler: '~/server/server.js',
+    }
+]
+```
+
 ## DB Schema
 The backend database used in this website is PostgreSQL setup using Heroku free Postgres. We are using the plugin `sequelize` to interact with the DB (configuration and explanation provided in Plugins section of this document). We are making use of following 3 tables for our website:
 

@@ -9,7 +9,7 @@ We then loop over the crumbs parameter for each split of '/' and the link is gen
 
 For instance, for page Products/ProductInfo?name=Product1, the crumbs will be 'Products' and 'ProductInfo'. 
 The breadcrumbs however will display 'Products / Product1' only. This is because, 'ProductInfo' is not an actual page.
-
+The value 'Product1' is obtained using getParam method which returns this.$route.query.name
 -->
 <template>
   <div id="breadcrumb">

@@ -1,3 +1,6 @@
+/*
+Generated automatically by Sequelize cli when running sequelize-cli model:generate --name xyz and --attributes field_name:field_type
+*/
 'use strict';
 const {
   Model

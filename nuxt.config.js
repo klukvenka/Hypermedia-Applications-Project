@@ -1,5 +1,6 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  //Add title, viewport and description based on lighthouse report
   head: {
     title: 'Hypercompany',
     htmlAttrs: {
@@ -22,6 +23,8 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
+
+  //mmcc plugin
   plugins: [
     '~/plugins/mmcc.js'
   ],
@@ -32,6 +35,8 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
   ],
+
+  //Configure Server handler
 
   serverMiddleware: [
     {
@@ -46,6 +51,8 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
+
+  //Configure chatbot id with mmcc
 
   env: {
     configurationId: 'e8cdc118-3b2d-4f7b-8149-23d5ef2e8428',

@@ -62,15 +62,78 @@
 
 **Re-usability of code:**
 
-- **Re-usable CSS**: Most of the CSS to be re-used is configured in layouts/default.vue and CSS is only added to individual pages if there is a need to over-write some styles for the specific page. All styles that is valid for the particular page is provided with `scoped` attribute. Detailed explanation provided in [layouts/README.md](./layouts/README.md)
+- **Re-usable CSS**: Most of the CSS to be re-used is configured in layouts/default.vue and CSS is only added to individual pages if there is a need to over-write some styles for the specific page. All styles that is necessary only for the particular page is provided with `scoped` attribute. Detailed explanation provided in [layouts/README.md](./layouts/README.md)
 
 - **Re-usable code**: Almost ALL the information in the website is displayed using a SINGLE component (components/ShortPage.vue). Each part of the web-page is written as a set of components (Navbar, Footer, Topbar, Chat, Heading and ShortPage) and displayed as necessary.
 Detailed explanation provided in [components/README.md](./components/README.md)
 
 **Adherence to project specification:**
 
-- **Responsiveness**: The website is responsive and will adapt to the device height and width due to the use of CSS Media queries
+- **Responsiveness**: The website is responsive and will adapt to the device height and width due to the use of CSS Media queries.
+The @media query is configured in layouts/default.vue, components/ShortPage.vue, components/Navbar.vue and components/Chat.vue
 
+1. **layouts/default.vue**
+```
+/*Define properties if screen width < 800 px */
+@media only screen and (max-width: 800px) {
+  /*Do not use flexbox for display-details */
+  .display-details {
+    display: block;
+  }
+  /*Do not use 300x300 image size if device is small*/
+  .display-details img {
+    width: 100%;
+  }
+  /*Do not lock topbar position on top if device is small*/
+  .topbar {
+    display: block;
+    position: relative;
+    top: 0vh;
+  }
+}
+```
+
+2. **components/ShortPage.vue**
+```
+/*The image for area will be adjusted depending on screen size. */
+
+@media only screen and (max-width: 800px) {
+    .area-content img {
+        width: 70vw;
+        height: 40vh;
+    }
+}
+```
+
+3. **components/Navbar.vue**
+```
+/*Adjust navbar as block and not flex when device width is less than 800 px */
+@media only screen and (max-width: 800px) {
+  /*Do not lock navbar on top when device width is small*/
+  .navbar {
+    display: block;
+    position: relative;
+  }
+  /*Define size of logo for small device*/
+  .logo img {
+    height: 10vh;
+    width: 100vw;
+  }
+}
+```
+
+4. **components/Chat.vue**
+```
+}
+/*Adjust position of chat button when screen width is less than 800px*/
+
+@media only screen and (max-width: 800px) {
+  .button {
+    bottom: 6vh;
+    right: 2vw;
+  }
+}
+```
 
 **Adherence to applicable usability heuristics:**
 

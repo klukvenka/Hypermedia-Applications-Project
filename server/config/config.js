@@ -1,3 +1,9 @@
+/*
+Author: Sairaghav Venkataraman
+
+Description:
+Configuration to use by Sequelize. Gets URL of PostgreSQL from $DATABASE_URL environment variable set up in Heroku
+*/
 const conn = process.env.DATABASE_URL;
 
 const dialect = conn.split('://')[0];

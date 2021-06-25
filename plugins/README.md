@@ -4,6 +4,13 @@
 
 **1. MMCC:** Plugin for chatbot: https://gitlab.com/i3lab/mmcc/frontend/mmcc-vue.git.
 
+It also needs to be configured in `nuxt.config.js`:
+```
+plugins: [
+    '~/plugins/mmcc.js'
+]
+```
+
 ## Server-side
 
 **1. express, vue-router**: For setting up the server, `express` is installed with the command `npm install --save express cors`. **cors** is used to provide cross-origin resource sharing capability to allow access from only allowed external websites. `vue-router` is also installed to enable routing for the server using  the command `npm install --save vue-router`.

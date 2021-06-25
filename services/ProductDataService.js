@@ -1,3 +1,8 @@
+/** 
+Author: Sairaghav Venkataraman
+Description:
+Defines methods to access Product-related data using Axios
+*/
 import http from "../http-common";
 
 class ProductDataService {

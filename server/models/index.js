@@ -1,3 +1,9 @@
+/** 
+Author: Sairaghav Venkataraman
+Description:
+Initialise Sequelize and defines objects for areas, members and products
+*/
+
 const dbConfig = require("../config/config.js");
 
 const Sequelize = require("sequelize");

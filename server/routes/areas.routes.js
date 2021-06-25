@@ -1,3 +1,8 @@
+/** 
+Author: Sairaghav Venkataraman
+Description:
+Defines routes to access Area-related data using Axios
+*/
 module.exports = app => {
     const areas = require("../controllers/areas.controller.js");
     var router = require("express").Router();

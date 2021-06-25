@@ -1,3 +1,8 @@
+/** 
+Author: Sairaghav Venkataraman
+Description:
+Defines all methods for Products table
+*/
 const db = require("../models");
 const products = db.products;
 const Op = db.Sequelize.Op;

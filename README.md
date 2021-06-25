@@ -41,26 +41,31 @@
 9. Github README
 ```
 
+## Architecture
+
+![Architecture](./architecture.png)
+
 ## Technical Documentation
-- **Server and DB Technologies:** [server/README.md](./server/README.md)
-- **Components Developed and their structure:** [components/README.md](./components/README.md)
-- **Plugins:** [plugins/README.md](./plugins/README.md)
-- **Chatbot:** [Chatbot/README.md](./Chatbot/README.md)
+- **Server and DB Technologies:** Detailed information provided in [server/README.md](./server/README.md)
+- **Components Developed and their structure:** Each element of the page is split into components and code is re-used to the maximum extent possible. MOST of the components are displayed with only one component (ShortPage.vue) depending on the props passed to it. [components/README.md](./components/README.md)
+- **Style and Layout:** All the styles and elements are defined in layouts/default.vue. Styles are defined in individual files ONLY if there is a need to over-write any specfic property. Detailed information provided in [layouts/README.md](./layouts/README.md)
+- **Plugins:** Plugins used are `Sequelize` for DB-related tasks, `axios` for API, `vue-router` for routing for server, `express` for setting up the server. Detailed information provided in [plugins/README.md](./plugins/README.md)
+- **Chatbot:** Very little changes were made to the components related to chat and only changes were the position of the chat button, color of message box and responsiveness to device width (media query). [Chatbot/README.md](./Chatbot/README.md)
 
 ## Compliance to best-practices of framework
 
 **Consistency of page design, colors and font:**
 
-- **Consistent design CSS, fonts and colors (layouts/default.vue):** Making use of layouts folder provided by Nuxt for easy management of consistent CSS and components across all pages. Detailed explanation provided [here](./layouts/README.md)
+- **Consistent design CSS, fonts and colors (layouts/default.vue):** Making use of layouts folder provided by Nuxt for easy management of consistent CSS and components across all pages. Detailed explanation provided in [layouts/README.md](./layouts/README.md)
 
-- **Common error page (layouts/error.vue):** Making use of layouts folder provided by Nuxt for common error page for all errors encountered by user. Detailed explanation provided [here](./layouts/README.md)
+- **Common error page (layouts/error.vue):** Making use of layouts folder provided by Nuxt for common error page for all errors encountered by user. Detailed explanation provided in [layouts/README.md](./layouts/README.md)
 
 **Re-usability of code:**
 
-- **Re-usable CSS**: Most of the CSS to be re-used is configured in layouts/default.vue and CSS is only added to individual pages if there is a need to over-write some styles for the specific page. All styles that is valid for the particular page is provided with `scoped` attribute. Detailed explanation provided [here](./layouts/README.md)
+- **Re-usable CSS**: Most of the CSS to be re-used is configured in layouts/default.vue and CSS is only added to individual pages if there is a need to over-write some styles for the specific page. All styles that is valid for the particular page is provided with `scoped` attribute. Detailed explanation provided in [layouts/README.md](./layouts/README.md)
 
 - **Re-usable code**: Almost ALL the information in the website is displayed using a SINGLE component (components/ShortPage.vue). Each part of the web-page is written as a set of components (Navbar, Footer, Topbar, Chat, Heading and ShortPage) and displayed as necessary.
-Detailed explanation provided [here](./components/README.md)
+Detailed explanation provided in [components/README.md](./components/README.md)
 
 **Adherence to project specification:**
 

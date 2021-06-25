@@ -4,8 +4,6 @@ Description:
 This component for Footer displays all the landmark links as an unstyled list.
 
 'list-unstyled' CSS is defined to not display bullet points.
-
-@media is used to adjust display based on device width.
 -->
 <template>
     <div class="footer">
@@ -46,16 +44,5 @@ This component for Footer displays all the landmark links as an unstyled list.
 .elements a, .copyright a {
   text-decoration-line: none;
   color: white;
-}
-/*Do not use flex elements but display as block when the device is smaller than 800 px width*/
-@media only screen and (max-width: 800px) {
-  .copyright, .elements {
-    display: block;
-    text-align: center;
-  }
-  .copyright {
-    margin-left: 0vw;
-  }
-  
 }
 </style>

@@ -1,3 +1,8 @@
+/** 
+Author: Sairaghav Venkataraman
+Description:
+Defines all methods for Members table
+*/
 const db = require("../models");
 const members = db.members;
 const Op = db.Sequelize.Op;

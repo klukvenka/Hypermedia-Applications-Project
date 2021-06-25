@@ -17,11 +17,13 @@ Defines the common error page for all errors
 </template>
 
 <style scoped>
+/*Define height and padding for main content of error page*/
 .error {
     height: 100vh;
     padding-top: 60px;
     
 }
+/*Over-ride light-heading in default.vue for center justify text */
 .light-heading {
     text-align: center;
 }

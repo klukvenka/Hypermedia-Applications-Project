@@ -1,3 +1,8 @@
+/** 
+Author: Sairaghav Venkataraman
+Description:
+Defines routes to access Product-related data using Axios
+*/
 module.exports = app => {
     const products = require("../controllers/products.controller.js");
     var router = require("express").Router();

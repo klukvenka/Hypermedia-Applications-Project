@@ -57,5 +57,5 @@ Loads the chat and footer in all pages
 
 - **Common Error page:**
 ```
-Displays a common error message with link to home
+Displays a common error message with link to home.
 ```

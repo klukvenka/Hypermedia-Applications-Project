@@ -32,10 +32,7 @@ The current path of the page is obtained from this.$route.path parameter split u
 We then loop over the crumbs parameter for each split of '/' and the link is generated based on the index of the crumb.
 
 For instance, for page Products/ProductInfo?name=Product1, the crumbs will be 'Products' and 'ProductInfo'. 
-The breadcrumbs however will display 'Products /' only. 
-This is because, 'ProductInfo' is not an actual page and the only page required to traverse is 'Products'.
-
-We are avoiding displaying the exact product name in breadcrumb to avoid repetition since name of product will be already displayed on current page and user need not thave to traverse back.
+The breadcrumbs however will display 'Products / Product1' only. This is because, 'ProductInfo' is not an actual page.
 ```
 
 - **Chat.vue:**
@@ -52,8 +49,6 @@ Also, img src was changed from URL to local file in /static folder
 This component for Footer displays all the landmark links as an unstyled list.
 
 'list-unstyled' CSS is defined to not display bullet points.
-
-@media is used to adjust display based on device width.
 ```
 
 - **Heading.vue:**
@@ -65,7 +60,20 @@ This Heading component accepts heading, subheading and description parameters to
 ```
 This Navbar component displays the navigation bar on top with the menu names specified in script data section.
 
-The Navbar will adjust based on device width using @media CSS
+The Navbar will adjust based on device width (< 800px) using @media CSS.
+
+```
+/*Do not lock navbar on top when device width is small*/
+  .navbar {
+    display: block;
+    position: relative;
+  }
+  /*Define size of logo for small device*/
+  .logo img {
+    height: 10vh;
+    width: 100vw;
+  }
+```
 ```
 
 - **Topbar.vue:**

@@ -1,3 +1,12 @@
+/** 
+Author: Sairaghav Venkataraman
+Description:
+Defines the server using express and cors
+
+Initialises DB using sequelize
+Initialises routes
+*/
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");

@@ -65,15 +65,16 @@ The Navbar will adjust based on device width using @media CSS
   width: 100%;
 }
 /*Adjust navbar as block and not flex when device width is less than 800 px */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
+  /*Do not lock navbar on top when device width is small*/
   .navbar {
     display: block;
     position: relative;
   }
+  /*Define size of logo for small device*/
   .logo img {
     height: 10vh;
     width: 100vw;
-  
   }
 }
 </style>

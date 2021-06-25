@@ -276,7 +276,7 @@ Reference: https://sequelize.org/v3/docs/getting-started/
 
 The DB model was created with the sequelize-cli installed with command `npm install --save sequelize-cli sequelize`. It also requires installation of components for postgres: `npm install --save pg pg-hstore pg-native`
 
-Sequelize makes use of DB connection strings configured in server/config/config.js file.
+Sequelize makes use of DB connection strings configured in server/config/config.js and initialises DB using the configuration in server/models/index.js file.
 
 The DB model was created from cli with command `sequelize-cli model:generate --name <table_name> --attributes <field_name1>:<field_type>,<field_name2>:<field_type>,...`. This will create files in server/models and server/migrations folder.
 

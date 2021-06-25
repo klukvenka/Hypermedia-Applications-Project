@@ -1,3 +1,8 @@
+/** 
+Author: Sairaghav Venkataraman
+Description:
+Defines all methods for Areas table
+*/
 const db = require("../models");
 const areas = db.areas;
 const Op = db.Sequelize.Op;

@@ -126,10 +126,11 @@ export default {
   width: 100%;
   position: absolute;
 }
+/*Adjusted position of chat button when screen width is less than 800px*/
 
 @media only screen and (max-width: 800px) {
   .button {
-    bottom: 21vh;
+    bottom: 6vh;
     right: 2vw;
   }
 }

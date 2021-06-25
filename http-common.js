@@ -1,3 +1,8 @@
+/*
+Author: Sairaghav Venkataraman
+Description: 
+Defines the API path using axios 
+*/
 import axios from "axios";
 
 export default axios.create({

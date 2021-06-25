@@ -1,3 +1,8 @@
+/** 
+Author: Sairaghav Venkataraman
+Description:
+Defines routes to access Member-related data using Axios
+*/
 module.exports = app => {
     const members = require("../controllers/members.controller.js");
     var router = require("express").Router();

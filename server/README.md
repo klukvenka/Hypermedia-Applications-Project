@@ -370,11 +370,6 @@ The routes for the server are configured using files in server/controllers and s
         <td>/api/members/name?name=${name}</td>
     </tr>
     <tr>
-        <td>getByProduct(name)</td>
-        <td>GET</td>
-        <td>/api/members/product?product=${name}</td>
-    </tr>
-    <tr>
         <td>getByArea(name)</td>
         <td>GET</td>
         <td>/api/members/area?area=${name}</td>

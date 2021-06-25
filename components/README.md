@@ -4,7 +4,7 @@
 ```
 This is the component which is re-used the most in the website.
 
-This component displays the areas, members and products based on the props passed to this component.
+This component displays either the areas, members and products based on the props passed to this component.
 
 Props:
 
@@ -68,9 +68,15 @@ Also, img src was changed from URL to local file in /static folder
 
 - **Footer.vue:**
 ```
-This component for Footer displays all the landmark links as an unstyled list.
+This component for Footer displays copyright information.
 
-'list-unstyled' CSS is defined to not display bullet points.
+/*Define font size and color with center align */
+.footer, .footer a {
+  color: white;
+  font-size: 13px;
+  background-color: black;
+  text-align: center
+}
 ```
 
 - **Heading.vue:**
@@ -101,5 +107,11 @@ The Navbar will adjust based on device width (< 800px) using @media CSS.
 ```
 This component displays the Navbar along with the breadcrumbs on top of the page.
 
-The CSS for 'topbar' is specified in layouts/default.vue
+/*Configure topbar (Navigation bar + Breadcrumbs) to be always visible even if user scrolls down the page*/
+
+.topbar {
+  position: sticky;
+  top:0vh;
+  width: 100vw;
+}
 ```

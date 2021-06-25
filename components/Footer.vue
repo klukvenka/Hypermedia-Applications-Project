@@ -22,27 +22,11 @@ This component for Footer displays all the landmark links as an unstyled list.
 </script>
 
 <style>
-.footer {
+/*Define font size and color with center align */
+.footer, .footer a {
   color: white;
-  text-decoration: none;
-  display: flex;
   font-size: 13px;
-}
-/*Display as flex for side-by-side representation of list elements */
-.elements, .copyright {
-  display: flex;
-  justify-content: center;
   background-color: black;
-  width: 100%;
-  padding: 10px 0px;
-}
-/*Do not display bullet point */
-.list-unstyled {
-  list-style-type: none;
-}
-/*Do not underline links and display in white color */
-.elements a, .copyright a {
-  text-decoration-line: none;
-  color: white;
+  text-align: center
 }
 </style>

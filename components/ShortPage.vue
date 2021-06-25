@@ -5,6 +5,7 @@ This is the component which is re-used the most in the website.
 
 This component displays the areas, members and products based on the props passed to this component.
 
+Props:
 The props that can be passed to this component are:
 
 1. needHeading: If this is true, the component displays the heading specifying the area name as a link. 
@@ -19,7 +20,25 @@ The props that can be passed to this component are:
 
 4. getProduct: If this is true, the component will display details of all products of the specific area passed in 'forArea' prop.
                 getProduct ALWAYS requires 'forArea' prop (Object type) to be passed. 
-                It also accepts optional parameters 'item' which is an array and will have value of list of members. Used in 'MemberInfo.vue'
+                It also accepts optional parameters 'item' which is an array and will have value of list of products passed by 'MemberInfo.vue'.
+
+5. needToggleInfo: If this is true, the message '(Click on image to toggle short description)' will be displayed.
+Computed:
+1. isMemberReady: Checks if getMember is true. If getMember is false, exits.
+                  If getMember is true, checks if 'mem' is passed. If 'mem' is passed, executes method retrieveMembersByName. Else, executes retrieveMembersByArea
+
+2. isProductReady: Checks if getProduct  is true. If getProduct is false, exits.
+                   If getProduct is true, checks if 'item' is passed. If 'item' is passed, returns 'item'. Else, executes retrieveProductsByArea.
+
+Methods:
+1. retrieveMembersByName: Uses MemberDataService to retrieve members based on 'mem' value passed
+
+2. retrieveMembersByArea: Uses MemberDataService to retrieve members based on 'forArea' value passed
+
+3. retrieveProductsByArea: Uses ProductDataService to retrieve products based on 'forArea' value passed
+
+4. isShow(item): Toggles whether to show/hide a card by using an array 'renderItem'. 
+                 The value of 'item' passed is added to the array if it is not there already, and removed if already exists in array.
 -->
 <template>
     <div>
@@ -135,9 +154,6 @@ export default {
         /*These methods use the Data services defined in 'services/' folder to access the DB using API (with Axios defined in http-common.js)
         For products and members, the value is stored in 'this.items' variable.
         */
-        async retrieveAreaByName() {
-            this.area = await (await AreaDataService.getByName(this.product.area)).data;
-        },
         async retrieveProductsByArea() {
             this.products = await (await ProductDataService.getByArea(this.forArea.name)).data;
             this.items = this.products;
@@ -221,7 +237,7 @@ export default {
 
 /*The image for area will be adjusted depending on screen size. */
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 800px) {
     .area-content img {
         width: 70vw;
         height: 40vh;

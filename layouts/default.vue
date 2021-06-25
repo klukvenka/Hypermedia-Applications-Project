@@ -70,7 +70,7 @@ img {
   height: 300px;
 }
 
-/*Outermost box for displaying content. Difference is .card is the margin parameter*/
+/*Outermost box for displaying content. Difference with .card is the margin parameter*/
 .content {
   margin: 2vh 10vw;
   text-align: center;
@@ -79,7 +79,7 @@ img {
   padding: 1%;
 }
 
-/*Card-like box for displaying content. Difference is .content is the margin parameter*/
+/*Card-like box for displaying content. Difference with .content is the margin parameter*/
 .card {
   text-align: center;
   border: 1px solid #ccc;
@@ -116,7 +116,6 @@ button:hover {
   display: inline;
   text-transform: uppercase;
   font-weight:bold;
-  color: black;
 }
 
 /*Display flex box with content wrap */

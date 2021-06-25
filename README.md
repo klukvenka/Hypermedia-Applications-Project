@@ -48,7 +48,7 @@
 ## Technical Documentation
 - **Server and DB Technologies:** Detailed information provided in [server/README.md](./server/README.md)
 - **Components Developed and their structure:** Each element of the page is split into components and code is re-used to the maximum extent possible. Almost ALL of the content is displayed with only one component (ShortPage.vue) depending on the props passed to it. [components/README.md](./components/README.md)
-- **Style and Layout:** All the styles and elements are defined in layouts/default.vue. Styles are defined in individual files ONLY if there is a need to over-write any specfic property. Detailed information provided in [layouts/README.md](./layouts/README.md)
+- **Style and Layout:** All the styles and elements are defined in layouts/default.vue. Styles are defined in individual files ONLY if there is a need to over-write any specfic property. `viewport-height (vh)` and `viewport-width (vw)` are used wherever possible to adjust to available viewport instead of specific number of pixels. Detailed information provided in [layouts/README.md](./layouts/README.md)
 - **Plugins:** Plugins used are `Sequelize` for DB-related tasks, `axios` for API, `vue-router` for routing for server, `express` for setting up the server, `mmcc` for chatbot. Detailed information provided in [plugins/README.md](./plugins/README.md)
 - **Chatbot:** Very little changes were made to the components related to chat and only changes were the position of the chat button, color of message box and responsiveness to device width (media query). [Chatbot/README.md](./Chatbot/README.md)
 

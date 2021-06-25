@@ -10,6 +10,27 @@
 
 The routes for the server are configured using files in server/controllers and server/routes folders. There are controllers and routes for each table, namely areas, members and products. The following routes are configured:
 
+<table>
+    <tr>
+    <td><b>Areas</b></td>
+    <td>
+        <tr>
+            <td><b>Request Method</b></td>
+            <td><b>Request URL</b></td>
+            <td><b>Parameters required</b></td>
+            <td><b>Description</b></td>
+            <td><b>Controller path</b></td>
+        </tr>
+        <tr>
+            <td>POST</td>
+            <td>/areas/</td>
+            <td>name<br>short_description<br>description<br>image</td>
+            <td>Create area</td>
+            <td><b>create</b> in <b>controllers/areas.controller.js</b></td>
+        </tr>
+    </td>
+</table>
+
 ```
 Areas:
     POST /areas/ - Create area (calls create function in controllers)

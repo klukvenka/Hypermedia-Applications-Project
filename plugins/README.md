@@ -6,7 +6,7 @@
 
 ## Server-side
 
-**1. vue-router**: For setting up the server, `express` is installed with the command `npm install --save express cors`. **cors** is used to provide cross-origin resource sharing capability to allow access from only allowed external websites. `vue-router` is also installed to enable routing for the server using  the command `npm install --save vue-router`.
+**1. express, vue-router**: For setting up the server, `express` is installed with the command `npm install --save express cors`. **cors** is used to provide cross-origin resource sharing capability to allow access from only allowed external websites. `vue-router` is also installed to enable routing for the server using  the command `npm install --save vue-router`.
 
 The routes for the server are configured using files in server/controllers and server/routes folders. There are controllers and routes for each table, namely areas, members and products. The following routes are configured:
 
@@ -22,28 +22,28 @@ The routes for the server are configured using files in server/controllers and s
     </tr>
     <tr>
         <td>POST</td>
-        <td>/areas/</td>
+        <td>/api/areas/</td>
         <td>name<br>short_description<br>description<br>image</td>
         <td>Create area</td>
         <td>create in controllers/areas.controller.js</td>
     </tr>
     <tr>
         <td>POST</td>
-        <td>/areas/initdb</td>
+        <td>/api/areas/initdb</td>
         <td>NA</td>
         <td>Initialize DB</td>
         <td>initdata in controllers/areas.controller.js</td>
     </tr>
     <tr>
         <td>GET</td>
-        <td>/areas/all</td>
+        <td>/api/areas/all</td>
         <td>NA</td>
         <td>Queries all values in areas table</td>
         <td>findAll in controllers/areas.controller.js</td>
     </tr>
     <tr>
         <td>GET</td>
-        <td>/areas/name</td>
+        <td>/api/areas/name</td>
         <td>name</td>
         <td>Queries all values in areas table based on name parameter</td>
         <td>findByName in controllers/areas.controller.js</td>
@@ -62,49 +62,49 @@ The routes for the server are configured using files in server/controllers and s
     </tr>
     <tr>
         <td>POST</td>
-        <td>/products/</td>
+        <td>/api/products/</td>
         <td>name<br>short_description<br>description<br>image<br>area<br>manager<br>reference</td>
         <td>Create Product</td>
         <td>create in controllers/products.controller.js</td>
     </tr>
     <tr>
         <td>POST</td>
-        <td>/products/initdb</td>
+        <td>/api/products/initdb</td>
         <td>NA</td>
         <td>Initialize DB</td>
         <td>initdata in controllers/products.controller.js</td>
     </tr>
     <tr>
         <td>GET</td>
-        <td>/products/all</td>
+        <td>/api/products/all</td>
         <td>NA</td>
         <td>Queries all values in products table</td>
         <td>findAll in controllers/products.controller.js</td>
     </tr>
     <tr>
         <td>GET</td>
-        <td>/products/name</td>
+        <td>/api/products/name</td>
         <td>name</td>
         <td>Queries all values in products table based on name parameter</td>
         <td>findByName in controllers/products.controller.js</td>
     </tr>
     <tr>
         <td>GET</td>
-        <td>/products/area</td>
+        <td>/api/products/area</td>
         <td>area</td>
         <td>Queries all values in products table based on area parameter</td>
         <td>findByArea in controllers/products.controller.js</td>
     </tr>
     <tr>
         <td>GET</td>
-        <td>/products/manager</td>
+        <td>/api/products/manager</td>
         <td>manager</td>
         <td>Queries all values in products table based on manager parameter</td>
         <td>findByManager in controllers/products.controller.js</td>
     </tr>
     <tr>
         <td>GET</td>
-        <td>/products/reference</td>
+        <td>/api/products/reference</td>
         <td>reference</td>
         <td>Queries all values in products table based on reference parameter</td>
         <td>findByReference in controllers/products.controller.js</td>
@@ -123,35 +123,35 @@ The routes for the server are configured using files in server/controllers and s
     </tr>
     <tr>
         <td>POST</td>
-        <td>/members/</td>
+        <td>/api/members/</td>
         <td>name<br>short_description<br>description<br>image<br>area<br>designation</td>
         <td>Create Member</td>
         <td>create in controllers/members.controller.js</td>
     </tr>
     <tr>
         <td>POST</td>
-        <td>/members/initdb</td>
+        <td>/api/members/initdb</td>
         <td>NA</td>
         <td>Initialize DB</td>
         <td>initdata in controllers/members.controller.js</td>
     </tr>
     <tr>
         <td>GET</td>
-        <td>/members/all</td>
+        <td>/api/members/all</td>
         <td>NA</td>
         <td>Queries all values in members table</td>
         <td>findAll in controllers/members.controller.js</td>
     </tr>
     <tr>
         <td>GET</td>
-        <td>/members/name</td>
+        <td>/api/members/name</td>
         <td>name</td>
         <td>Queries all values in members table based on name parameter</td>
         <td>findByName in controllers/members.controller.js</td>
     </tr>
     <tr>
         <td>GET</td>
-        <td>/members/area</td>
+        <td>/api/members/area</td>
         <td>area</td>
         <td>Queries all values in members table based on area parameter</td>
         <td>findByArea in controllers/members.controller.js</td>
@@ -159,22 +159,116 @@ The routes for the server are configured using files in server/controllers and s
 </table>
 
 **2. Axios:** Defined in `http-common.js`. API served in /api base URL. Makes use of services defined in ../services/ folder. Axios was installed with the command `npm install --save axios`
-```
-AreaDataService:
-    getAll - /api/areas/all
-    getByName(name) - /api/areas/name?name=${name}
-MemberDataService:
-    getAll - /api/members/all
-    getByName(name) - /api/members/name?name=${name}
-    getByProduct(name) - /api/members/product?product=${name}
-    getByArea(name) - /api/members/area?area=${name}
-ProductDataService:
-    getAll - /api/products/all
-    getByName(name) - /api/products/name?name=${name}
-    getByArea(name) - /api/products/area?area=${name}
-    getByManager(name) - /api/products/manager?manager=${name}
-    getByReference(name) - /api/products/reference?reference=${name}
-```
+
+<table>
+    <tr>
+        <td><b>AreaDataService</b></td>
+    </tr>
+    <tr>
+        <td><b>Function Name</b></td>
+        <td><b>Request Method</b></td>
+        <td><b>Request URL</b></td>
+    </tr>
+    <tr>
+        <td>getAll</td>
+        <td>GET</td>
+        <td>/api/areas/all</td>
+    </tr>
+    <tr>
+        <td>getByName(name)</td>
+        <td>GET</td>
+        <td>/api/areas/name?name=${name}</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td><b>MemberDataService</b></td>
+    </tr>
+    <tr>
+        <td><b>Function Name</b></td>
+        <td><b>Request Method</b></td>
+        <td><b>Request URL</b></td>
+    </tr>
+    <tr>
+        <td>getAll</td>
+        <td>GET</td>
+        <td>/api/members/all</td>
+    </tr>
+    <tr>
+        <td>getByName(name)</td>
+        <td>GET</td>
+        <td>/api/members/name?name=${name}</td>
+    </tr>
+    <tr>
+        <td>getByProduct(name)</td>
+        <td>GET</td>
+        <td>/api/members/product?product=${name}</td>
+    </tr>
+    <tr>
+        <td>getByArea(name)</td>
+        <td>GET</td>
+        <td>/api/members/area?area=${name}</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td><b>AreaDataService</b></td>
+    </tr>
+    <tr>
+        <td><b>Function Name</b></td>
+        <td><b>Request Method</b></td>
+        <td><b>Request URL</b></td>
+    </tr>
+    <tr>
+        <td>getAll</td>
+        <td>GET</td>
+        <td>/api/areas/all</td>
+    </tr>
+    <tr>
+        <td>getByName(name)</td>
+        <td>GET</td>
+        <td>/api/areas/name?name=${name}</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td><b>ProductDataService</b></td>
+    </tr>
+    <tr>
+        <td><b>Function Name</b></td>
+        <td><b>Request Method</b></td>
+        <td><b>Request URL</b></td>
+    </tr>
+    <tr>
+        <td>getAll</td>
+        <td>GET</td>
+        <td>/api/products/all</td>
+    </tr>
+    <tr>
+        <td>getByName(name)</td>
+        <td>GET</td>
+        <td>/api/products/name?name=${name}</td>
+    </tr>
+    <tr>
+        <td>getByArea(name)</td>
+        <td>GET</td>
+        <td>/api/products/area?area=${name}</td>
+    </tr>
+    <tr>
+        <td>getByManager(name)</td>
+        <td>GET</td>
+        <td>/api/products/manager?manager=${name}</td>
+    </tr>
+    <tr>
+        <td>getByReference(name)</td>
+        <td>GET</td>
+        <td>/api/products/reference?reference=${name}</td>
+    </tr>
+</table>
+
 
 **3. Sequelize:** Sequelize is the plugin used to interact with the DB. It provides ability to create tables with models, insert and search from DB by calling required functions. 
 

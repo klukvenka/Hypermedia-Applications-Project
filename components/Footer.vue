@@ -27,6 +27,7 @@ This component for Footer displays all the landmark links as an unstyled list.
   color: white;
   font-size: 13px;
   background-color: black;
-  text-align: center
+  text-align: center;
+  text-decoration-line: none
 }
 </style>
